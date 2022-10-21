@@ -1,0 +1,35 @@
+.main-footer
+    .footer-content
+        padding: 6rem 0
+        background-color: $main-grey
+    .footer-copyright
+        width: 100%
+        min-height: 50px
+        background-color: $main-green
+    .footer
+        &__text
+            a
+                text-decoration: none
+                color: #ffffff
+                font-weight: normal
+            p
+                color: #ffffff
+                font-weight: bold
+        &__col
+            display: flex
+            justify-content: center
+
+.logo
+    &__footer-img
+        img
+            width: 100%
+
+
+/* RESPONSIVE */
+@include media-breakpoint-down(lg)
+    .main-footer
+        .footer
+            &__col
+                margin-bottom: 50px
+        .footer-content
+            text-align: center
