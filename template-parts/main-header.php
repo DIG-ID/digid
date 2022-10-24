@@ -22,20 +22,20 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="custom-container">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location'  => 'main',
-					'container_class' => 'collapse navbar-collapse',
-					'container_id'    => 'navbarSupportedContent',
-					'menu_class'      => 'navbar-nav',
-					'fallback_cb'     => '',
-					'menu_id'         => 'main-nav',
-				)
-			);
-			?>
+			<div class="custom-container">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'main',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'navbarSupportedContent',
+						'menu_class'      => 'navbar-nav',
+						'fallback_cb'     => '',
+						'menu_id'         => 'main-nav',
+					)
+				);
+				?>
+			</div>
 		</div>
 	</nav>
 </header>
