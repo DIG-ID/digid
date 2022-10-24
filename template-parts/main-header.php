@@ -1,7 +1,7 @@
 <header id="main-header" class="main-header" itemscope itemtype="http://schema.org/WebSite">
 	<nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'digid' ); ?>">
-		<div class="site-branding">
-			<div class="custom-container">
+		<div class="container">	
+			<div class="site-branding">
 				<div class="row justify-content-between align-items-center">
 					<div class="col">
 						<?php
