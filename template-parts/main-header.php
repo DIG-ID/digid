@@ -22,7 +22,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="custom-container">
+			<div class="container">
 				<?php
 				wp_nav_menu(
 					array(
