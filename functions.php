@@ -6,7 +6,8 @@ function digid_theme_setup() {
 
 	register_nav_menus(
 		array(
-			'main' => __( 'Main Menu', 'digid' ),
+			'main'   => __( 'Main Menu', 'digid' ),
+			'footer' => __( 'Footer Menu', 'digid' ),
 		)
 	);
 
@@ -80,6 +81,24 @@ if ( ! function_exists( 'digid_get_font_face_styles' ) ) :
 			src: url('" . get_theme_file_uri( 'assets/fonts/RidleyGrotesk-Medium.woff2' ) . "') format('woff2'), url('" . get_theme_file_uri( 'assets/fonts/RidleyGrotesk-Medium.otf' ) . "') format('otf');
 		}
 
+		@font-face {
+			font-family: 'kobenhavn';
+			src:url('https://use.typekit.net/af/516904/00000000000000007735c102/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3') format('woff2'),url('https://use.typekit.net/af/516904/00000000000000007735c102/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3') format('woff'),url('https://use.typekit.net/af/516904/00000000000000007735c102/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3') format('opentype');
+			font-display: auto;
+			font-style: normal;
+			font-weight: 100;
+			font-stretch: normal;
+		}
+			
+		@font-face {
+			font-family: 'kobenhavn';
+			src:url('https://use.typekit.net/af/cf4ae3/00000000000000007735c104/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3') format('woff2'),url('https://use.typekit.net/af/cf4ae3/00000000000000007735c104/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3') format('woff'),url('https://use.typekit.net/af/cf4ae3/00000000000000007735c104/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3') format('opentype');
+			font-display: auto;
+			font-style: normal;
+			font-weight: 200;
+			font-stretch: normal;
+		}
+
 		";
 
 	}
@@ -99,6 +118,8 @@ if ( ! function_exists( 'digid_preload_webfonts' ) ) :
 		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/RidleyGrotesk-Medium.otf' ) ); ?>" as="font" type="font/otf" crossorigin>
 		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/RidleyGrotesk-Light.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/RidleyGrotesk-Light.otf' ) ); ?>" as="font" type="font/otf" crossorigin>
+		<link rel="preload" href="https://p.typekit.net/p.css?s=1&k=xvn1tnj&ht=tk&f=37561.37563&a=100534906&app=typekit&e=css" as="font" type="font/woff2" crossorigin>
+
 		<?php
 	}
 
@@ -110,13 +131,13 @@ add_action( 'wp_head', 'digid__preload_webfonts' );
  * Add custom classes to posts body
  */
 function custom_body_classes( $classes ) {
-    if ( is_single() ) {
-        global $post;
-        foreach ( ( get_the_category( $post->ID ) ) as $category ) {
-            $classes[] = $category->category_nicename;
-        }
-    }
-    return $classes;
+	if ( is_single() ) {
+		global $post;
+		foreach ( ( get_the_category( $post->ID ) ) as $category ) {
+			$classes[] = $category->category_nicename;
+		}
+	}
+	return $classes;
 }
 add_filter( 'body_class', 'custom_body_classes' );
 
@@ -129,7 +150,16 @@ function digid_theme_enqueue_styles() {
 	//Get the theme data
 	$the_theme     = wp_get_theme(); 
 	$theme_version = $the_theme->get( 'Version' );
-	wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/dist/main.css', array(), $theme_version );
+
+	// Register Theme main style.
+	wp_register_style( 'theme-styles', get_template_directory_uri() . '/dist/main.css', array(), $theme_version );
+
+	// Add styles inline.
+	wp_add_inline_style( 'theme-styles', digid_get_font_face_styles() );
+
+	// Enqueue theme stylesheet.
+	wp_enqueue_style( 'theme-styles' );
+
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/main.js', array( 'jquery' ), $theme_version, false );
 	/*if ( is_page_template( array( 'page-templates/page-home.php', 'page-templates/page-contact.php' ) ) ) :
@@ -140,6 +170,8 @@ function digid_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'digid_theme_enqueue_styles' );
 
+// Theme custom Walker.
+require get_template_directory() . '/inc/theme-custom-walker.php';
 
 // Theme customizer options.
 require get_template_directory() . '/inc/customizer.php';
