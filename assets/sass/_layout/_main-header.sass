@@ -7,13 +7,13 @@
           height: auto
           fill: $text-color
   
-#main-nav
+.navbar-nav
   .menu-item
-    a
+    .nav-link
       font-family: $main-font
       font-size: 16px
+      font-weight: 300
       color: $text-color
-      padding: 0 10px
       text-decoration: none
 
 
@@ -27,3 +27,16 @@
       .nav-link
         padding-right: 1.6rem
         padding-left: 1.6rem
+
+  .menu-button
+    &__start
+      .nav-link
+        background-color: $accent-color
+        font-size: 12px !important
+        line-height: 16px
+        text-transform: uppercase
+        color: #F7F7F7 !important
+        border-radius: 30px
+        padding: 1.1rem 3rem 0.9rem !important
+        margin-left: 3rem
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important
