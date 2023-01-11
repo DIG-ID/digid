@@ -6,6 +6,11 @@
           max-width: 40px
           height: auto
           fill: $text-color
+    &__light, &__dark
+      .site-branding
+          .site-logo
+            path
+              fill: $main-color !important
   
 .navbar-nav
   .menu-item
@@ -13,9 +18,12 @@
       font-family: $main-font
       font-size: 16px
       font-weight: 300
-      color: $text-color
+      color: #445659
       text-decoration: none
-
+  &__dark
+    .menu-item
+      .nav-link
+        color: #DEE3E4
 
 @include media-breakpoint-up(lg)
   #main-header
@@ -28,12 +36,13 @@
     .navbar-nav
       .nav-link
         padding-right: 1.6rem
-        padding-left: 1.6rem    
+        padding-left: 1.6rem
     .menu-button
       &__start
         .nav-link
           background-color: $accent-color
           font-size: 12px !important
+          font-weight: 400
           line-height: 16px
           text-transform: uppercase
           color: #F7F7F7 !important
@@ -43,7 +52,7 @@
           box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%) !important
 
   #main-header.sticky
-    .navbar:not(.nav-open)
+    .navbar
       padding-top: 25px
       padding-bottom: 30px
       background-color: #fff
@@ -52,6 +61,14 @@
         .site-logo
           path
             fill: $main-color !important
+      &__light
+        background-color: $dark-color
+        .nav-link
+          color: #DEE3E4
+      &__dark
+        background-color: $bg-color
+        .nav-link
+          color: #445659
       .navbar-actions
         .navbar-toggler
           .icon-left,
@@ -62,20 +79,3 @@
               background-color: $main-color
             &:not(.collapsed)
               background-color: $main-color
-    .navbar.nav-open
-      padding-top: 15px
-      padding-bottom: 15px
-      .site-branding
-        .navbar-brand
-          .custom-logo
-            width: 90%
-            path
-              fill: #fff !important
-      .navbar-actions
-        .navbar-toggler
-          .icon-left,
-          .icon-right
-            background-color: transparent
-            &::before,
-            &::after
-              background-color: #fff
