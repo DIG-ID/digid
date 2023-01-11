@@ -18,25 +18,64 @@
 
 
 @include media-breakpoint-up(lg)
-  .navbar-expand-lg
-    padding-top: 35px
-    padding-bottom: 30px
+  #main-header
+    .navbar
+      transition: all .4s ease-in-out
+      padding-top: 35px
+      padding-bottom: 40px
     .navbar-collapse
       justify-content: flex-end
     .navbar-nav
       .nav-link
         padding-right: 1.6rem
-        padding-left: 1.6rem
+        padding-left: 1.6rem    
+    .menu-button
+      &__start
+        .nav-link
+          background-color: $accent-color
+          font-size: 12px !important
+          line-height: 16px
+          text-transform: uppercase
+          color: #F7F7F7 !important
+          border-radius: 30px
+          padding: 1.1rem 3rem 0.9rem !important
+          margin-left: 3rem
+          box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%) !important
 
-  .menu-button
-    &__start
-      .nav-link
-        background-color: $accent-color
-        font-size: 12px !important
-        line-height: 16px
-        text-transform: uppercase
-        color: #F7F7F7 !important
-        border-radius: 30px
-        padding: 1.1rem 3rem 0.9rem !important
-        margin-left: 3rem
-        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important
+  #main-header.sticky
+    .navbar:not(.nav-open)
+      padding-top: 25px
+      padding-bottom: 30px
+      background-color: #fff
+      box-shadow: 0px -1px 4px 0px rgb(0 0 0 / 20%)
+      .site-branding
+        .site-logo
+          path
+            fill: $main-color !important
+      .navbar-actions
+        .navbar-toggler
+          .icon-left,
+          .icon-right
+            background-color: #fff
+            &::before,
+            &::after
+              background-color: $main-color
+            &:not(.collapsed)
+              background-color: $main-color
+    .navbar.nav-open
+      padding-top: 15px
+      padding-bottom: 15px
+      .site-branding
+        .navbar-brand
+          .custom-logo
+            width: 90%
+            path
+              fill: #fff !important
+      .navbar-actions
+        .navbar-toggler
+          .icon-left,
+          .icon-right
+            background-color: transparent
+            &::before,
+            &::after
+              background-color: #fff
