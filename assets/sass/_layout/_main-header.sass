@@ -15,3 +15,15 @@
       color: $text-color
       padding: 0 10px
       text-decoration: none
+
+
+@include media-breakpoint-up(lg)
+  .navbar-expand-lg
+    padding-top: 35px
+    padding-bottom: 30px
+    .navbar-collapse
+      justify-content: flex-end
+    .navbar-nav
+      .nav-link
+        padding-right: 1.6rem
+        padding-left: 1.6rem
