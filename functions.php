@@ -178,3 +178,6 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Theme custom template tags.
 require get_template_directory() . '/inc/theme-template-tags.php';
+
+// ACF bidirectional-relationships.
+require get_template_directory() . '/inc/bidirectional-relationships.php';

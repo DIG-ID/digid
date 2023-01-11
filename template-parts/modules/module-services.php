@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<?php get_template_part( 'template-parts/loops/services' ); ?>
+			<?php get_template_part( 'template-parts/loops/loop', 'services' ); ?>
 		</div>
 	</div>
 </section>
