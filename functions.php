@@ -19,6 +19,8 @@ function digid_theme_setup() {
 
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size( 'card-post-thumbnail', 426, 314, array( 'center', 'center' ) );
+
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
 }

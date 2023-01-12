@@ -45,22 +45,38 @@
     width: 100%
     height: auto
     object-fit: cover
-  p
-    font-size: 16px
-    line-height: 30px
+    margin-bottom: 20px
+
   &__title
     text-decoration: none
     h3
       font-family: $second-font
       font-size: 23.04px
       font-weight: 300
-      line-height: 64px
       letter-spacing: 0.46079999999999993px
       transition: all .3s ease-in
       color: $text-color
     &:hover
       h3
         color: $accent-color
+  &__tags
+    font-family: $main-font
+    font-size: 12px
+    letter-spacing: 0.36px
+    line-height: 30px
+    margin-bottom: 30px
+    color: #496063
+  p
+    font-size: 16px
+    line-height: 30px
+    color: #496063
+    // Addition lines for 3 line or multiline ellipsis
+    text-overflow: ellipsis
+    overflow: hidden
+    display: -webkit-box !important
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    white-space: normal
   &__btn
     display: flex
     align-items: center
