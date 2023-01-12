@@ -36,3 +36,49 @@
       color: $accent-color
       svg
         fill: $accent-color
+
+
+.card-post
+  margin-bottom: 40px
+  img
+    max-width: 100%
+    width: 100%
+    height: auto
+    object-fit: cover
+  p
+    font-size: 16px
+    line-height: 30px
+  &__title
+    text-decoration: none
+    h3
+      font-family: $second-font
+      font-size: 23.04px
+      font-weight: 300
+      line-height: 64px
+      letter-spacing: 0.46079999999999993px
+      transition: all .3s ease-in
+      color: $text-color
+    &:hover
+      h3
+        color: $accent-color
+  &__btn
+    display: flex
+    align-items: center
+    font-family: $second-font
+    font-weight: 300
+    font-size: 19px
+    letter-spacing: 0.36px
+    line-height: 25px
+    text-decoration: none
+    transition: all .3s ease-in
+    margin-top: 15px
+    color: $text-color
+    svg
+      margin-top: 10px
+      margin-left: 10px
+      transition: all .3s ease-in
+      fill: $main-color
+    &:hover
+      color: $accent-color
+      svg
+        fill: $accent-color
