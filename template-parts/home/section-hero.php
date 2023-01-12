@@ -4,9 +4,9 @@
       <div class="col-12">
         <h2 class="section-hero__title">
           <span>forward</span> <br>
-          thinking <br>
-          marketing <br>
-          solutions
+          <span>thinking</span> <br>
+          <span>marketing</span> <br>
+          <span>solutions</span>
         </h2>
       </div>
     </div>
