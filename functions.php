@@ -180,7 +180,8 @@ add_action( 'wp_enqueue_scripts', 'digid_theme_enqueue_styles' );
  * Wrap the post thumbnail image in a figure element only in the blog posts and project posts.
  */
 function digid_wrap_post_thumbnail_in_figure( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
-	if ( 'card-post-thumbnail' !== $size || 'card-project-thumbnail-portrait' !== $size || 'card-project-thumbnail-landscape' !== $size ) :
+	$allowed_sizes = array( 'card-post-thumbnail', 'card-project-thumbnail-portrait', 'card-project-thumbnail-landscape' );
+	if ( ! in_array( $size, $allowed_sizes ) ) :
 		return $html;
 	endif;
 	return '<a href="' . get_the_permalink() . '"><figure>' . $html . '</figure></a>';
