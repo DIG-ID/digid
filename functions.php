@@ -172,6 +172,18 @@ function digid_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'digid_theme_enqueue_styles' );
 
+/**
+ * Wrap the post thumbnail image in a figure element only in the blog posts.
+ */
+function digid_wrap_post_thumbnail_in_figure( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+	if ( 'card-post-thumbnail' !== $size ) :
+		return $html;
+	endif;
+	return '<a href="' . get_the_permalink() . '"><figure>' . $html . '</figure></a>';
+}
+
+add_filter( 'post_thumbnail_html', 'digid_wrap_post_thumbnail_in_figure', 10, 5 );
+
 // Theme custom Walker.
 require get_template_directory() . '/inc/theme-custom-walker.php';
 
