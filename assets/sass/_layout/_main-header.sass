@@ -97,3 +97,10 @@
               background-color: $main-color
             &:not(.collapsed)
               background-color: $main-color
+
+@include media-breakpoint-between(lg, xl)
+  #main-header
+    .navbar-nav
+      .nav-link
+        padding-right: 1.2rem
+        padding-left: 1.2rem

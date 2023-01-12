@@ -4,7 +4,7 @@
 			<div class="site-branding">
 				<div class="row justify-content-between align-items-center">
 					<div class="col">
-						<div class="site-logo"><?php get_template_part( 'template-parts/main-logo' ); ?></div>
+						<a class="site-logo" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>"><?php get_template_part( 'template-parts/main-logo' ); ?></a>
 					</div>
 					<div class="col d-none d-lg-flex justify-content-end">
 						<?php do_action( 'socials' ); ?>
