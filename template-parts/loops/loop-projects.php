@@ -16,7 +16,7 @@ if ( $the_query->have_posts() ) :
 				get_template_part( 'template-parts/components/cards/card', 'project-portrait' );
 				break;
 			default:
-				get_template_part( 'template-parts/components/cards/card', 'project' );
+				get_template_part( 'template-parts/components/cards/card', 'project-landscape' );
 				break;
 		endswitch;
 	endwhile;

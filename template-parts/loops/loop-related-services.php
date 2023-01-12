@@ -6,6 +6,6 @@ if ( $related_services ) :
 		setup_postdata( $post );
 		$services_names[] = get_the_title();
 	endforeach;
-	echo '<ul class="related-services"><li>' . implode( '<li>,</li>', $services_names ) . '</li></ul>';
+	echo '<ul class="related-services"><li>' . implode( ', </li><li>', $services_names ) . '</li></ul>';
 	wp_reset_postdata();
 endif;

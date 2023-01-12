@@ -21,6 +21,10 @@ function digid_theme_setup() {
 
 	add_image_size( 'card-post-thumbnail', 426, 314, array( 'center', 'center' ) );
 
+	add_image_size( 'card-project-thumbnail-portrait', 646, 733, array( 'center', 'center' ) );
+
+	add_image_size( 'card-project-thumbnail-landscape', 646, 422, array( 'center', 'center' ) );
+
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
 }
@@ -173,10 +177,10 @@ function digid_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'digid_theme_enqueue_styles' );
 
 /**
- * Wrap the post thumbnail image in a figure element only in the blog posts.
+ * Wrap the post thumbnail image in a figure element only in the blog posts and project posts.
  */
 function digid_wrap_post_thumbnail_in_figure( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
-	if ( 'card-post-thumbnail' !== $size ) :
+	if ( 'card-post-thumbnail' !== $size || 'card-project-thumbnail-portrait' !== $size || 'card-project-thumbnail-landscape' !== $size ) :
 		return $html;
 	endif;
 	return '<a href="' . get_the_permalink() . '"><figure>' . $html . '</figure></a>';

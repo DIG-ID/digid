@@ -1,21 +1,39 @@
 .card-service
-  margin: 0 15px 30px 15px
-  padding: 40px
-  background-color: #fff
-  box-shadow: 0px 3px 20px #0000000D
+  margin-bottom: 30px
+  &__content
+    padding: 50px 40px 40px
+    background-color: #fff
+    box-shadow: 0px 3px 20px #0000000D
   &__title
     text-decoration: none
     h3
       font-family: $second-font
       font-size: 23.04px
       font-weight: 300
-      line-height: 64px
       letter-spacing: 0.46079999999999993px
+      margin-bottom: 40px
       transition: all .3s ease-in
       color: $main-color
     &:hover
       h3
         color: $accent-color
+  p
+    font-size: 16px
+    line-height: 25px
+    margin-bottom: 40px
+    color: #496063
+    
+    // Addition lines for 3 line or multiline ellipsis
+    text-overflow: ellipsis
+    overflow: hidden
+    display: -webkit-box !important
+    -webkit-line-clamp: 4
+    -webkit-box-orient: vertical
+    white-space: normal
+  hr
+    border-top-width: 2px
+    border-top-color: #707070
+    margin-bottom: 20px
   &__btn
     display: flex
     justify-content: space-between
@@ -24,7 +42,6 @@
     font-weight: 300
     font-size: 19px
     letter-spacing: 0.38px
-    line-height: 64px
     text-decoration: none
     transition: all .3s ease-in
     color: $text-color
@@ -36,6 +53,49 @@
       color: $accent-color
       svg
         fill: $accent-color
+
+.card-project
+  margin-bottom: 40px
+  figure
+    margin-bottom: 20px
+    overflow: hidden
+    img
+      max-width: 100%
+      width: 100%
+      height: auto
+      object-fit: cover
+      transform: scale(1)
+      transition: all .3s ease-in
+    &:hover
+      img
+        transform: scale(1.1)
+
+  &__title
+    text-decoration: none
+    h3
+      font-family: $second-font
+      font-size: 23.04px
+      font-weight: 300
+      letter-spacing: 0.46079999999999993px
+      transition: all .3s ease-in
+      color: $text-color
+    &:hover
+      h3
+        color: $accent-color
+  &__content
+    margin-left: 40px
+    .related-services
+      padding: 0
+      margin: 0
+      list-style: none
+      li
+        display: inline-block
+        font-family: $main-font
+        font-size: 12px
+        letter-spacing: 0.36px
+        line-height: 30px
+        margin-bottom: 30px
+        color: #496063
 
 
 .card-post
