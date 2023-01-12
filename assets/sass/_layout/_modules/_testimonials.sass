@@ -1,0 +1,48 @@
+.section-testimonials
+  padding-top: 100px
+  padding-bottom: 100px
+  .section__title
+    color: $text-color
+    &--line
+      background-color: $text-color
+    &--wrapper
+      margin-bottom: 50px
+  .testimonials-swiper
+    .swiper-arrows
+      position: absolute
+      right: 0px
+      bottom: 30px
+      display: flex
+      z-index: 10
+      .swiper-arrow-prev,
+      .swiper-arrow-next
+        svg
+          fill: $text-color
+          transition: all .4s ease-in
+        &:hover
+          cursor: pointer
+          svg
+            fill: $accent-color
+      .swiper-arrow-prev
+        margin-right: 30px
+
+
+  .testimonial-blockquote
+    &__content
+      p
+        font-family: $second-font
+        font-weight: 400
+        font-size: 39.82px
+        letter-spacing: 0.3982px
+        line-height: 44px
+        color: $main-color
+    &__info
+      margin-top: 40px
+      font-family: $main-font
+      font-weight: 400
+      font-size: 16px
+      letter-spacing: 0.48px
+      line-height: 20px
+      color: $text-color
+      span
+        font-weight: 600

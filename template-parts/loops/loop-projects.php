@@ -13,10 +13,10 @@ if ( $the_query->have_posts() ) :
 		switch ( $the_query->current_post ) :
 			case 1:
 			case 2:
-				get_template_part( 'template-parts/modules/cards/card', 'project-portrait' );
+				get_template_part( 'template-parts/components/cards/card', 'project-portrait' );
 				break;
 			default:
-				get_template_part( 'template-parts/modules/cards/card', 'project' );
+				get_template_part( 'template-parts/components/cards/card', 'project' );
 				break;
 		endswitch;
 	endwhile;

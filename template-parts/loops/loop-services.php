@@ -10,7 +10,7 @@ $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) :
 	while ( $the_query->have_posts() ) :
 		$the_query->the_post();
-		get_template_part( 'template-parts/modules/cards/card', 'service' );
+		get_template_part( 'template-parts/components/cards/card', 'service' );
 	endwhile;
 	wp_reset_postdata();
 endif;
