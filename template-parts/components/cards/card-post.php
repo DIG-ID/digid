@@ -3,7 +3,7 @@
 	if ( has_post_thumbnail() ) :
 		the_post_thumbnail( 'card-post-thumbnail' );
 	else :
-		echo '<img src="https://via.placeholder.com/416x304" alt="placeholder image">';
+		echo '<figure><img src="https://via.placeholder.com/416x304" alt="placeholder image"></figure>';
 	endif;
 	?>
 	<a href="<?php the_permalink(); ?>" class="card-post__title"><?php the_title( '<h3>', '</h3> '); ?></a>
