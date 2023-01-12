@@ -29,16 +29,16 @@
 							);
 							?>
 						</p>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'footer',
+								'menu_class'     => 'footer-nav',
+								'fallback_cb'    => false,
+							),
+						);
+						?>
 					</div>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'menu_class'     => 'footer-nav',
-							'fallback_cb'    => false,
-						),
-					);
-					?>
 				</div><!--  .footer-left -->
 				<div class="col-12 col-lg-6 footer-right d-flex flex-column">
 					<h4 class="footer-title">Our Newsletter</h4>
