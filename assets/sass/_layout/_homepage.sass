@@ -59,3 +59,10 @@
     margin-bottom: 0
     &--wrapper
       margin-bottom: 60px
+
+@include media-breakpoint-down(lg)
+  .section-hero
+    &__title
+      span
+        &:nth-child(1)
+          margin-left: 0
