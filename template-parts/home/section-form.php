@@ -13,11 +13,12 @@
 				</h2>
 			</div>
 		</div>
-		<div class="row justify-content-between">
+		<div class="row justify-content-between align-items-center">
 			<div class="col-12 col-lg-8">
-				<?php echo do_shortcode( '[contact-form-7 id="5" title="Contact form 1"]' ); ?>
+				<?php $form_shortcode = get_field( 'form_shortcode' ); ?>
+				<?php echo do_shortcode( $form_shortcode ); ?>
 			</div>
-			<div class="col-12 col-lg-3">
+			<div class="col-12 col-lg-3 bg-logo">
 				<?php get_template_part( 'template-parts/main-logo' ); ?>
 			</div>
 		</div>

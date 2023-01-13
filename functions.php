@@ -189,6 +189,9 @@ function digid_wrap_post_thumbnail_in_figure( $html, $post_id, $post_thumbnail_i
 
 add_filter( 'post_thumbnail_html', 'digid_wrap_post_thumbnail_in_figure', 10, 5 );
 
+// Remove <p> from Contact Form 7
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
+
 // Theme custom Walker.
 require get_template_directory() . '/inc/theme-custom-walker.php';
 
