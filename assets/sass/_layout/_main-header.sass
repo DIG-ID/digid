@@ -104,3 +104,77 @@
       .nav-link
         padding-right: 1.2rem
         padding-left: 1.2rem
+
+
+@include media-breakpoint-down(lg)
+  #main-header
+    .navbar
+      padding: 40px 15px 30px
+      background-color: transparent
+      transition: all 600ms ease-in-out
+      .navbar-collapse
+          padding: 60px 0
+      &.nav-open
+        background-color: $dark-color
+        .site-branding
+          .site-logo
+            svg
+              fill: $main-color
+      .site-branding
+        .navbar-brand
+          display: block
+          .custom-logo
+            width: 100%
+            object-fit: cover
+            transition: all 600ms ease-in-out
+            path
+              transition: all 600ms ease-in-out
+    .navbar-nav
+      .nav-link
+        color: #DEE3E4
+    .navbar-actions
+      display: flex
+      align-items: center
+      .navbar-toggler
+        position: relative
+        width: 30px
+        height: 30px
+        padding: 0
+        transition-duration: 0.5s
+        outline: none
+        box-shadow: none
+        border: 0
+        &:focus,
+        &:active
+          outline: none
+          box-shadow: none
+          border: 0
+        &:not(.collapsed)
+          .icon-left
+            transition-duration: 0.5s
+            background-color: transparent
+            &::before
+              transform: rotateZ(45deg) scaleX(1.4) translate(1px, 1px)
+            &::after
+              transform: rotateZ(-45deg) scaleX(1.4) translate(1px, -1px)
+          .icon-right
+            transition-duration: 0.5s
+            background-color: transparent
+            &::before
+              transform: rotateZ(-45deg) scaleX(1.4) translate(-1px, 1px)
+            &::after
+              transform: rotateZ(45deg) scaleX(1.4) translate(-1px, -1px)
+    .menu-button
+      &__start
+        .nav-link
+          display: inline-block
+          background-color: $accent-color
+          font-size: 12px !important
+          font-weight: 400
+          line-height: 16px
+          text-transform: uppercase
+          color: #F7F7F7 !important
+          border-radius: 30px
+          padding: 1.1rem 3rem 0.9rem !important
+          margin-top: 1rem
+          box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%) !important
