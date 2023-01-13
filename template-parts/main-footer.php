@@ -1,9 +1,9 @@
 <footer class="main-footer">
 	<div class="footer-content">
-		<div class="container-fluid g-0">
-			<div class="row g-0">
-				<div class="col-12 col-lg-6 footer-left d-flex flex-column">
-					<?php get_template_part( 'template-parts/main-logo'); ?>
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-12 col-md-12 col-lg-5 col-xl-5 footer-left d-flex flex-column">
+					<?php get_template_part( 'template-parts/main-logo' ); ?>
 					<h4 class="footer-title">Where can you find us</h4>
 					<div class="address">
 						<div class="address__ch">
@@ -40,7 +40,7 @@
 						?>
 					</div>
 				</div><!--  .footer-left -->
-				<div class="col-12 col-lg-6 footer-right d-flex flex-column">
+				<div class="col-12 col-md-12 col-lg-5 footer-right d-flex flex-column">
 					<h4 class="footer-title">Our Newsletter</h4>
 					<p>Join our mailing list etc etc etc</p>
 

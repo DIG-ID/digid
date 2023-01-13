@@ -1,4 +1,5 @@
 .main-footer
+  background: linear-gradient(to right, $dark-color 0%, $dark-color 50%, $main-color 50%, $main-color 100%)
   .footer-title
     font-size: 16px
     letter-spacing: 0.7998px
@@ -8,8 +9,6 @@
   .footer-left
     padding-top: 75px
     padding-bottom: 60px
-    padding-left: 15%
-    background-color: $dark-color
     color: $bg-color
     svg
       max-width: 40px
@@ -50,7 +49,6 @@
       display: flex
       justify-content: space-between
       align-items: center
-      margin-right: 60px
       .copyright
         font-size: 12px
         font-weight: 400
@@ -85,8 +83,6 @@
   .footer-right
     padding-top: 75px
     padding-bottom: 60px
-    padding-left: 80px
-    background-color: $main-color
     color: $dark-color
     .contacts
       display: flex
@@ -99,4 +95,15 @@
         line-height: 25px
         letter-spacing: 0.36px
         text-decoration: none
+        transition: all .3s ease-in
         color: $dark-color
+        &:hover
+          color: $accent-color
+
+@include media-breakpoint-down(lg)
+  .main-footer
+    background: linear-gradient(to bottom, $dark-color 0%, $dark-color 67%, $main-color 67%, $main-color 100%)
+
+@include media-breakpoint-down(sm)
+  .main-footer
+    background: linear-gradient(to bottom, $dark-color 0%, $dark-color 67%, $main-color 67%, $main-color 100%)
