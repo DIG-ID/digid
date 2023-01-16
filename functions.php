@@ -192,6 +192,31 @@ add_filter( 'post_thumbnail_html', 'digid_wrap_post_thumbnail_in_figure', 10, 5 
 // Remove <p> from Contact Form 7
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
+
+/**
+ * Add a Custom Title and Description to an Archive Page Using ACF Pro.
+ */
+function digid_create_option_page_for_cpt() {
+	if ( function_exists( 'acf_add_options_page' ) ) :
+		$services = acf_add_options_sub_page(
+			array(
+				'page_title'  => 'Archive',
+				'parent_slug' => 'edit.php?post_type=services',
+				'capability'  => 'manage_options',
+			)
+		);
+		$projects = acf_add_options_sub_page(
+			array(
+				'page_title'  => 'Archive',
+				'parent_slug' => 'edit.php?post_type=projects',
+				'capability'  => 'manage_options',
+			)
+		);
+	endif;
+}
+
+add_action( 'acf/init', 'digid_create_option_page_for_cpt' );
+
 // Theme custom Walker.
 require get_template_directory() . '/inc/theme-custom-walker.php';
 

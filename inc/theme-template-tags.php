@@ -48,3 +48,25 @@ function theme_after_main_content() {
 }
 
 add_action( 'after_main_content', 'theme_after_main_content' );
+
+/**
+ * This function open the post content.
+ */
+function theme_before_post_content() {
+	?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php
+}
+
+add_action( 'before_post_content', 'theme_before_post_content' );
+
+/**
+ * This function closes the post content.
+ */
+function theme_after_post_content() {
+	?>
+	</article><!-- #article -->
+	<?php
+}
+
+add_action( 'after_post_content', 'theme_after_post_content' );
