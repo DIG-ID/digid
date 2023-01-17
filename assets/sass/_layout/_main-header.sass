@@ -107,6 +107,67 @@
 
 
 @include media-breakpoint-down(lg)
+  .animated-icon2
+    width: 30px
+    height: 20px
+    position: relative
+    margin: 0px
+    -webkit-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: .5s ease-in-out
+    -moz-transition: .5s ease-in-out
+    -o-transition: .5s ease-in-out
+    transition: .5s ease-in-out
+    cursor: pointer
+    span
+      background: $dark-color
+      display: block
+      position: absolute
+      height: 3px
+      width: 100%
+      border-radius: 9px
+      opacity: 1
+      left: 0
+      -webkit-transform: rotate(0deg)
+      -moz-transform: rotate(0deg)
+      -o-transform: rotate(0deg)
+      transform: rotate(0deg)
+      -webkit-transition: .25s ease-in-out
+      -moz-transition: .25s ease-in-out
+      -o-transition: .25s ease-in-out
+      transition: .25s ease-in-out
+      &:nth-child(1)
+        top: 0px
+      &:nth-child(2)
+        top: 10px
+      &:nth-child(3)
+        top: 10px
+      &:nth-child(4)
+        top: 20px
+  .animated-icon2.open
+    span
+      background: $main-color
+      &:nth-child(1)
+        top: 11px
+        width: 0%
+        left: 50%
+      &:nth-child(2)
+        -webkit-transform: rotate(45deg)
+        -moz-transform: rotate(45deg)
+        -o-transform: rotate(45deg)
+        transform: rotate(45deg)
+      &:nth-child(3)
+        -webkit-transform: rotate(-45deg)
+        -moz-transform: rotate(-45deg)
+        -o-transform: rotate(-45deg)
+        transform: rotate(-45deg)
+      &:nth-child(4)
+        top: 11px
+        width: 0%
+        left: 50%
+
   #main-header
     .navbar
       padding: 40px 15px 30px
@@ -132,9 +193,11 @@
             path
               transition: all 600ms ease-in-out
     .navbar-nav
+      position: relative
       min-height: calc(100vh - 118px)
       .nav-link
-        color: #DEE3E4
+        color: $main-color
+        text-align: right
     .navbar-actions
       display: flex
       align-items: center
@@ -169,6 +232,10 @@
               transform: rotateZ(45deg) scaleX(1.4) translate(-1px, -1px)
     .menu-button
       &__start
+        position: absolute
+        bottom: 75px
+        width: 100%
+        text-align: center
         .nav-link
           display: inline-block
           background-color: $accent-color

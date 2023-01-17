@@ -10,7 +10,8 @@
 </div><!-- .site-branding -->
 <div class="navbar-actions">
 	<?php do_action( 'wpml_add_language_selector' ); ?>
-	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+	
+	<button class="navbar-toggler hamburguer-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
     </button>
 </div><!-- .navbar-actions -->
