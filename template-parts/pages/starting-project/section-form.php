@@ -1,4 +1,4 @@
-<section class="section section-start-project section-form">
+<section class="section section-st-project section-form">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-7">

@@ -1,4 +1,4 @@
-.section-start-project.section-form
+.section-st-project.section-form
     display: flex
     justify-content: center
     align-items: center
@@ -17,3 +17,14 @@
         line-height: 44px
         margin-bottom: 60px
         color: $text-color
+
+.section-st-kontakt
+    .section
+        &__description
+            margin-top: 20px
+
+@include media-breakpoint-up(lg)
+    .section-st-kontakt
+        .section
+            &__description
+                max-width: 75%
