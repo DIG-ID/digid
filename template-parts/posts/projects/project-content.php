@@ -14,7 +14,7 @@
 					$website = get_field( 'project_scope_website' );
 					if ( $website ) :
 						echo '<h3>' . esc_html_e( 'Website', 'digid' ) . '</h3>';
-						echo '<p><a href="' . esc_url( $website ) . '">' . $website . '</a></p>';
+						echo '<p><a href="' . esc_url( $website ) . '" target="_blank">' . $website . '</a></p>';
 					endif;
 
 					$sector = get_field( 'project_scope_sector' );
