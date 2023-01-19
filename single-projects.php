@@ -1,5 +1,5 @@
 <?php
-get_header( 'dark' );
+get_header( 'light' );
 	do_action( 'before_main_content' );
 	if ( have_posts() ) :
 		do_action( 'before_post_content' );
