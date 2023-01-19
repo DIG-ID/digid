@@ -14,22 +14,26 @@
     padding-top: 0
     padding-bottom: 0
     .filter-button-group
+      width: 100%
       display: flex
-      justify-content: space-between
       align-items: center
+      flex-wrap: wrap
+      
       .button
         font-family: $main-font
         font-weight: 400
         font-size: 12px
         letter-spacing: 0.36px
         text-transform: uppercase
+        white-space: nowrap
         padding: 10px 20px
         margin-bottom: 20px
+        margin-right: 10px
         border: 1px solid $text-color
         border-radius: 30px
         background-color: transparent
-        color: $text-color
         transition: all .3s ease-in
+        color: $text-color
         &:last-of-type
           margin-right: 0
       .is-checked
