@@ -1,6 +1,6 @@
 <?php
 $args = array(
-	'post_type'      => 'projects',
+	'post_type'      => 'case_studies',
 	'post_status'    => 'publish',
 );
 

@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-project grid-item col-12 col-lg-6' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-project grid-item col-12 col-lg-6 ' . digid_get_related_services() . '' ); ?>>
 	<?php
 	if ( has_post_thumbnail() ) :
 		the_post_thumbnail( 'card-project-thumbnail-portrait' );

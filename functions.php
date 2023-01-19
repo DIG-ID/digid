@@ -19,6 +19,8 @@ function digid_theme_setup() {
 
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size( 'single-project-featured-image', 1080, 720, array( 'center', 'center' ) );
+
 	add_image_size( 'card-post-thumbnail', 426, 314, array( 'center', 'center' ) );
 
 	add_image_size( 'card-project-thumbnail-portrait', 646, 733, array( 'center', 'center' ) );
@@ -198,17 +200,24 @@ add_filter( 'wpcf7_autop_or_not', '__return_false' );
  */
 function digid_create_option_page_for_cpt() {
 	if ( function_exists( 'acf_add_options_page' ) ) :
-		$services = acf_add_options_sub_page(
+		$projects     = acf_add_options_page(
 			array(
-				'page_title'  => 'Archive',
+				'page_title'  => 'Projects Archive',
+				'parent_slug' => 'edit.php?post_type=projects',
+				'capability'  => 'manage_options',
+			)
+		);
+		$services     = acf_add_options_page(
+			array(
+				'page_title'  => 'Services Archive',
 				'parent_slug' => 'edit.php?post_type=services',
 				'capability'  => 'manage_options',
 			)
 		);
-		$projects = acf_add_options_sub_page(
+		$case_studies = acf_add_options_page(
 			array(
-				'page_title'  => 'Archive',
-				'parent_slug' => 'edit.php?post_type=projects',
+				'page_title'  => 'Case Studies Archive',
+				'parent_slug' => 'edit.php?post_type=case_studies',
 				'capability'  => 'manage_options',
 			)
 		);
@@ -225,6 +234,3 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Theme custom template tags.
 require get_template_directory() . '/inc/theme-template-tags.php';
-
-// ACF bidirectional-relationships.
-require get_template_directory() . '/inc/bidirectional-relationships.php';

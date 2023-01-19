@@ -10,12 +10,12 @@
 		</div>
 		<div class="row">
 			<div class="col-12 col-lg-10 offset-lg-1">
-				<p class="section__subtitle"><?php the_field( 'service_archive_title', 'option' ); ?></p>
+				<p class="section__subtitle"><?php the_field( 'services_archive_title', 'option' ); ?></p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12 col-lg-5 offset-lg-1">
-				<p class="section__description"><?php the_field( 'service_archive_description', 'option' ); ?></p>
+				<p class="section__description"><?php the_field( 'services_archive_description', 'option' ); ?></p>
 			</div>
 		</div>
 	</div>

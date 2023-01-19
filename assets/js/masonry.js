@@ -1,9 +1,11 @@
 import Masonry from 'masonry-layout';
 $(function() {
-  const projects_masonry = new Masonry( '.grid-projects', {
-    // options
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true,
-  });
+  if ( $("body").is(".page-template-page-home") || $("body").is(".single-services") ) {
+    const projects_masonry = new Masonry( '.grid-projects', {
+      // options
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true,
+    });
+  }
 });

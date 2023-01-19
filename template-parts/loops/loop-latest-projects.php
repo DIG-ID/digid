@@ -2,6 +2,7 @@
 $args = array(
 	'post_type'      => 'projects',
 	'post_status'    => 'publish',
+	'posts_per_page' => 5,
 );
 
 $the_query = new WP_Query( $args );

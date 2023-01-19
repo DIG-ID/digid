@@ -70,3 +70,21 @@ function theme_after_post_content() {
 }
 
 add_action( 'after_post_content', 'theme_after_post_content' );
+
+
+/**
+ * This function gets the current project related service.
+ */
+function digid_get_related_services() {
+	$pod   = pods( 'projects', get_the_id() );
+	$rpods = $pod->field( 'related_services' );
+	if ( ! empty( $rpods ) ) :
+		$rnames = array();
+		foreach ( $rpods as $rpod ) :
+			$rpod_id  = $rpod['ID'];
+			$rnames[] = get_post_field( 'post_name', $rpod_id  );
+		endforeach;
+		$rnames = esc_attr( implode( ' ', $rnames ) );
+		return $rnames;
+	endif;
+}
