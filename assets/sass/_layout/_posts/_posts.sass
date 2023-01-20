@@ -53,30 +53,32 @@
           &:hover
             color: $accent-color
     .post-sidebar
-      .widget_nav_menu
+
+      .menu,
+      .related-services
+        list-style-type: none
+        padding: 0
         padding: 40px
-        box-shadow: 0px 3px 20px #0000000D
+        margin: 0
         margin-bottom: 40px
+        box-shadow: 0px 3px 20px #0000000D
         background-color: #fff
-        .menu
-          list-style-type: none
-          padding: 0
-          margin: 0
-          .menu-item
-            padding-bottom: 20px
-            &:last-of-type
-              border-bottom: 1px solid $text-color
-            a
-              font-family: $second-font
-              font-weight: 300
-              font-size: 23.04px
-              line-height: 1
-              letter-spacing: 0.46079999999999993px
-              text-decoration: none
-              transition: all .3s ease-in
-              color: $main-color
-              &:hover
-                color: $accent-color
+        .menu-item,
+        li
+          padding-bottom: 20px
+          &:last-of-type
+            border-bottom: 1px solid $text-color
+          a
+            font-family: $second-font
+            font-weight: 300
+            font-size: 23.04px
+            line-height: 1
+            letter-spacing: 0.46079999999999993px
+            text-decoration: none
+            transition: all .3s ease-in
+            color: $main-color
+            &:hover
+              color: $accent-color
 
 
   

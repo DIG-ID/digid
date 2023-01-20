@@ -12,6 +12,7 @@
 				?>
 			</div>
 			<sidebar class="col-12 col-lg-4 post-sidebar">
+				<?php get_template_part( 'template-parts/loops/loop', 'post-related-services' ); ?>
 				<?php
 				if ( is_active_sidebar( 'sidebar-1' ) ) :
 					dynamic_sidebar( 'sidebar-1' );
