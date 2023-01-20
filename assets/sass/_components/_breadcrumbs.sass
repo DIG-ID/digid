@@ -1,0 +1,28 @@
+.section-intro
+  .section__title
+    #breadcrumbs
+      margin-bottom: 0px
+      color: $text-color
+      span
+        span > a
+          text-decoration: none
+          transition: all .4s ease-in
+          color: $text-color
+          &:hover
+            color: $accent-color
+        .breadcrumb_last
+          color: $main-color
+  &--dark
+    .section__title
+      #breadcrumbs
+        margin-bottom: 0px
+        color: $bg-color
+        span
+          span > a
+            text-decoration: none
+            transition: all .4s ease-in
+            color: $bg-color
+            &:hover
+              color: $accent-color
+          .breadcrumb_last
+            color: $main-color

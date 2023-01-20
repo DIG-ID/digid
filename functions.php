@@ -21,6 +21,8 @@ function digid_theme_setup() {
 
 	add_image_size( 'single-project-featured-image', 1080, 720, array( 'center', 'center' ) );
 
+	add_image_size( 'single-featured-image', 920, 420, array( 'center', 'center' ) );
+
 	add_image_size( 'card-post-thumbnail', 426, 314, array( 'center', 'center' ) );
 
 	add_image_size( 'card-project-thumbnail-portrait', 646, 733, array( 'center', 'center' ) );
@@ -49,9 +51,21 @@ function digid_theme_footer_widgets_init() {
 		),
 	);
 
-}
-add_action( 'widgets_init', 'digid_theme_footer_widgets_init' );
+	register_sidebar(
+		array(
+			'name'          => __( 'Main Sidebar', 'digid' ),
+			'id'            => 'sidebar-1',
+			'description'   => __( 'Widgets in this area will be shown on all posts.', 'digid' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
+}
+
+add_action( 'widgets_init', 'digid_theme_footer_widgets_init' );
 
 if ( ! function_exists( 'digid_get_font_face_styles' ) ) :
 

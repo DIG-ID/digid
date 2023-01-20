@@ -1,2 +1,85 @@
+.post-template-default
+  
+  .section-intro
+    padding-top: 200px
+    padding-bottom: 60px
+
+  .section-content
+    .post-content
+      margin-bottom: 100px
+      img
+        &:first-of-type
+          width: 100%
+          max-width: 100%
+          height: auto
+          object-fit: cover
+          margin-bottom: 40px
+      .post-title
+        font-family: $second-font
+        font-weight: 600
+        font-size: 26px
+        letter-spacing: 0.23039999999999997px
+        margin-bottom: 15px
+        color: $text-color
+
+      .related-categories
+        list-style-type: none
+        margin: 0
+        padding: 0
+        margin-bottom: 20px
+        display: flex
+        li
+          font-family: $main-font
+          font-weight: 300
+          font-size: 14px
+          letter-spacing: 0.36px
+          margin-right: 5px
+          color: $text-color
+          &:last-of-type
+            margin-right: 0
+      p
+        font-size: 16px
+        line-height: 30px
+        margin-bottom: 30px
+        color: $text-color
+        a
+          font-family: $main-font
+          font-weight: 300
+          font-size: 16px
+          text-decoration: none
+          line-height: 30px
+          margin-bottom: 30px
+          color: $main-color
+          &:hover
+            color: $accent-color
+    .post-sidebar
+      .widget_nav_menu
+        padding: 40px
+        box-shadow: 0px 3px 20px #0000000D
+        margin-bottom: 40px
+        background-color: #fff
+        .menu
+          list-style-type: none
+          padding: 0
+          margin: 0
+          .menu-item
+            padding-bottom: 20px
+            &:last-of-type
+              border-bottom: 1px solid $text-color
+            a
+              font-family: $second-font
+              font-weight: 300
+              font-size: 23.04px
+              line-height: 1
+              letter-spacing: 0.46079999999999993px
+              text-decoration: none
+              transition: all .3s ease-in
+              color: $main-color
+              &:hover
+                color: $accent-color
+
+
+  
+  
 @import "single-services"
 @import "single-projects"

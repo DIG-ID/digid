@@ -1,26 +1,22 @@
-<section class="section section-filter">
+<section class="section-filter">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<div class="button-group filter-button-group">
 					<button class="button is-checked" data-filter="*"><?php esc_html_e( 'All', 'digid' ); ?></button>
 					<?php
-					$args = array(
-						'post_type'   => 'services',
-						'post_status' => 'publish',
+					$a = array(
+						'taxonomy'   => 'category',
+						'hide_empty' => 0,
+						'exclude'    => array( 1 ),
 					);
-					$tquery = new WP_Query( $args );
-
-					if ( $tquery->have_posts() ) :
-						while ( $tquery->have_posts() ) :
-							$tquery->the_post();
-							$ptitle = get_the_title();
-							$pslug  = get_post_field( 'post_name', get_the_ID() );
-							echo '<button class="button" data-filter=".' . esc_attr( $pslug )  . '">' . esc_html( $ptitle ) . '</button>';
-						endwhile;
-						wp_reset_postdata();
-					endif;
-				?>
+					$c = get_terms( $a );
+					foreach ( $c as $c_id ) :
+						$cname = $c_id->name;
+						$cslug = $c_id->slug;
+						echo '<button class="button" data-filter=".' . esc_attr( $cslug )  . '">' . esc_html( $cname ) . '</button>';
+					endforeach;
+					?>
 				</div>
 			</div>
 		</div>

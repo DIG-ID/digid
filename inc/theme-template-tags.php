@@ -71,7 +71,6 @@ function theme_after_post_content() {
 
 add_action( 'after_post_content', 'theme_after_post_content' );
 
-
 /**
  * This function gets the current project related service.
  */
@@ -86,5 +85,20 @@ function digid_get_related_services() {
 		endforeach;
 		$rnames = esc_attr( implode( ' ', $rnames ) );
 		return $rnames;
+	endif;
+}
+
+/**
+ * This function gets the current post related categorie.
+ */
+function digid_get_related_categories() {
+	$c = get_the_category( get_the_id() );
+	if ( $c ) :
+		$cnames = array();
+		foreach ( $c as $c_id ) :
+			$cnames[] = $c_id->slug;
+		endforeach;
+		$cnames = esc_attr( implode( ' ', $cnames ) );
+		return $cnames;
 	endif;
 }

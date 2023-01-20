@@ -126,13 +126,21 @@
     &:hover
       h3
         color: $accent-color
-  &__tags
-    font-family: $main-font
-    font-size: 12px
-    letter-spacing: 0.36px
-    line-height: 30px
-    margin-bottom: 30px
-    color: #496063
+  .related-categories
+    display: flex
+    list-style-type: none
+    margin: 0
+    padding: 0
+    margin-bottom: 20px
+    li
+      font-family: $main-font
+      font-size: 12px
+      letter-spacing: 0.36px
+      line-height: 30px
+      margin-right: 5px
+      color: #496063
+      &:last-of-type
+        margin-right: 0
   p
     font-size: 16px
     line-height: 30px

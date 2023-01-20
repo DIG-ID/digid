@@ -1,4 +1,4 @@
-<section class="section section-filter">
+<section class="section-filter">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">

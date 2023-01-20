@@ -1,4 +1,4 @@
-<section class="section section-intro section-intro--dark">
+<section class="section-intro section-intro--dark">
 	<div class="container">
 		<div class="row align-items-center section__title--wrapper">
 			<div class="col-1">
