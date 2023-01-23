@@ -43,6 +43,7 @@
     margin-bottom: 60px
     color: $text-color
   .bg-logo
+    display: flex
     svg
       opacity: .16
       fill: $bg-color
@@ -57,9 +58,23 @@
     &--wrapper
       margin-bottom: 60px
 
-@include media-breakpoint-down(lg)
+@include media-breakpoint-down(xl)
   .section-hero
     &__title
       span
         &:nth-child(1)
           margin-left: 0
+
+  .section-form
+    .bg-logo
+      position: absolute
+      right: 0
+      display: flex
+      justify-content: flex-end
+      svg
+        max-width: 100%
+
+@include media-breakpoint-down(sm)
+  .section-hero
+    &__title
+      font-size: 68px
