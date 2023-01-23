@@ -75,7 +75,7 @@ add_action( 'after_post_content', 'theme_after_post_content' );
  * This function gets the current project related service.
  */
 function digid_get_related_services() {
-	if ( is_singular( 'projects' ) ) :
+	if ( is_archive( 'projects' ) ) :
 		$pod = pods( 'projects', get_the_id() );
 	else :
 		$pod = pods( 'case_studies', get_the_id() );
