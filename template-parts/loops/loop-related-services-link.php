@@ -1,5 +1,9 @@
 <?php
-$pod   = pods( 'projects', get_the_id() );
+if ( is_singular( 'projects' ) ) :
+	$pod = pods( 'projects', get_the_id() );
+else :
+	$pod = pods( 'case_studies', get_the_id() );
+endif;
 $rpods = $pod->field( 'related_services' );
 if ( ! empty( $rpods ) ) :
 	$rnames = array();
