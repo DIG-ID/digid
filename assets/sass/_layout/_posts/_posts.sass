@@ -53,7 +53,6 @@
           &:hover
             color: $accent-color
     .post-sidebar
-
       .menu,
       .related-services
         list-style-type: none
@@ -67,6 +66,7 @@
         li
           padding-bottom: 20px
           &:last-of-type
+            padding-bottom: 30px
             border-bottom: 1px solid $text-color
           a
             font-family: $second-font
@@ -80,8 +80,33 @@
             &:hover
               color: $accent-color
 
+.section-navigation
+  padding-top: 60px
+  padding-bottom: 60px
+  background-color: #DEE3E4
+  .previous-post,
+  .next-post
+    a
+      font-family: $second-font
+      font-weight: 300
+      font-size: 23.04px
+      letter-spacing: 0.2304px
+      text-decoration: none
+      transition: all .3s ease-in
+      color: $text-color
+      svg
+        transition: all .3s ease-in
+        fill: $main-color
+      &:hover
+        color: $accent-color
+        svg
+          fill: $accent-color
+  .previous-post
+    svg
+      margin-right: 10px
+  .next-post
+    svg
+      margin-left: 10px
 
-  
-  
 @import "single-services"
 @import "single-projects"

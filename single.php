@@ -7,6 +7,7 @@ get_header( 'light' );
 			the_post();
 			get_template_part( 'template-parts/posts/post/post', 'intro' );
 			get_template_part( 'template-parts/posts/post/post', 'content' );
+			get_template_part( 'template-parts/posts/post/post', 'navigation' );
 		endwhile;
 		do_action( 'after_post_content' );
 	endif;

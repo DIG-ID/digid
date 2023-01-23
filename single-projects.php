@@ -8,6 +8,7 @@ get_header( 'light' );
 			get_template_part( 'template-parts/posts/projects/project', 'intro' );
 			get_template_part( 'template-parts/posts/projects/project', 'featured-image' );
 			get_template_part( 'template-parts/posts/projects/project', 'content' );
+			get_template_part( 'template-parts/posts/projects/project', 'navigation' );
 		endwhile;
 		do_action( 'after_post_content' );
 	endif;
