@@ -5,12 +5,12 @@
 				<span class="section__title--line"></span>
 			</div>
 			<div class="col-11">
-				<h2 class="section__title">Services</h2>
+				<h2 class="section__title"><?php the_field( 'services_section_title' ); ?></h2>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12 col-lg-11 offset-lg-1">
-				<p class="section__subtitle">Insert title about services</p>
+				<p class="section__subtitle"><?php the_field( 'services_section_subtitle' ); ?></p>
 			</div>
 		</div>
 		<div class="row">
