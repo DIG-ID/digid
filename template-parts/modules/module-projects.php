@@ -1,4 +1,4 @@
-<section class="section section-projects">
+<section class="section-projects">
 	<div class="container">
 		<div class="row grid-projects">
 			<div class="grid-sizer col-12 col-md-6"></div>

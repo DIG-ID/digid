@@ -4,7 +4,7 @@
 			<div class="col-12">
 				<?php
 				if ( has_post_thumbnail() ) :
-					the_post_thumbnail( 'case-studie-banner' );
+					the_post_thumbnail( 'single-case-studie-featured-image' );
 				else :
 					echo '<img src="https://via.placeholder.com/416x304" alt="placeholder image"></figure>';
 				endif;

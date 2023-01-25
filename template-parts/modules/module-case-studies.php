@@ -1,4 +1,4 @@
-<section class="section section-case-studies">
+<section class="section-case-studies">
 	<div class="container">
 		<div class="row grid-projects">
 			<div class="grid-sizer col-12 col-md-6"></div>

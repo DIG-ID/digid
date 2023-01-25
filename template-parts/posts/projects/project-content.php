@@ -1,6 +1,6 @@
 <section class="section-content">
 	<div class="container">
-		<div class="row">
+		<div class="row justify-content-between">
 			<div class="col-12 col-lg-4">
 				<div class="project-details">
 					<h2><?php esc_html_e( 'Project scope', 'digid' ); ?></h2>
@@ -38,12 +38,12 @@
 					<?php the_content(); ?>
 				</div>
 			</div>
-			<div class="col-12 col-lg-8">
+			<div class="col-12 col-lg-7">
 				<?php
 				$images = get_field( 'project_gallery' );
 				if ( $images ) :
 					foreach ( $images as $image_id ) :
-						echo wp_get_attachment_image( $image_id, 'full' );
+						echo wp_get_attachment_image( $image_id, 'single-project-image' );
 					endforeach;
 				endif;
 				?>

@@ -19,9 +19,13 @@ function digid_theme_setup() {
 
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'single-project-featured-image', 1080, 720, array( 'center', 'center' ) );
+	add_image_size( 'single-case-studie-featured-image', 1320, 720, array( 'center', 'center' ) );
 
-	add_image_size( 'single-featured-image', 920, 420, array( 'center', 'center' ) );
+	add_image_size( 'single-project-featured-image', 1320, 720, array( 'center', 'center' ) );
+
+	add_image_size( 'single-project-image', 760, 9999, array( 'center', 'center' ) );
+
+	add_image_size( 'single-featured-image', 770, 420, array( 'center', 'center' ) );
 
 	add_image_size( 'card-post-thumbnail', 426, 314, array( 'center', 'center' ) );
 
