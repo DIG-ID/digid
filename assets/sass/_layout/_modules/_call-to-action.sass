@@ -22,3 +22,11 @@
     border-radius: 30px
     color: $bg-color
     background-color: $accent-color
+
+@include media-breakpoint-down(lg)
+  .section-call-to-action
+    .justify-content-between
+      flex-direction: column
+      .text-end
+        text-align: center !important
+        margin-top: 35px

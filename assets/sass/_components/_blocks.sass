@@ -44,3 +44,15 @@
         max-width: 100%
         height: auto
         object-fit: cover
+
+@include media-breakpoint-down(lg)
+  .section-blocks
+    .block
+      display: block
+      &__content
+        width: 100%
+        padding: 35px 25px
+        .offset-1
+          margin: 0
+      &__image
+        width: 100%

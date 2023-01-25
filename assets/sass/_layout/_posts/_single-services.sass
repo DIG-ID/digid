@@ -23,3 +23,13 @@
         font-size: 16px
         line-height: 30px
         color: $bg-color
+
+@include media-breakpoint-down(lg)
+  .services-template-default
+    .section-intro
+      height: auto
+      padding-top: 150px
+      &--dark
+        .section__subtitle
+          font-size: 37.78px
+          line-height: 44px
