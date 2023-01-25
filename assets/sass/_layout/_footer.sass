@@ -102,8 +102,14 @@
 
 @include media-breakpoint-down(lg)
   .main-footer
-    background: linear-gradient(to bottom, $dark-color 0%, $dark-color 67%, $main-color 67%, $main-color 100%)
+    background: linear-gradient(to bottom, $main-color 0%, $main-color 30%, $dark-color 30%, $dark-color 100%)
+    .footer-left
+      order: 2
+      .address
+        display: block
+    .footer-right
+      order: 1
 
 @include media-breakpoint-down(sm)
   .main-footer
-    background: linear-gradient(to bottom, $dark-color 0%, $dark-color 67%, $main-color 67%, $main-color 100%)
+    background: linear-gradient(to bottom, $main-color 0%, $main-color 30%, $dark-color 30%, $dark-color 100%)
