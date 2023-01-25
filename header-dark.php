@@ -24,7 +24,7 @@
 								'theme_location' => 'main',
 								'container'      => false,
 								'menu_class'     => 'navbar-nav__dark',
-								'items_wrap'     => '<ul id="%1$s" class="navbar-nav %2$s">%3$s</ul>',
+								'items_wrap'     => '<ul id="%1$s" class="navbar-nav align-items-center %2$s">%3$s</ul>',
 								'fallback_cb'    => '__return_false',
 								'detph'          => 2,
 								'walker'         => new digid_bs5_nav_walker(),
