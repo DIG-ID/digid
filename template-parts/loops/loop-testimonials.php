@@ -12,6 +12,7 @@ if ( $the_query->have_posts() ) :
 		?>
 		<div class="swiper-slide">
 			<blockquote class="testimonial-blockquote">
+				<div class="section__subtitle"><?php the_title(); ?></div>
 				<div class="testimonial-blockquote__content"><?php the_content(); ?></div>
 				<footer class="testimonial-blockquote__info"><span><?php the_field( 'client_name' ); ?></span> <br><?php the_field( 'position_company_name' ); ?></footer>
 			</blockquote>
