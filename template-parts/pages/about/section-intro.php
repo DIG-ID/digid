@@ -1,6 +1,6 @@
 <section class="section section-about-intro position-relative">
     <div class="container-fluid g-0 min-vh-100">
-        <div class="about__image-container position-absolute">
+        <div class="about__image-container d-flex position-absolute overflow-hidden justify-content-center">
             <?php 
             $header_image = get_field('header_image');
             if( $header_image ) {
