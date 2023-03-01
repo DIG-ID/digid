@@ -1,6 +1,6 @@
-<section class="section section-about-intro">
-    <div class="container-fluid g-0">
-        <div class="about__image-container">
+<section class="section section-about-intro position-relative">
+    <div class="container-fluid g-0 min-vh-100">
+        <div class="about__image-container position-absolute">
             <?php 
             $header_image = get_field('header_image');
             if( $header_image ) {
