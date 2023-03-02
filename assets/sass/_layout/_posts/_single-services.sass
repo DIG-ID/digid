@@ -40,6 +40,31 @@
         line-height: 30px
         color: $dark-color
 
+.services-template-service-newsletter
+  .services
+    &__overview
+      &-title
+        font-size: 20px
+        font-weight: 400
+        line-height: 24px
+        margin-bottom: 50px
+        color: $main-color
+      &-description
+        font-size: 14px
+        font-weight: 300
+        line-height: 30px
+        color: $dark-color
+        max-width: 80%
+      &-listItem
+        font-size: 14px
+        font-weight: 600
+        line-height: 16px
+        color: $dark-color
+        margin-bottom: 0
+        padding-bottom: 6px
+        &:not(:first-child)
+          padding-top: 6px
+
 
 @include media-breakpoint-down(lg)
   .services-template-default, .services-template-page-templates
@@ -50,3 +75,9 @@
         .section__subtitle
           font-size: 37.78px
           line-height: 44px
+
+  .services-template-service-newsletter
+    .services
+      &__overview
+        &-description
+          max-width: 100%
