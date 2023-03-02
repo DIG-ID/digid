@@ -28,7 +28,7 @@
             <div class="col-12 col-md-6 col-lg-3 px-0 mb-5">
             <?php 
             $image = get_sub_field('photo');
-            $size = 'full';
+            $size = 'team-photo-image';
             if( $image ) :
                 echo wp_get_attachment_image( $image, $size );
             else:
