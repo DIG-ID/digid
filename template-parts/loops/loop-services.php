@@ -3,6 +3,7 @@ $args = array(
 	'post_type'      => 'services',
 	'post_status'    => 'publish',
 	'posts_per_page' => 6,
+	'post_parent' => 0,
 );
 
 $the_query = new WP_Query( $args );
