@@ -65,6 +65,24 @@
         &:not(:first-child)
           padding-top: 6px
 
+.section
+  &-reporting
+    padding-bottom: 140px
+    background-color: $dark-color
+    &__title
+      font-size: 40px
+      font-weight: 400
+      letter-spacing: 0.9556px
+      line-height: 64px
+      color: $main-color
+      margin-bottom: 65px
+    &__text
+      font-size: 14px
+      font-weight: 300
+      line-height: 30px
+      color: $bg-color
+      max-width: 85%
+
 
 @include media-breakpoint-down(lg)
   .services-template-default, .services-template-page-templates
@@ -81,3 +99,8 @@
       &__overview
         &-description
           max-width: 100%
+
+  .section
+    &-reporting
+      &__text
+        max-width: 100%

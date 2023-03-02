@@ -8,6 +8,7 @@
 	do_action( 'before_main_content' );
 	get_template_part( 'template-parts/archives/services/newsletter-marketing/section', 'intro' );
     get_template_part( 'template-parts/archives/services/newsletter-marketing/services', 'overview' );
+    get_template_part( 'template-parts/archives/services/newsletter-marketing/reporting' );
     get_template_part( 'template-parts/modules/module', 'call-to-action' );
 	get_template_part( 'template-parts/modules/module', 'related-projects' );
 	do_action( 'after_main_content' );
