@@ -11,6 +11,7 @@
     if ( get_field('section_reporting_enable_section') ) :
         get_template_part( 'template-parts/archives/services/newsletter-marketing/reporting' );
     endif;
+    get_template_part( 'template-parts/archives/services/newsletter-marketing/tiers' );
     get_template_part( 'template-parts/modules/module', 'call-to-action' );
 	get_template_part( 'template-parts/modules/module', 'related-projects' );
 	do_action( 'after_main_content' );
