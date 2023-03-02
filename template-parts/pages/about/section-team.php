@@ -41,7 +41,6 @@
             endwhile;
         endif; 
         ?>
-            
         </div>
     </div>
 </section>
