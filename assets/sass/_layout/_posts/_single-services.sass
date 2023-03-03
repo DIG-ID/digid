@@ -66,9 +66,13 @@
           padding-top: 6px
 
 .section
+  &-services
+    &-overview
+      padding-bottom: 0
   &-reporting
     padding-bottom: 140px
     background-color: $dark-color
+    margin-top: 100px
     &__title
       font-size: 40px
       font-weight: 400
@@ -83,6 +87,7 @@
       color: $bg-color
       max-width: 85%
   &-tiers
+    padding-bottom: 200px
     &__title
       font-size: 40px
       font-weight: 400
@@ -90,6 +95,30 @@
       line-height: 64px
       color: $text-color
       margin-bottom: 65px
+    &__card-wrapper
+      max-width: 250px
+      background-color: #ffffff
+      position: relative
+      padding-bottom: 45px
+      box-shadow: 3px 3px 20px #eee
+    &__name
+      padding: 15px 30px
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: 0.9556px
+      text-transform: uppercase
+      color: $main-color
+      background-color: $dark-color
+    &__list
+      padding: 15px 30px
+      font-size: 14px
+      font-weight: 300
+      letter-spacing: 0.9556px
+      color: $dark-color
+    &__mailImg
+      position: absolute
+      margin-left: 30px
+      width: 120px
 
 
 @include media-breakpoint-down(lg)

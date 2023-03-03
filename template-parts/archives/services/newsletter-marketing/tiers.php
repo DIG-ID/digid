@@ -10,9 +10,11 @@
             if( have_rows('section_tiers_tiers_repeater') ):
                 while( have_rows('section_tiers_tiers_repeater') ) : the_row(); ?>
                   <div class="col-12 col-lg-4">
-                    <h3 class="section-tiers__name"><?php the_sub_field('name'); ?></h3>
-                    <p class="section-tiers__list"><?php the_sub_field('list'); ?></p>
-                    <img src="<?php echo wp_upload_dir()['url'] . '/mail.svg' ?>" alt="" title="" />
+                    <div class="section-tiers__card-wrapper">
+                        <h3 class="section-tiers__name"><?php the_sub_field('name'); ?></h3>
+                        <p class="section-tiers__list"><?php the_sub_field('list'); ?></p>
+                        <img class="section-tiers__mailImg" src="<?php echo wp_upload_dir()['url'] . '/mail.svg' ?>" alt="" title="" />
+                    </div>
                   </div>
                <?php endwhile;
             endif; ?>
