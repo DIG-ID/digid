@@ -119,6 +119,41 @@
       position: absolute
       margin-left: 30px
       width: 120px
+  &-websites
+    &__blocks
+      padding-bottom: 0
+    &__row
+      padding-bottom: 140px
+      &:nth-child(even)
+        flex-direction: row-reverse
+        .section-websites__image
+          margin: 50px auto 0 0
+      &:nth-child(odd)
+        .section-websites__image
+          margin: 50px 0 0 auto
+    &__title
+      font-size: 20px
+      font-weight: 400
+      line-height: 24px
+      margin-bottom: 40px
+      color: $main-color
+    &__description
+      font-size: 16px
+      line-height: 30px
+      max-width: 80%
+      padding-top: 45px
+    &__image
+      display: block
+    &__list
+      padding: 4px 0
+      margin-bottom: 0
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: 0.9556px
+      color: $dark-color
+        
+
+
 
 
 @include media-breakpoint-down(lg)
@@ -140,4 +175,7 @@
   .section
     &-reporting
       &__text
+        max-width: 100%
+    &-websites
+      &__description
         max-width: 100%
