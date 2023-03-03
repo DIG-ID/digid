@@ -6,7 +6,7 @@
 
  get_header( 'light' );
 	do_action( 'before_main_content' );
-	get_template_part( 'template-parts/archives/services/newsletter-marketing/section', 'intro' );
+	get_template_part( 'template-parts/archives/services/section', 'intro-child' );
     get_template_part( 'template-parts/archives/services/newsletter-marketing/services', 'overview' );
     if ( get_field('section_reporting_enable_section') ) :
         get_template_part( 'template-parts/archives/services/newsletter-marketing/reporting' );
