@@ -4,7 +4,7 @@
     align-items: center
     padding: 200px 0 150px
     background: $main-color
-    color: $text-color
+    color: $dark-color
     .wpcf7
         .wpcf7-form
             label
@@ -14,9 +14,81 @@
                 span:nth-child(2)
                     margin-bottom: 30px
     .section__subtitle
-        line-height: 44px
-        margin-bottom: 60px
-        color: $text-color
+        text-align: center
+        color: $dark-color
+        margin-bottom: 0
+    .st
+        &__col
+            margin-bottom: 65px
+        &__title
+            font-size: 20px
+            font-weight: 400
+            text-align: center
+            text-transform: uppercase
+            line-height: 24px
+            color: $dark-color
+            margin-bottom: 55px
+        &__custom
+            &-radio
+                [type="radio"]
+                    position: absolute
+                    left: -9999px
+                [type="radio"] + .wpcf7-list-item-label::before,
+                [type="radio"] + .wpcf7-list-item-label::after
+                    content: ""
+                    position: absolute
+                    box-sizing: border-box
+                    border-radius: 50%
+                [type="radio"] + .wpcf7-list-item-label::before
+                    top: 0
+                    left: 0
+                    width: 20px
+                    height: 20px
+                    border: 1px solid $dark-color
+                [type="radio"] + .wpcf7-list-item-label::after
+                    top: 0
+                    left: 0
+                    width: 20px
+                    height: 20px
+                    background: $dark-color
+                    transition: all 0.2s
+                [type="radio"]:not(:checked) + .wpcf7-list-item-label::after
+                    opacity: 0
+                    transform: scale(0.01)
+                [type="radio"]:checked + .wpcf7-list-item-label::after
+                    opacity: 1
+                    transform: scale(1)
+                [type="radio"]:focus + .wpcf7-list-item-label::before
+                    box-shadow: 0 0 0 0 $dark-color
+
+    .form
+        &__list
+            &-services
+                display: flex
+                flex-wrap: wrap
+                .wpcf7-list-item
+                    flex: 0 0 48%
+                    padding: 30px 0 0 12%
+                    &-label
+                        position: relative
+                        font-family: $main-font
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 20px
+                        color: $dark-color
+                        text-transform: none
+                        padding-left: 35px
+    .cf7mls
+        &_next
+            padding: 10px 52px
+            font-family: $main-font
+            font-size: 14px
+            text-transform: uppercase
+            font-weight: 400
+            border-radius: 20px
+        &-btns
+            display: flex
+            justify-content: center
 
 .section-st-kontakt
     .section
