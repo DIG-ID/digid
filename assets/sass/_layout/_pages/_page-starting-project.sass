@@ -60,6 +60,23 @@
                     transform: scale(1)
                 [type="radio"]:focus + .wpcf7-list-item-label::before
                     box-shadow: 0 0 0 0 $dark-color
+        &__control
+            &-wrap
+                width: 60%
+                margin: 0 auto 20px
+                .wpcf7-form-control
+                    border: 1px solid $dark-color !important
+                    border-radius: 25px
+                    background-color: $main-color
+                    font-family: $main-font
+                    font-size: 14px
+                    line-height: 16px
+                    text-transform: uppercase
+                    color: $dark-color
+                    outline: 0
+                    &::placeholder
+                        color: $dark-color
+                        opacity: 1
 
     .form
         &__list
@@ -78,6 +95,22 @@
                         color: $dark-color
                         text-transform: none
                         padding-left: 35px
+            &-projects
+                display: flex
+                flex-direction: column
+                .wpcf7-list-item
+                    padding: 15px 0
+                    margin-left: 62%
+                    transform: translateX(-62%)
+                    &-label
+                        position: relative
+                        font-family: $main-font
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 20px
+                        color: $dark-color
+                        text-transform: none
+                        padding-left: 35px
     .cf7mls
         &_next
             padding: 10px 52px
@@ -85,10 +118,20 @@
             font-size: 14px
             text-transform: uppercase
             font-weight: 400
+            border: 1px solid $dark-color
+            border-radius: 20px
+        &_back
+            padding: 10px 52px
+            font-family: $main-font
+            font-size: 14px
+            text-transform: uppercase
+            font-weight: 400
+            border: 1px solid $dark-color
             border-radius: 20px
         &-btns
             display: flex
             justify-content: center
+            gap: 25px
 
 .section-st-kontakt
     .section
