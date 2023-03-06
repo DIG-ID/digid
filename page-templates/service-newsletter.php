@@ -11,7 +11,9 @@
     if ( get_field('section_reporting_enable_section') ) :
         get_template_part( 'template-parts/archives/services/newsletter-marketing/reporting' );
     endif;
-    get_template_part( 'template-parts/archives/services/newsletter-marketing/tiers' );
+    if ( get_field('section_tiers_enable_section') ) :
+        get_template_part( 'template-parts/archives/services/newsletter-marketing/tiers' );
+    endif;
     get_template_part( 'template-parts/modules/module', 'call-to-action' );
     get_template_part( 'template-parts/modules/module', 'related-services' );
 	get_template_part( 'template-parts/modules/module', 'related-projects' );
