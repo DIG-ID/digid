@@ -59,8 +59,8 @@
                                         $categories = get_the_category( $rpod_id );
                                         $category = $categories[0]->name;
                                         $output .= $category .', ';
-                                        ?>
-                                        <p class="card-related-post__categ"><?php echo mb_strimwidth( $output, 0, 36, "..." );; ?></p>
+                                        $output1 = rtrim($output, ', '); ?>
+                                        <p class="card-related-post__categ"><?php echo mb_strimwidth( $output1, 0, 36, "..." );; ?></p>
                                         <p class="card-related-post__text"><?php echo mb_strimwidth( get_the_excerpt( $rpod_id ), 0, 56, "..." ); ?></p>
                                     </div>
                                 </div>
