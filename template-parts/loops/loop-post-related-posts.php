@@ -17,9 +17,14 @@
                             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $rpod_id ), 'card-related-post-thumbnail' ); ?>
                             <img src="<?php echo $image[0]; ?>" alt="" title="">
                         </div>
-                        <div class="col-8">
-                            <a href="<?php the_permalink( $rpod_id ); ?>" class="card-service__title"><h3><?php echo get_the_title( $rpod_id ); ?></h3></a>
-                            <p><?php echo get_the_excerpt( $rpod_id ); ?></p>
+                        <div class="col-8 py-3">
+                            <h3 class="card-related-post__title"><?php echo mb_strimwidth( get_the_title( $rpod_id ), 0, 26, "..." ); ?></h3>
+                            <?php 
+                            $categories = get_the_category( $rpod_id );
+                            $category = $categories[0]->name;
+                            $output .= $category .', '; ?>
+                            <p class="card-related-post__categ"><?php echo mb_strimwidth( $output, 0, 23, "..." );; ?></p>
+                            <p class="card-related-post__text"><?php echo mb_strimwidth( get_the_excerpt( $rpod_id ), 0, 56, "..." ); ?></p>
                         </div>
                     </div>
                 </div>
