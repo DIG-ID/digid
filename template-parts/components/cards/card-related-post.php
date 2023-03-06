@@ -33,11 +33,12 @@
             <?php else : ?>
             <?php
             $args = array(
-                'post_type'=> 'post',
-                'orderby'    => 'ID',
-                'post_status' => 'publish',
-                'order'    => 'DESC',
-                'posts_per_page' => -1
+                'post_type'      => 'post',
+                'orderby'        => 'ID',
+                'post_status'    => 'publish',
+                'order'          => 'DESC',
+                'posts_per_page' => 5,
+                'post__not_in'   => [get_the_ID()],
                 );
                 $result = new WP_Query( $args );
                 if ( $result-> have_posts() ) : ?>
