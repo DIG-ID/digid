@@ -19,6 +19,8 @@ function digid_theme_setup() {
 
 	add_theme_support( 'post-thumbnails' );
 
+	add_theme_support( 'yoast-seo-breadcrumbs' );
+
 	add_image_size( 'single-case-studie-featured-image', 1320, 720, array( 'center', 'center' ) );
 
 	add_image_size( 'single-project-featured-image', 1320, 720, array( 'center', 'center' ) );
@@ -212,7 +214,6 @@ add_filter( 'post_thumbnail_html', 'digid_wrap_post_thumbnail_in_figure', 10, 5 
 // Remove <p> from Contact Form 7
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
-
 /**
  * Add a Custom Title and Description to an Archive Page Using ACF Pro.
  */
@@ -243,6 +244,51 @@ function digid_create_option_page_for_cpt() {
 }
 
 add_action( 'acf/init', 'digid_create_option_page_for_cpt' );
+
+
+/**
+ * Add custom html a tag to the yoast breadcrumbs single page link.
+ */
+/*function digid_theme_custom_breadcrumb_link( $links ) {
+	//if ( is_plugin_active( 'wordpress-seo/wp-seo.php' ) ) :
+		// check if we are on a single page
+		if ( is_single() ) :
+			// loop through the links
+			foreach ( $links as $link ) :
+				// change the current page title to a h1 heading 
+				$a = get_the_title();
+				var_dump($a);
+				if ( $link['text'] == get_the_title() ) :
+					echo 'yo';
+					$link['url'] = false;
+					$link['text'] = '<h1 class="page-title">' . get_the_title() . '</h1>';
+				endif;
+			endforeach;
+		endif;
+		var_dump($links);
+		return $links;
+		
+	//endif;
+}
+
+add_filter( 'wpseo_breadcrumb_links', 'digid_theme_custom_breadcrumb_link' );
+
+/**
+ * Add custom html tags to the yoast breadcrumbs.
+ */
+/*
+function digid_theme_custom_breadcrumb_output( $output ) {
+	if ( is_plugin_active( 'wordpress-seo/wp-seo.php' ) ) :
+		return $output;
+	endif;
+}
+
+add_filter( 'wpseo_breadcrumb_output', 'digid_theme_custom_breadcrumb_output' );
+*/
+
+
+
+
 
 // Theme custom Walker.
 require get_template_directory() . '/inc/theme-custom-walker.php';
