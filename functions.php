@@ -31,9 +31,13 @@ function digid_theme_setup() {
 
 	add_image_size( 'card-post-thumbnail', 426, 314, array( 'center', 'center' ) );
 
+	add_image_size( 'card-related-post-thumbnail', 150, 150, array( 'center', 'center' ) );
+
 	add_image_size( 'card-project-thumbnail-portrait', 646, 733, array( 'center', 'center' ) );
 
 	add_image_size( 'card-project-thumbnail-landscape', 646, 422, array( 'center', 'center' ) );
+
+	add_image_size( 'team-photo-image', 249, 300, array( 'center', 'center' ) );
 
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 

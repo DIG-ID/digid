@@ -1,6 +1,6 @@
 <?php
-$prev_post = get_previous_post( 'category' );
-$next_post = get_next_post( 'category' );
+$prev_post = get_previous_post();
+$next_post = get_next_post();
 
 if ( ! empty( $prev_post ) || ! empty( $next_post ) ) :
 	?>

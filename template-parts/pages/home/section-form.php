@@ -1,5 +1,13 @@
 <section class="section section-form">
 	<div class="container">
+		<div div class="row align-items-center section__title--wrapper">
+			<div class="col-1">
+				<span class="section__title--line"></span>
+			</div>
+			<div class="col-11">
+				<h2 class="section__title"><?php echo esc_html( 'Contact Us', 'digid' ); ?></h2>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-12 col-lg-12">
 				<h2 class="section__subtitle"><?php the_field( 'form_section_title' ); ?></h2>

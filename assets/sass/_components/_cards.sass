@@ -183,3 +183,39 @@
       color: $accent-color
       svg
         fill: $accent-color
+
+.card-related
+  &-post
+    margin-bottom: 30px
+    &__content
+      background-color: #fff
+      box-shadow: 0px 3px 20px rgb(0 0 0 / 5%)
+      img
+        width: 100%
+    &__title
+      font-family: $second-font
+      font-size: 19px
+      font-weight: 600
+      letter-spacing: 0.1px
+      margin-bottom: 10px
+      transition: all .3s ease-in
+      color: $text-color
+    &__categ
+      font-family: $main-font
+      font-size: 12px
+      font-weight: 400
+      letter-spacing: 0.3px
+      margin-bottom: 20px
+      color: $main-color
+    &__text
+      font-family: $main-font
+      font-size: 12px
+      font-weight: 400
+      letter-spacing: 0.3px
+      margin-bottom: 0px
+      color: $text-color
+    &__link
+      text-decoration: none
+      &:hover
+        .card-related-post__title
+          color: $main-color

@@ -31,9 +31,16 @@
     line-height: 30px
     color: $text-color
     p
+      font-size: 14px
+      line-height: 30px
+      color: $text-color
+    &-contact, &-team
+      font-family: $main-font
+      font-weight: 300
       font-size: 16px
       line-height: 30px
       color: $text-color
+      padding-right: 20%
   &__btn
     font-family: $second-font
     font-weight: 300
@@ -43,6 +50,9 @@
     text-decoration: none
     transition: all .3s ease-in
     color: $text-color
+    &-blocks
+      display: inline-block
+      margin-top: 50px
     svg
       margin-left: 5px
       transition: all .3s ease-in
@@ -59,3 +69,9 @@
     &__title--wrapper
       .text-end
         width: 100%
+    &__description
+      &-contact
+        padding-right: 0
+    &__btn
+      &-blocks
+        margin-top: 0

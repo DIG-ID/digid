@@ -12,7 +12,10 @@
 				?>
 			</div>
 			<sidebar class="col-12 col-lg-4 post-sidebar">
+				<p class="post-sidebar__title"><?php echo esc_html( 'Related services', 'digid' ) ?></p>
 				<?php get_template_part( 'template-parts/loops/loop', 'post-related-services' ); ?>
+				<p class="post-sidebar__title"><?php echo esc_html( 'Related posts', 'digid' ) ?></p>
+				<?php get_template_part( 'template-parts/loops/loop', 'post-related-posts' ); ?>
 				<?php
 				if ( is_active_sidebar( 'sidebar-1' ) ) :
 					dynamic_sidebar( 'sidebar-1' );
