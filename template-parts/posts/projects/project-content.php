@@ -1,7 +1,7 @@
 <section class="section-content">
 	<div class="container">
 		<div class="row justify-content-between">
-			<div class="col-12 col-lg-4">
+			<div class="col-12 col-lg-4 sticky-content">
 				<div class="project-details">
 					<h2><?php esc_html_e( 'Project scope', 'digid' ); ?></h2>
 					<?php
