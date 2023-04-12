@@ -26,7 +26,9 @@
   min-height: 100vh
   background: $main-color
   //background: linear-gradient(180deg, $main-color 1%, $bg-color 90%)
-  background: linear-gradient(0deg, #0cc 0%, #12232b 100%)
+  background: linear-gradient(180deg, rgba(18,35,43,1) 0%, rgba(0,204,204,1) 50%, rgba(248,248,248,1) 100%)
+  &__row
+    padding: 150px 0 100px
   &__title
     font-size: 72px
     font-weight: bold
@@ -36,6 +38,9 @@
       &:nth-child(1)
         color: $bg-color
         margin-left: 30%
+  .section__title, .section__subtitle, .section__description, .section__description > p, .section__btn
+    color: $dark-color
+  
 
 
 .section-form
