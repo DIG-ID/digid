@@ -73,6 +73,7 @@
   &:hover
     figure
       &::after
+        visibility: hidden
         background-image: linear-gradient(0,rgba(18,35,43,.85),rgba(18,35,43,.70))
         filter: contrast(1.5)
         content: ""
@@ -134,7 +135,7 @@
 
 .card-project:hover
   .card-project__hover-title
-    visibility: visible
+    visibility: hidden
     opacity: 1
     color: $main-color
 
