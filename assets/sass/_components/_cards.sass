@@ -4,16 +4,22 @@
     padding: 50px 40px 40px
     background-color: #fff
     box-shadow: 0px 3px 20px #0000000D
-    transition: background-color 0.3s ease
+    transition: background-color 0.3s ease-in
     &-link
       text-decoration: none
       &:hover
         .card-service__content
           background-color: $main-color
+          p
+            color: $dark-color
+          hr
+            border-top-color: $dark-color
+            opacity: 0.8
           .card-service__title
             h3
               color: $bg-color
           .card-service__btn
+            color: $dark-color
             svg
               fill: $dark-color
   &__title
@@ -30,7 +36,7 @@
     font-size: 14px
     line-height: 25px
     margin-bottom: 40px
-    color: $dark-color
+    color: #496063
     // Addition lines for 4 line or multiline ellipsis
     text-overflow: ellipsis
     overflow: hidden
@@ -39,9 +45,11 @@
     -webkit-box-orient: vertical
     white-space: normal
   hr
+    transition: all 0.3s ease-in
     border-top-width: 2px
-    border-top-color: $dark-color
+    border-top-color: #707070
     margin-bottom: 20px
+    opacity: 0.6
   &__btn
     display: flex
     justify-content: space-between
@@ -52,7 +60,7 @@
     letter-spacing: 0.38px
     text-decoration: none
     transition: all .3s ease-in
-    color: $dark-color
+    color: $text-color
     svg
       margin-left: 5px
       transition: all .3s ease-in
