@@ -4,6 +4,18 @@
     padding: 50px 40px 40px
     background-color: #fff
     box-shadow: 0px 3px 20px #0000000D
+    transition: background-color 0.3s ease
+    &-link
+      text-decoration: none
+      &:hover
+        .card-service__content
+          background-color: $main-color
+          .card-service__title
+            h3
+              color: $bg-color
+          .card-service__btn
+            svg
+              fill: $dark-color
   &__title
     text-decoration: none
     h3
@@ -14,9 +26,6 @@
       margin-bottom: 40px
       transition: all .3s ease-in
       color: $main-color
-    &:hover
-      h3
-        color: $accent-color
   p
     font-size: 14px
     line-height: 25px
@@ -48,10 +57,6 @@
       margin-left: 5px
       transition: all .3s ease-in
       fill: $main-color
-    &:hover
-      color: $accent-color
-      svg
-        fill: $accent-color
 
 .card-project
   margin-bottom: 40px
