@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12 col-lg-5 offset-lg-1">
+			<div class="col-12 col-lg-5 offset-lg-1 position-relative">
 				<p class="section__subtitle"><?php the_field( 'intro_section_subtitle' ); ?></p>
 				<div class="section__description">
 					<?php the_field( 'intro_section_description' ); ?>
@@ -32,7 +32,7 @@
 				if ( $image ) :
 					echo wp_get_attachment_image( $image, 'full' );
 				else :
-					echo '<img src="https://via.placeholder.com/435" alt="">';
+					echo '<img src="https://via.placeholder.com/405x500" alt="">';
 				endif;
 				?>
 			</div>
