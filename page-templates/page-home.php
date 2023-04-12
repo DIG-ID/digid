@@ -3,7 +3,7 @@
  * Template Name: Home Page Template
  */
 
-get_header();
+get_header('dark');
 	do_action( 'before_main_content' );
 	get_template_part( 'template-parts/pages/home/section', 'hero' );
 	get_template_part( 'template-parts/pages/home/section', 'intro' );
