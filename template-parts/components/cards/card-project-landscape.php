@@ -7,6 +7,7 @@
 		echo '<a class="position-relative" href="' . esc_url( get_the_permalink() ) . '"><figure><img src="https://via.placeholder.com/646x422" alt="placeholder image"></figure></a>';
 	endif;
 	?>
+	<div class="card-project__hover-title"><?php the_title( '<h3>', '</h3> ' ); ?></div>
 	<div class="card-project__content">
 		<a href="<?php the_permalink(); ?>" class="card-project__title"><?php the_title( '<h3>', '</h3> ' ); ?></a>
 		<?php get_template_part( 'template-parts/loops/loop', 'related-services' ); ?>

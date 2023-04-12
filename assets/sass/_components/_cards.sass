@@ -91,7 +91,15 @@
     &:hover
       img
         transform: scale(1.1)
-
+  &__hover-title
+    visibility: hidden
+    opacity: 0
+    transition: all .3s ease-in
+    position: absolute
+    top: 45%
+    left: 50%
+    transform: translate(-50%, -50%)
+    color: $main-color
   &__title
     text-decoration: none
     h3
@@ -120,6 +128,9 @@
         margin-right: 5px
         color: #496063
 
+.card-project a:hover + .card-project__hover-title
+  visibility: visible
+  opacity: 1
 
 .card-post
   margin-bottom: 40px
