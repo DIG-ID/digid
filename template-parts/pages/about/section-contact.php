@@ -9,8 +9,8 @@
 			</div>
 		</div>
         <div class="row">
-            <div class="col-12 col-lg-6">
-                <p class="section__subtitle"><?php the_field('basel_title_field') ?></p>
+            <div class="col-12 col-lg-6 mb-5">
+                <p class="section__subtitle mb-3"><?php the_field('basel_title_field') ?></p>
                 <?php 
                 $basel_image = get_field('basel_image');
                 if ( $basel_image ) : 
@@ -18,7 +18,7 @@
                 else : 
                     echo '<img src="https://via.placeholder.com/530x340" alt="">';
                 endif; ?>
-                <p class="section__description-contact fixed-height mb-5"><?php the_field('basel_description') ?></p>
+                <p class="section__description-contact fixed-height mt-2 mb-5"><?php the_field('basel_description') ?></p>
                 <div class="align-items-center d-flex mb-2">
                     <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_email.svg" alt="" title="" /></div>
                     <p class="section__description-contact mb-0"><?php the_field('basel_email'); ?></p>
@@ -32,8 +32,8 @@
                     <p class="section__description-contact mb-0"><?php the_field('basel_address'); ?></p>
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <p class="section__subtitle"><?php the_field('porto_title_field') ?></p>
+            <div class="col-12 col-lg-6 mb-5">
+                <p class="section__subtitle mb-3"><?php the_field('porto_title_field') ?></p>
                 <?php 
                 $porto_image = get_field('porto_image');
                 if ( $porto_image ) : 
@@ -41,7 +41,7 @@
                 else : 
                     echo '<img src="https://via.placeholder.com/530x340" alt="">';
                 endif; ?>
-                <p class="section__description-contact fixed-height mb-5"><?php the_field('porto_description') ?></p>
+                <p class="section__description-contact fixed-height mt-2 mb-5"><?php the_field('porto_description') ?></p>
                 <div class="align-items-center d-flex mb-2">
                     <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_email.svg" alt="" title="" /></div>
                     <p class="section__description-contact mb-0"><?php the_field('porto_email'); ?></p>
