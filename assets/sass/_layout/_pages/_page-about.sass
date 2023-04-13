@@ -2,6 +2,16 @@
   padding: 0
   overflow: hidden
 
+.section-st-kontakt
+    background-color: $dark-color
+    .section
+        &__subtitle, &__description-contact
+            color: $bg-color
+        &__title--line
+            background-color: $main-color
+    .contact-icon__col
+        width: 20px
+
 .about
     &__header
         &-image
@@ -35,3 +45,10 @@
                 font-size: 16px
                 line-height: 30px
                 color: $bg-color
+
+@include media-breakpoint-up(lg)
+    .section-st-kontakt
+        .section
+            &__description-contact.fixed-height
+                max-height: 60px
+                min-height: 60px

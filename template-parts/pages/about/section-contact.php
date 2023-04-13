@@ -11,11 +11,49 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="section__subtitle"><?php the_field('basel_title_field') ?></p>
-                <p class="section__description-contact"><?php the_field('basel_description') ?></p>
+                <?php 
+                $basel_image = get_field('basel_image');
+                if ( $basel_image ) : 
+                    echo wp_get_attachment_image( $basel_image, 'contact-image-thumbnail' );
+                else : 
+                    echo '<img src="https://via.placeholder.com/530x340" alt="">';
+                endif; ?>
+                <p class="section__description-contact fixed-height mb-5"><?php the_field('basel_description') ?></p>
+                <div class="align-items-center d-flex mb-2">
+                    <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_email.svg" alt="" title="" /></div>
+                    <p class="section__description-contact mb-0"><?php the_field('basel_email'); ?></p>
+                </div>
+                <div class="align-items-center d-flex mb-2">
+                    <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_phone.svg" alt="" title="" /></div>
+                    <p class="section__description-contact mb-0"><?php the_field('basel_phone'); ?></p>
+                </div>
+                <div class="align-items-center d-flex">
+                    <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_location.svg" alt="" title="" /></div>
+                    <p class="section__description-contact mb-0"><?php the_field('basel_address'); ?></p>
+                </div>
             </div>
             <div class="col-12 col-lg-6">
                 <p class="section__subtitle"><?php the_field('porto_title_field') ?></p>
-                <p class="section__description-contact"><?php the_field('porto_description') ?></p>
+                <?php 
+                $porto_image = get_field('porto_image');
+                if ( $porto_image ) : 
+                    echo wp_get_attachment_image( $porto_image, 'contact-image-thumbnail' );
+                else : 
+                    echo '<img src="https://via.placeholder.com/530x340" alt="">';
+                endif; ?>
+                <p class="section__description-contact fixed-height mb-5"><?php the_field('porto_description') ?></p>
+                <div class="align-items-center d-flex mb-2">
+                    <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_email.svg" alt="" title="" /></div>
+                    <p class="section__description-contact mb-0"><?php the_field('porto_email'); ?></p>
+                </div>
+                <div class="align-items-center d-flex mb-2">
+                    <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_phone.svg" alt="" title="" /></div>
+                    <p class="section__description-contact mb-0"><?php the_field('porto_phone'); ?></p>
+                </div>
+                <div class="align-items-center d-flex">
+                    <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_location.svg" alt="" title="" /></div>
+                    <p class="section__description-contact mb-0"><?php the_field('porto_address'); ?></p>
+                </div>
             </div>
         </div>
     </div>

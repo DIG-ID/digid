@@ -39,6 +39,8 @@ function digid_theme_setup() {
 
 	add_image_size( 'team-photo-image', 249, 300, array( 'center', 'center' ) );
 
+	add_image_size( 'contact-image-thumbnail', 530, 340, array( 'center', 'center' ) );
+
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
 }
