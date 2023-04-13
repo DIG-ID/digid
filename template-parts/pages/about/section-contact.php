@@ -21,11 +21,11 @@
                 <p class="section__description-contact fixed-height mt-2 mb-5"><?php the_field('basel_description') ?></p>
                 <div class="align-items-center d-flex mb-2">
                     <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_email.svg" alt="" title="" /></div>
-                    <p class="section__description-contact mb-0"><?php the_field('basel_email'); ?></p>
+                    <a href="mailto:<?php the_field('basel_email'); ?>" class="section__description-contact text-decoration-none mb-0"><?php the_field('basel_email'); ?></a>
                 </div>
                 <div class="align-items-center d-flex mb-2">
                     <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_phone.svg" alt="" title="" /></div>
-                    <p class="section__description-contact mb-0"><?php the_field('basel_phone'); ?></p>
+                    <a href="tel:<?php the_field('basel_phone'); ?>" class="section__description-contact text-decoration-none mb-0"><?php the_field('basel_phone'); ?></a>
                 </div>
                 <div class="align-items-center d-flex">
                     <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_location.svg" alt="" title="" /></div>
@@ -44,11 +44,11 @@
                 <p class="section__description-contact fixed-height mt-2 mb-5"><?php the_field('porto_description') ?></p>
                 <div class="align-items-center d-flex mb-2">
                     <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_email.svg" alt="" title="" /></div>
-                    <p class="section__description-contact mb-0"><?php the_field('porto_email'); ?></p>
+                    <a href="mailto:<?php the_field('porto_email'); ?>" class="section__description-contact text-decoration-none mb-0"><?php the_field('porto_email'); ?></a>
                 </div>
                 <div class="align-items-center d-flex mb-2">
                     <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_phone.svg" alt="" title="" /></div>
-                    <p class="section__description-contact mb-0"><?php the_field('porto_phone'); ?></p>
+                    <a href="tel:<?php the_field('porto_phone'); ?>"p class="section__description-contact text-decoration-none mb-0"><?php the_field('porto_phone'); ?></a>
                 </div>
                 <div class="align-items-center d-flex">
                     <div class="contact-icon__col justify-content-center d-flex me-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/ic_location.svg" alt="" title="" /></div>
