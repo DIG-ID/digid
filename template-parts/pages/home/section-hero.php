@@ -30,7 +30,7 @@
 				<?php
 				$image = get_field( 'intro_section_image' );
 				if ( $image ) :
-					echo wp_get_attachment_image( $image, 'full' );
+					echo wp_get_attachment_image( $image, 'home-intro-image' );
 				else :
 					echo '<img src="https://via.placeholder.com/405x500" alt="">';
 				endif;

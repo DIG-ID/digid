@@ -21,6 +21,8 @@ function digid_theme_setup() {
 
 	add_theme_support( 'yoast-seo-breadcrumbs' );
 
+	add_image_size( 'home-intro-image', 405, 500, array( 'center', 'center' ) );
+
 	add_image_size( 'single-case-studie-featured-image', 1320, 720, array( 'center', 'center' ) );
 
 	add_image_size( 'single-project-featured-image', 1320, 720, array( 'center', 'center' ) );
