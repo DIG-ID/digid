@@ -11,6 +11,7 @@ $(function() {
         columnWidth: '.grid-sizer'
       }
     });
+
     // filter items on button click
     $('.filter-button-group').on( 'click', 'button', function() {
 
