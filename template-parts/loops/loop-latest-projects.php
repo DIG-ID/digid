@@ -4,7 +4,7 @@ $args = array(
 	'post_status'    => 'publish',
 	'posts_per_page' => 5,
 	'orderby'        => 'ID',
-    'order'          => 'ASC',
+    'order'          => 'DESC',
 );
 
 $the_query = new WP_Query( $args );

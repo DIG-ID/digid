@@ -5,7 +5,7 @@ $rpods = $pod->field(
 		'name'     => 'related_projects',
 		'output'   => 'objects',
 		'orderby'  => 'ID',
-    	'order'    => 'ASC',
+    	'order'    => 'DESC',
 	),
 );
 if ( ! empty( $rpods ) ) :
