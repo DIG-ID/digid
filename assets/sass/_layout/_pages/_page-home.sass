@@ -37,7 +37,9 @@
     span
       &:nth-child(1)
         color: $bg-color
-        margin-left: 30%
+        margin-left: 50%
+        transform: translateX(-60%)
+        display: inline-block
   .section__title, .section__subtitle, .section__description, .section__description > p, .section__btn
     color: $dark-color
   .section__btn
@@ -76,9 +78,13 @@
 @include media-breakpoint-down(xl)
   .section-hero
     &__title
+      font-size: 54px
+      line-height: 60px
       span
         &:nth-child(1)
           margin-left: 0
+          margin-right: 10%
+          float: right
 
   .section-form
     .bg-logo
@@ -92,4 +98,8 @@
 @include media-breakpoint-down(sm)
   .section-hero
     &__title
-      font-size: 68px
+      font-size: 34px
+      line-height: 40px
+      span
+        &:nth-child(1)
+          margin-right: -10%
