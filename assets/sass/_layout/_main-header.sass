@@ -49,16 +49,15 @@
     background-color: transparent
     border: 0
     padding: 0 10px
-    &:hover
-      background-color: transparent
-      li a
-        color: $bg-color
     li
       a
         font-family: $main-font
         font-size: 16px
         font-weight: 400
         color: $main-color
+        &:hover
+          background-color: transparent
+          color: $bg-color
 
 @include media-breakpoint-up(lg)
   #main-header
