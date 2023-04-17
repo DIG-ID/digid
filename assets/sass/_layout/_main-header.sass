@@ -135,13 +135,19 @@
     display: none
   .wpml-ls-legacy-list-horizontal
     position: absolute
-    top: 365px
+    bottom: 34%
     left: 50%
     transform: translateX(-50%)
     li
       a
-        font-size: 28px
         color: $main-color
+        padding: 0 10px
+        span
+          font-size: 28px
+          color: $main-color
+          font-weight: 300
+        &:nth-child(1)
+          border: 1px solid
 
   .animated-icon2
     width: 30px
