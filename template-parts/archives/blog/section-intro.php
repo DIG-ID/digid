@@ -14,5 +14,18 @@
 				</h1>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-12 col-lg-10 offset-lg-1">
+				<?php
+				$page_blog = get_posts([
+					'name'      => 'blog',
+					'post_type' => 'page'
+				]);
+				if ( $page_blog )
+				{ ?>
+					<h2 class="section__subtitle"><?php echo $page_blog[0]->post_content; ?></h2>
+				<?php } ?>
+			</div>
+		</div>
 	</div>
 </section>
