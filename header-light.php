@@ -17,7 +17,7 @@
 			<nav class="navbar navbar__light fixed-top navbar-expand-lg" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'digid' ); ?>">
 				<div class="container">
 					<?php get_template_part( 'template-parts/main', 'header' ); ?>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
 						<?php
 						wp_nav_menu(
 							array(
