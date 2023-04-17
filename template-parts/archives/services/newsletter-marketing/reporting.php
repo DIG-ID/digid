@@ -9,7 +9,7 @@
             <div class="col-12 col-lg-6">
                 <p class="section-reporting__text"><?php the_field('section_reporting_reporting_group_text_content'); ?></p>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 text-center text-lg-start mt-4 mt-lg-0">
             <?php 
             $image = get_field('section_reporting_reporting_group_illustration');
             $size = 'full';

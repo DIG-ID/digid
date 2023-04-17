@@ -1,10 +1,10 @@
 <section class="section section-intro section-intro--light">
 	<div class="container">
 		<div class="row align-items-center section__title--wrapper">
-			<div class="col-3 col-sm-1">
+			<div class="col-3 col-md-1 d-none d-md-block">
 				<span class="section__title--line"></span>
 			</div>
-			<div class="col-9 col-sm-11">
+			<div class="col-12 col-md-11">
 				<h2 class="section__title">
 					<?php
 					if ( function_exists( 'yoast_breadcrumb' ) ) :

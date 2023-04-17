@@ -159,7 +159,8 @@
     .section-intro
       height: auto
       padding-top: 150px
-      &--dark
+      &--dark,
+      &--light
         .section__subtitle
           font-size: 28px
           line-height: 32px !important
@@ -176,8 +177,32 @@
 
   .section
     &-reporting
+      padding-bottom: 100px
+      &__title
+        font-size: 24px
+        line-height: 28px !important
+        letter-spacing: 0.23px
+        margin-bottom: 40px
       &__text
         max-width: 100%
     &-websites
       &__description
         max-width: 100%
+
+  .section
+    &-tiers
+      padding-bottom: 100px
+      &__title
+        font-size: 26px
+      &__card-wrapper
+        width: 100%
+        max-width: 100%
+        margin-bottom: 80px
+    &-websites
+      &__row
+        padding-bottom: 90px
+        .section-websites__image
+          &:nth-child(odd),
+          &:nth-child(even)
+            margin: 0 auto
+            margin-bottom: 40px
