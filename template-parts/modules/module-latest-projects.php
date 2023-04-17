@@ -12,10 +12,10 @@ endif;
 <section class="section section-projects">
 	<div class="container">
 		<div div class="row align-items-center section__title--wrapper">
-			<div class="col-1">
+			<div class="col-3 col-sm-1">
 				<span class="section__title--line"></span>
 			</div>
-			<div class="col-11">
+			<div class="col-9 col-sm-11">
 				<h2 class="section__title"><?php echo $stitle; ?></h2>
 			</div>
 		</div>

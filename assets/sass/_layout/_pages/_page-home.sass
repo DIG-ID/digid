@@ -95,6 +95,15 @@
       svg
         max-width: 100%
 
+@include media-breakpoint-down(lg)
+  .section-hero
+    .section__btn
+      display: inline-block
+      margin-top: 40px
+      position: relative
+      svg
+        fill: $dark-color
+
 @include media-breakpoint-down(sm)
   .section-hero
     &__title
