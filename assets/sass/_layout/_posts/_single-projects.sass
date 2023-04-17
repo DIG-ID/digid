@@ -33,17 +33,6 @@
   .section-content
     padding-top: 60px
     padding-bottom: 100px
-    .sticky-content
-      position: -webkit-sticky
-      position: -moz-sticky
-      position: -ms-sticky
-      position: -o-sticky
-      position: sticky
-      height: 1000px
-      background: transparent
-      top: 100px
-      bottom: auto
-      z-index: 8
     .project-details
       h2
         font-family: $second-font
@@ -118,6 +107,21 @@
       &:last-of-type
         margin-bottom: 0
         
+@include media-breakpoint-up(lg)
+  .projects-template-default
+    .section-content
+      .sticky-content
+        position: -webkit-sticky
+        position: -moz-sticky
+        position: -ms-sticky
+        position: -o-sticky
+        position: sticky
+        height: 1000px
+        background: transparent
+        top: 100px
+        bottom: auto
+        z-index: 8
+
 @include media-breakpoint-down(lg)
   .projects-template-default
     .section__subtitle
