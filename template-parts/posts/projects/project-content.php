@@ -3,34 +3,33 @@
 		<div class="row justify-content-between">
 			<div class="col-12 col-lg-4 sticky-content">
 				<div class="project-details">
-					<h2><?php esc_html_e( 'Project scope', 'digid' ); ?></h2>
+					<h2><?php esc_html_e( 'Projektumfang', 'digid' ); ?></h2>
 					<?php
 					$client = get_field( 'project_scope_client' );
 					if ( $client ) :
-						echo '<h3>' . esc_html_e( 'Client', 'digid' ) . '</h3>';
+						echo '<h3>' . esc_html_e( 'Kunde', 'digid' ) . '</h3>';
 						echo '<p>' . $client . '</p>';
 					endif;
 
 					$website = get_field( 'project_scope_website' );
 					if ( $website ) :
-						echo '<h3>' . esc_html_e( 'Website', 'digid' ) . '</h3>';
+						echo '<h3>' . esc_html_e( 'Webseite', 'digid' ) . '</h3>';
 						echo '<p><a href="' . esc_url( $website ) . '" target="_blank">' . $website . '</a></p>';
 					endif;
 
 					$sector = get_field( 'project_scope_sector' );
 					if ( $sector ) :
-						echo '<h3>' . esc_html_e( 'Sector', 'digid' ) . '</h3>';
+						echo '<h3>' . esc_html_e( 'Branche', 'digid' ) . '</h3>';
 						echo '<p>' . $sector . '</p>';
 					endif;
 
 					$date = get_field( 'project_scope_date' );
 					if ( $date ) :
-						echo '<h3>' . esc_html_e( 'Date', 'digid' ) . '</h3>';
+						echo '<h3>' . esc_html_e( 'Datum', 'digid' ) . '</h3>';
 						echo '<p>' . $date . '</p>';
 					endif;
 					?>
-
-					<h3><?php esc_html_e( 'Services', 'digid' ); ?></h3>
+					<h3><?php esc_html_e( 'Dienstleistungen', 'digid' ); ?></h3>
 					<?php get_template_part( 'template-parts/loops/loop', 'related-services-link' ); ?>
 					<span class="line"></span>
 				</div>
