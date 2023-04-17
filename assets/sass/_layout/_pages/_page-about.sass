@@ -68,3 +68,11 @@
             &__description-contact.fixed-height
                 max-height: 60px
                 min-height: 60px
+
+@include media-breakpoint-down(lg)
+    .about__container
+        padding-right: calc(var(--bs-gutter-x) * 0.5)
+        padding-left: calc(var(--bs-gutter-x) * 0.5)
+        .section__subtitle
+            font-size: 28px
+            line-height: 32px!important
