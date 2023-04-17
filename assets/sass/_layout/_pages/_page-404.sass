@@ -5,7 +5,31 @@
     .section__subtitle
       line-height: 1
       span
+        display: inline-block
         font-size: 99.08px
         //font-weight: 600
         line-height: 1
         color: $main-color
+    .section__btn
+      display: inline-block
+      text-align: center
+      margin: 0px auto
+    .img-404
+      svg
+        max-width: 100%
+        width: 100%
+        height: auto
+        object-fit: cover
+
+@include media-breakpoint-down(lg)
+  .error404
+    .section-not-found
+      .section__subtitle
+        font-size: 26px
+        line-height: 42px
+        margin-bottom: 20px
+        span
+          line-height: 80px
+      .img-404
+        svg
+          max-width: 60%
