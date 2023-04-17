@@ -9,5 +9,5 @@
 	<a href="<?php the_permalink(); ?>" class="card-post__title"><?php the_title( '<h3>', '</h3> '); ?></a>
 	<?php get_template_part( 'template-parts/loops/loop', 'related-categories' ); ?>
 	<?php the_excerpt(); ?>
-	<a href="<?php the_permalink(); ?>" class="card-post__btn"><?php esc_html_e( 'Read more', 'digid' ); ?></a>
+	<a href="<?php the_permalink(); ?>" class="card-post__btn"><?php esc_html_e( 'Mehr erfahren', 'digid' ); ?></a>
 </article>

@@ -4,7 +4,7 @@
 			<div class="row justify-content-between">
 				<div class="col-12 col-md-12 col-lg-5 col-xl-5 footer-left d-flex flex-column">
 					<?php get_template_part( 'template-parts/main-logo' ); ?>
-					<h4 class="footer-title">Where can you find us</h4>
+					<h4 class="footer-title"><?php echo esc_html_e('Besuchen Sie uns', 'digid'); ?></h4>
 					<div class="address">
 						<div class="address__ch">
 							<p class="address__title">Switzerland</p>
@@ -17,7 +17,7 @@
 							4425 Porto</p>
 						</div>
 					</div><!--  .address -->
-					<h4 class="footer-title">Connect with us</h4>
+					<h4 class="footer-title"><?php echo esc_html_e('Folgen Sie uns', 'digid'); ?></h4>
 					<?php do_action( 'socials' ); ?>
 					<div class="footer-left-bottom">
 						<p class="copyright">
@@ -41,10 +41,10 @@
 					</div>
 				</div><!--  .footer-left -->
 				<div class="col-12 col-md-12 col-lg-5 footer-right d-flex flex-column">
-					<h4 class="footer-title">Our Newsletter</h4>
-					<p>Join our mailing list etc etc etc</p>
+					<h4 class="footer-title"><?php echo esc_html_e('Unser Newsletter', 'digid'); ?></h4>
+					<p></p>
 
-					<h4 class="footer-title">Let's talk</h4>
+					<h4 class="footer-title"><?php echo esc_html_e('Kontaktieren Sie uns', 'digid'); ?></h4>
 					<div class="contacts">
 						<a href="mailto:hello@dig.id">hello@dig.id</a>
 						<a href="tel:+41613732020">+41 61 373 20 20</a>

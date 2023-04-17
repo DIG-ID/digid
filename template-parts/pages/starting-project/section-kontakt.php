@@ -5,7 +5,6 @@
                 <p class="section__subtitle">
                     <?php the_field('form_title') ?>
                     <br>
-                    <?php echo esc_html__( 'Insert text', 'digid' ) ?>
                 </p>
             </div>
             <div class="col-12 col-lg-7">

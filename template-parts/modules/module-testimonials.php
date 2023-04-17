@@ -5,7 +5,7 @@
 				<span class="section__title--line"></span>
 			</div>
 			<div class="col-11">
-				<h2 class="section__title"><?php echo esc_html( 'Testimonials', 'digid' ); ?></h2>
+				<h2 class="section__title"><?php echo esc_html_e( 'Testimonials', 'digid' ); ?></h2>
 			</div>
 		</div>
 		<div class="row">

@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="button-group filter-button-group">
-					<button class="button is-checked" data-filter="*"><?php esc_html_e( 'All', 'digid' ); ?></button>
+					<button class="button is-checked" data-filter="*"><?php esc_html_e( 'Alle', 'digid' ); ?></button>
 					<?php
 					$a = array(
 						'taxonomy'   => 'category',
