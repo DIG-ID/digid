@@ -48,8 +48,17 @@
         font-weight: 600
 
 @include media-breakpoint-down(lg)
+  .section-testimonials
+    padding-top: 20px
+    .testimonials-swiper
+      .swiper-arrows
+        right: auto
+        left: 0
+        bottom: 15px
+    .swiper
+      padding-bottom: 50px
   .testimonial-blockquote
     &__content
       p
-        font-size: 28.82px
-        line-height: 32px
+        font-size: 24px !important
+        line-height: 32px !important

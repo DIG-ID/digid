@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-11 offset-lg-1">
+			<div class="col-12 col-lg-11 offset-lg-1">
 				<div class="section__subtitle"><?php the_field('testimonials_section_title'); ?></div>
 				<div class="swiper testimonials-swiper">
 					<div class="swiper-wrapper">
