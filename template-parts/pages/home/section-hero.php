@@ -39,3 +39,4 @@
 		</div>
 	</div>
 </section>
+<?php get_template_part( 'template-parts/modules/module', 'start-project' ); ?>

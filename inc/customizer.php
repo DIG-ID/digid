@@ -18,6 +18,7 @@ function digid_theme_customizer_register( $wp_customize ) {
 
 	require get_parent_theme_file_path( '/inc/customizer/socials.php' );
 	require get_parent_theme_file_path( '/inc/customizer/newsletter.php' );
+	require get_parent_theme_file_path( '/inc/customizer/start-project.php' );
 
 }
 
