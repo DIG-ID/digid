@@ -89,14 +89,15 @@
   .wpml-ls-legacy-list-horizontal
     display: none
 
-  .wpml-ls-menu-item
-    &:first-of-type
-      a
+  .navbar-nav
+    li
+      &::nth-last-child2()       
         border-right: 1px solid
-        padding: 0 1rem 0 1.6rem
-    &:last-of-type
-      a
-        padding: 0 1.6rem 0 1rem
+        a
+          padding: 0 1rem 0 1.6rem
+      &::nth-last-child()      
+        a
+          padding: 0 1.6rem 0 1rem
 
   #main-header.sticky
     .dropdown-menu
