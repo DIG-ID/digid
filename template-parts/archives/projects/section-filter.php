@@ -5,20 +5,25 @@
 				<div class="button-group filter-button-group">
 					<button class="button is-checked" data-filter="*"><?php esc_html_e( 'Alle', 'digid' ); ?></button>
 					<?php
-					$args = array(
-						'post_type'   => 'services',
-						'post_status' => 'publish',
+					$services = pods( 'services' );
+					$services->find(
+						array(
+							'where' => array(
+								array(
+									'key'     => 'related_projects',
+									'compare' => '!=',
+									'value'   => '',
+								),
+							),
+						)
 					);
-					$tquery = new WP_Query( $args );
-
-					if ( $tquery->have_posts() ) :
-						while ( $tquery->have_posts() ) :
-							$tquery->the_post();
-							$ptitle = get_the_title();
-							$pslug  = get_post_field( 'post_name', get_the_ID() );
+					// Loop through the services
+					if ( $services->total() > 0 ) :
+						while ( $services->fetch() ) :
+							$ptitle = $services->field( 'post_title' );
+							$pslug  = $services->field( 'post_name' );
 							echo '<button class="button" data-filter=".' . esc_attr( $pslug )  . '">' . esc_html( $ptitle ) . '</button>';
 						endwhile;
-						wp_reset_postdata();
 					endif;
 				?>
 				</div>

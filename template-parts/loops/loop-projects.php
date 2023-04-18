@@ -1,9 +1,9 @@
 <?php
 $args = array(
-	'post_type'      => 'projects',
-	'post_status'    => 'publish',
-	'orderby'        => 'ID',
-    'order'          => 'DESC',
+	'post_type'   => 'projects',
+	'post_status' => 'publish',
+	'orderby'     => 'ID',
+	'order'       => 'DESC',
 );
 
 $the_query = new WP_Query( $args );
