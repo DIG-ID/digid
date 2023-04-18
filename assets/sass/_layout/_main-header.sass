@@ -3,7 +3,7 @@
     &__dark
       li
         &:last-child
-          border-color: $main-color
+          border-color: $main-color !important
       .menu-item
         .nav-link
           color: $main-color
@@ -61,7 +61,7 @@
   &__dark
     li
       &:last-child
-        border-color: #dee3e4
+        border-color: #dee3e4 !important
     .menu-item
       .nav-link
         color: #DEE3E4
@@ -151,6 +151,9 @@
           color: $main-color
       &__light
         background-color: $dark-color
+        li
+          &:last-child
+            border-color: #dee3e4
         .nav-link
           color: #DEE3E4
           &:hover
@@ -160,6 +163,9 @@
             color: $main-color
       &__dark
         background-color: $bg-color
+        li
+          &:last-child
+            border-color: $text-color
         .nav-link
           color: #445659
           &:hover
