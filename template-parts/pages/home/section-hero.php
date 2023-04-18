@@ -1,6 +1,6 @@
 <section class="section section-hero">
 	<div class="container">
-		<div class="row section-hero__row">
+		<div class="row section-hero__row ">
 			<div class="col-12">
 				<h2 class="section-hero__title">
 					<span>forward</span> <br>
@@ -10,6 +10,7 @@
 				</h2>
 			</div>
 		</div>
+		<?php get_template_part( 'template-parts/modules/module', 'start-project' ); ?>
 		<div class="row align-items-center section__title--wrapper">
 			<div class="col-3 col-sm-1">
 				<span class="section__title--line"></span>
@@ -37,6 +38,6 @@
 				?>
 			</div>
 		</div>
+		
 	</div>
 </section>
-<?php get_template_part( 'template-parts/modules/module', 'start-project' ); ?>

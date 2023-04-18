@@ -1,4 +1,4 @@
-<section class="section section-intro section-intro--dark">
+<section class="section section-intro section-intro--dark position-relative">
 	<div class="container">
 		<div class="row align-items-center section__title--wrapper">
 			<div class="col-md-1 d-none d-sm-block">
@@ -25,5 +25,6 @@
 			</div>
 		</div>
 	</div>
+	<?php get_template_part( 'template-parts/modules/module', 'start-project' ); ?>
 </section>
-<?php get_template_part( 'template-parts/modules/module', 'start-project' ); ?>
+
