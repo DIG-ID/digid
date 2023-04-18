@@ -1,10 +1,10 @@
 <section class="section section-blog">
 	<div class="container">
 		<div div class="row align-items-center section__title--wrapper">
-			<div class="col-1">
+			<div class="col-3 col-md-1">
 				<span class="section__title--line"></span>
 			</div>
-			<div class="col-11">
+			<div class="col-9 col-md-11">
 				<h2 class="section__title"><?php the_field( 'blog_section_title' ); ?></h2>
 			</div>
 		</div>
