@@ -106,6 +106,12 @@
   .main-footer
     background: linear-gradient(to bottom, $main-color 0%, $main-color 42%, $dark-color 30%, $dark-color 100%)
     .footer-left
+      &-bottom
+        .footer-nav
+          .menu-item
+            &:after
+              display: inline
+    .footer-left
       order: 2
       .address
         display: block
