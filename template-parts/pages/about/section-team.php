@@ -33,7 +33,7 @@
 						if ( $image ) :
 							echo wp_get_attachment_image( $image, 'team-photo-image' );
 						else :
-							echo '<figure><img src="https://via.placeholder.com/249x300" alt="placeholder image"></figure>';
+							echo '<figure><img src="' . get_template_directory_uri() . '/assets/images/avatar-default.png" alt="placeholder image"></figure>';
 						endif;
 						?>
 						<p class="team__name"><?php the_sub_field( 'name' ); ?></p>
