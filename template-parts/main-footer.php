@@ -41,9 +41,14 @@
 					</div>
 				</div><!--  .footer-left -->
 				<div class="col-12 col-md-12 col-lg-5 footer-right d-flex flex-column">
-					<h4 class="footer-title"><?php echo esc_html_e( 'Unser Newsletter', 'digid' ); ?></h4>
-					<p></p>
-
+					<h4 class="footer-title"><?php esc_html_e( 'Unser Newsletter', 'digid' ); ?></h4>
+					<p><?php esc_html_e( 'Join our mailing list etc etc etc', 'digid' ); ?></p>
+					<?php
+					$newsletter_sc = get_theme_mod( 'newsletter_sc' );
+					if ( $newsletter_sc ) :
+						echo do_shortcode( $newsletter_sc );
+					endif;
+					?>
 					<h4 class="footer-title"><?php echo esc_html_e( 'Kontaktieren Sie uns', 'digid' ); ?></h4>
 					<div class="contacts">
 						<a href="mailto:hello@dig.id">hello@dig.id</a>
