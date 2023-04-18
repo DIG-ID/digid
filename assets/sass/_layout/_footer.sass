@@ -57,31 +57,31 @@
         letter-spacing: 0.6px
         margin-bottom: 0
         color: $dark-accent
-      .menu-footer-menu-container
-        .footer-nav
-          margin: 0
-          padding: 0
-          list-style: none
-          display: flex
-          .menu-item
+
+      .footer-nav
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        .menu-item
+          &::after
+            content: '|'
+            display: inline-block
+            margin: 0 5px
+            color: $dark-accent
+          &:last-of-type
             &::after
-              content: '|'
-              display: inline-block
-              margin: 0 5px
-              color: $dark-accent
-            &:last-of-type
-              &::after
-                display: none
-            a
-              font-size: 12px
-              font-weight: 400
-              letter-spacing: 0.6px
-              text-decoration: none
-              margin-bottom: 0
-              transition: all .3s ease-in
-              color: $dark-accent
-              &:hover
-                color: $accent-color
+              display: none
+          a
+            font-size: 12px
+            font-weight: 400
+            letter-spacing: 0.6px
+            text-decoration: none
+            margin-bottom: 0
+            transition: all .3s ease-in
+            color: $dark-accent
+            &:hover
+              color: $accent-color
   .footer-right
     padding-top: 75px
     padding-bottom: 60px
