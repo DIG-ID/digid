@@ -53,15 +53,6 @@
           &:hover
             color: $accent-color
     .post-sidebar
-      position: -webkit-sticky
-      position: -moz-sticky
-      position: -ms-sticky
-      position: -o-sticky
-      position: sticky
-      height: 820px
-      background: transparent
-      top: 120px
-      bottom: auto
       z-index: 8
       .menu,
       .related-services
@@ -132,3 +123,19 @@
 @import "single-services"
 @import "single-projects"
 @import "single-case-studies"
+
+
+@include media-breakpoint-up(lg)
+  .post-template-default
+    .section-content
+      .post-sidebar
+        position: -webkit-sticky
+        position: -moz-sticky
+        position: -ms-sticky
+        position: -o-sticky
+        position: sticky
+        height: 820px
+        background: transparent
+        top: 120px
+        bottom: auto
+        z-index: 8
