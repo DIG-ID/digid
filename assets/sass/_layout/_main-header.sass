@@ -6,7 +6,10 @@
           color: $main-color
           &:hover
             color: #DEE3E4
-  
+      .current-menu-item
+        .nav-link
+          color: #DEE3E4
+
   
 #main-header
   .navbar
@@ -33,18 +36,28 @@
       text-decoration: none
       &:hover
         color: #DEE3E4
+  .current-menu-item
+    .nav-link
+      color: #DEE3E4
+
   &__light
     .menu-item
       .nav-link
         color: #445659
         &:hover
           color: $main-color
+    .current-menu-item
+      .nav-link
+        color: $main-color
   &__dark
     .menu-item
       .nav-link
         color: #DEE3E4
         &:hover
           color: $main-color
+    .current-menu-item
+      .nav-link
+        color: $main-color
   .dropdown-menu
     background-color: transparent
     border: 0
@@ -118,20 +131,29 @@
           path
             fill: $main-color !important
       .nav-link
-          color: #445659
-          &:hover
-            color: $main-color
+        color: #445659
+        &:hover
+          color: $main-color
+      .current-menu-item
+        .nav-link
+          color: $main-color
       &__light
         background-color: $dark-color
         .nav-link
           color: #DEE3E4
           &:hover
             color: $main-color
+        .current-menu-item
+          .nav-link
+            color: $main-color
       &__dark
         background-color: $bg-color
         .nav-link
           color: #445659
           &:hover
+            color: $main-color
+        .current-menu-item
+          .nav-link
             color: $main-color
       .navbar-actions
         .navbar-toggler
