@@ -306,3 +306,6 @@ require get_template_directory() . '/inc/customizer.php';
 
 // Theme custom template tags.
 require get_template_directory() . '/inc/theme-template-tags.php';
+
+// The theme admin settings
+require get_template_directory() . '/inc/theme-admin-settings.php';

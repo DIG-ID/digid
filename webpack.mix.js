@@ -10,7 +10,7 @@ mix
   })
   .js('assets/js/main.js', 'dist')
   .sass('assets/sass/main.sass', 'dist')
-
+  .sass('assets/sass/admin-login.sass', 'css')
   .disableNotifications()
   .browserSync({
     proxy: "digid.local",
