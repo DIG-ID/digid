@@ -13,8 +13,8 @@
 						</div>
 						<div class="addresss__pt">
 							<p class="address__title">Portugal</p>
-							<p>Rua Eng Ferreira Dias 161 escritório 448,<br>
-							4100-247 Porto (PT)</p>
+							<p>Rua Eng Ferreira Dias 161,<br>
+							4100-247 Porto</p>
 						</div>
 					</div><!--  .address -->
 					<h4 class="footer-title"><?php echo esc_html_e( 'Folgen Sie uns', 'digid' ); ?></h4>
