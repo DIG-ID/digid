@@ -12,9 +12,9 @@
 				?>
 			</div>
 			<sidebar class="col-12 col-lg-4 post-sidebar">
-				<p class="post-sidebar__title"><?php echo esc_html( 'Verwandte Dienstleistungen', 'digid' ) ?></p>
+				<p class="post-sidebar__title"><?php esc_html_e( 'Verwandte Dienstleistungen', 'digid' ); ?></p>
 				<?php get_template_part( 'template-parts/loops/loop', 'post-related-services' ); ?>
-				<p class="post-sidebar__title"><?php echo esc_html( 'Verwandte Beiträge', 'digid' ) ?></p>
+				<p class="post-sidebar__title"><?php esc_html_e( 'Verwandte Beiträge', 'digid' ); ?></p>
 				<?php get_template_part( 'template-parts/loops/loop', 'post-related-posts' ); ?>
 				<?php
 				if ( is_active_sidebar( 'sidebar-1' ) ) :
