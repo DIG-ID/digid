@@ -42,7 +42,7 @@
 				</div><!--  .footer-left -->
 				<div class="col-12 col-md-12 col-lg-5 footer-right d-flex flex-column">
 					<h4 class="footer-title"><?php esc_html_e( 'Unser Newsletter', 'digid' ); ?></h4>
-					<p><?php esc_html_e( 'Join our mailing list etc etc etc', 'digid' ); ?></p>
+					<p><?php esc_html_e( 'Abonnieren Sie unseren Newsletter, um über alle Neuigkeiten sowie Einblicke in die Branche informiert zu werden', 'digid' ); ?></p>
 					<?php
 					$newsletter_sc = get_theme_mod( 'newsletter_sc' );
 					if ( $newsletter_sc ) :
