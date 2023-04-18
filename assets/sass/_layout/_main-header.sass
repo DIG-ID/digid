@@ -133,6 +133,13 @@
           &:hover
             background-color: transparent
             color: $main-color
+    
+    .home
+      .navbar-nav
+        &__dark
+          li
+            &:last-child
+              border-color: $text-color !important
     .navbar
       padding-top: 20px
       padding-bottom: 20px
@@ -165,7 +172,7 @@
         background-color: $bg-color
         li
           &:last-child
-            border-color: $text-color
+            border-color: $text-color !important
         .nav-link
           color: #445659
           &:hover
