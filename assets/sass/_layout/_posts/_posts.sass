@@ -100,7 +100,10 @@
   z-index: 9
   .previous-post,
   .next-post
+    display: flex
+    align-items: center
     a
+      display: block
       font-family: $second-font
       font-weight: 300
       font-size: 23.04px
@@ -112,6 +115,7 @@
       overflow: hidden
       text-overflow: ellipsis
       svg
+        display: block
         transition: all .3s ease-in
         fill: $main-color
       &:hover
