@@ -214,7 +214,7 @@
         color: $main-color
         padding: 0 10px
         span
-          font-size: 28px
+          font-size: 32px
           color: $main-color
           font-weight: 300
 
@@ -286,7 +286,6 @@
       span
         background: $main-color
 
-
   #main-header
     .navbar
       padding: 40px 15px 30px
@@ -318,7 +317,7 @@
       .nav-link
         color: $main-color
         text-align: right
-        font-size: 28px
+        font-size: 32px
         font-weight: 300
         margin-bottom: 20px
     .navbar-actions
@@ -380,3 +379,15 @@
       padding-bottom: 25px
       &.nav-open
         background-color: $dark-color
+
+@include media-breakpoint-down(sm)
+  #main-header
+    .navbar-nav
+      .nav-link
+        font-size: 26px
+
+  .wpml-ls-legacy-list-horizontal
+    li
+      a
+        span
+          font-size: 26px
