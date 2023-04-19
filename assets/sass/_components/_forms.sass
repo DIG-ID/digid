@@ -10,6 +10,7 @@
         text-transform: uppercase
         margin-bottom: 10px
         color: $dark-color
+        visibility: visible
       .wpcf7-form-control-wrap
         display: block
         margin-bottom: 20px
@@ -51,3 +52,11 @@
           float: right !important
           &:hover
             opacity: 0.8
+
+@include media-breakpoint-down(lg)
+  .section-form
+    .wpcf7
+      .wpcf7-form
+        label
+          visibility: hidden
+          max-height: 0

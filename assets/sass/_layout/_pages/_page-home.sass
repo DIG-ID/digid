@@ -62,6 +62,14 @@
     svg
       opacity: .16
       fill: $bg-color
+  ::-webkit-input-placeholder
+    visibility: hidden
+  :-moz-placeholder
+    visibility: hidden
+  ::-moz-placeholder
+    visibility: hidden
+  :-ms-input-placeholder
+    visibility: hidden
 
 .section-blog
   padding-top: 100px
@@ -109,9 +117,30 @@
       line-height: 28px !important
     .bg-logo
       display: none !important
-    .wpcf7-form-control
-      &:placeholder
-        text-transform: uppercase
+    ::-webkit-input-placeholder
+      visibility: visible
+      font-family: $main-font
+      font-size: 12px
+      text-transform: uppercase
+      color: $text-color
+    :-moz-placeholder
+      visibility: visible
+      font-family: $main-font
+      font-size: 12px
+      text-transform: uppercase
+      color: $text-color
+    ::-moz-placeholder
+      visibility: visible
+      font-family: $main-font
+      font-size: 12px
+      text-transform: uppercase
+      color: $text-color
+    :-ms-input-placeholder
+      visibility: visible
+      font-family: $main-font
+      font-size: 12px
+      text-transform: uppercase
+      color: $text-color
   .section-blog
     padding-bottom: 40px
 
