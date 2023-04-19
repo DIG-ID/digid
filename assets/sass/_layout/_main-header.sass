@@ -4,6 +4,8 @@
       li
         &:last-child
           border-color: $main-color !important
+          &::before
+            background-color: $main-color !important
       .menu-item
         .nav-link
           color: $main-color
@@ -32,6 +34,8 @@
   li
     &:last-child
       border-color: #dee3e4
+      &::before
+        background-color: $text-color !important
   .menu-item
     .nav-link
       font-family: $main-font
@@ -50,6 +54,8 @@
     li
       &:last-child
         border-color: $text-color
+      &::before
+        background-color: $text-color !important
     .menu-item
       .nav-link
         color: #445659
@@ -62,6 +68,8 @@
     li
       &:last-child
         border-color: #dee3e4 !important
+        &::before
+          background-color: #dee3e4 !important
     .menu-item
       .nav-link
         color: #DEE3E4
@@ -117,12 +125,20 @@
   .navbar-nav
     li
       &:last-child
-        border-left: 1px solid
+        position: relative
+        &::before
+          content: ""
+          position: absolute
+          background-color: $main-color
+          width: 1px
+          height: 14px
+          bottom: 0
+          left: 0
         a
-          padding: 0 1.6rem 0 1rem !important
+          padding: 0 1.6rem 0 0.8rem !important
       &:nth-last-child(2)
         a
-          padding: 0 1rem 0 1.6rem !important
+          padding: 0 0.8rem 0 1.6rem !important
         
 
   #main-header.sticky
@@ -140,6 +156,8 @@
           li
             &:last-child
               border-color: $text-color !important
+              &::before
+                background-color: $text-color !important
     .navbar
       padding-top: 20px
       padding-bottom: 20px
@@ -161,6 +179,8 @@
         li
           &:last-child
             border-color: #dee3e4
+            &::before
+              background-color: #dee3e4 !important
         .nav-link
           color: #DEE3E4
           &:hover
@@ -173,6 +193,8 @@
         li
           &:last-child
             border-color: $text-color !important
+            &::before
+              background-color: $text-color !important
         .nav-link
           color: #445659
           &:hover
@@ -209,7 +231,15 @@
     transform: translateX(-50%)
     li
       &:first-child
-        border-right: 1px solid $main-color
+        position: relative
+        &::after
+          content: ""
+          position: absolute
+          background-color: $main-color
+          width: 1px
+          height: 80%
+          bottom: 0
+          right: 0
       a
         color: $main-color
         padding: 0 10px
