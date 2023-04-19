@@ -11,8 +11,18 @@ body
 //Bootstrap gutters mobile
 @include media-breakpoint-down(sm)
   .row > *
-    padding-right: calc(var(--bs-gutter-x) * 1)
     padding-left: calc(var(--bs-gutter-x) * 1)
+    padding-right: calc(var(--bs-gutter-x) * 1)
+
+  //Breadcrumbs title wrapper row
+  .row.align-items-center.py-5 > .col-3,
+  .row.align-items-center.section__title--wrapper > .col-3
+    padding-left: calc(var(--bs-gutter-x) * 1)
+    padding-right: calc(var(--bs-gutter-x) * 0.5)
+  .row.align-items-center.py-5 > .col-9,
+  .row.align-items-center.section__title--wrapper > .col-9
+    padding-left: calc(var(--bs-gutter-x) * 0.5)
+    padding-right: calc(var(--bs-gutter-x) * 0.5)
 
 
 .grecaptcha-badge
