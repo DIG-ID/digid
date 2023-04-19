@@ -46,8 +46,6 @@
     position: absolute
     bottom: 40px
   
-
-
 .section-form
   padding-top: 100px
   padding-bottom: 140px
@@ -64,8 +62,6 @@
     svg
       opacity: .16
       fill: $bg-color
-
-
 
 .section-blog
   padding-top: 100px
@@ -110,9 +106,12 @@
   .section-form
     padding-bottom: 50px
     .section__subtitle
-      line-height: 28px
+      line-height: 28px !important
     .bg-logo
       display: none !important
+    .wpcf7-form-control
+      &:placeholder
+        text-transform: uppercase
   .section-blog
     padding-bottom: 40px
 
