@@ -1,3 +1,4 @@
+import imagesLoaded from 'imagesloaded';
 import isotope from 'isotope-layout';
 $(function() {
 
@@ -10,6 +11,9 @@ $(function() {
       masonry: {
         columnWidth: '.grid-sizer'
       }
+    });
+    imagesLoaded(grid.element).on('progress', function() {
+      grid.layout();
     });
 
     // filter items on button click
