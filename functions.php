@@ -39,7 +39,7 @@ function digid_theme_setup() {
 
 	add_image_size( 'card-project-thumbnail-landscape', 646, 422, array( 'center', 'center' ) );
 
-	add_image_size( 'team-photo-image', 340, 340, array( 'center', 'center' ) );
+	add_image_size( 'team-photo-image', 340, 410, array( 'center', 'center' ) );
 
 	add_image_size( 'contact-image-thumbnail', 530, 340, array( 'center', 'center' ) );
 
