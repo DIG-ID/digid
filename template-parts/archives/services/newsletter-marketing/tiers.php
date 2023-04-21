@@ -12,7 +12,7 @@
                   <div class="col-12 col-lg-4">
                     <div class="section-tiers__card-wrapper">
                         <h3 class="section-tiers__name"><?php the_sub_field( 'name' ); ?></h3>
-                        <p class="section-tiers__list"><?php echo esc_html_e( 'Inklusive:', 'digid' ); ?></p>
+                        <p class="section-tiers__list list-intro-text"><?php echo esc_html_e( 'Inklusive:', 'digid' ); ?></p>
                         <p class="section-tiers__list"><?php the_sub_field( 'list' ); ?></p>
                         <img class="section-tiers__mailImg" src="<?php echo wp_upload_dir()['url'] . '/mail.svg' ?>" alt="" title="" />
                     </div>
