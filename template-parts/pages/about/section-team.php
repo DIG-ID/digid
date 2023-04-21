@@ -29,7 +29,7 @@
 				while ( have_rows( 'team_members_repeater' ) ) :
 					the_row();
 					?>
-					<div class="col-6 col-md-6 col-lg-4 col-xl-3 mb-5 team-card">
+					<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5 team-card">
 						<?php
 						$image = get_sub_field( 'photo' );
 						if ( $image ) :
