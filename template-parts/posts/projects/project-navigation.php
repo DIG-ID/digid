@@ -7,7 +7,7 @@ if ( ! empty( $prev_post ) || ! empty( $next_post ) ) :
 	<section class="section-navigation">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-6 col-md-6 previous-post">
+				<div class="col-12 col-lg-6 previous-post">
 					<?php
 					if ( is_a( $prev_post , 'WP_Post' ) ) :
 						?>
@@ -16,7 +16,7 @@ if ( ! empty( $prev_post ) || ! empty( $next_post ) ) :
 					endif;
 					?>
 				</div>
-				<div class="col-6 col-md-6 text-end next-post">
+				<div class="col-12 col-lg-6 text-end next-post">
 					<?php
 					if ( is_a( $next_post , 'WP_Post' ) ) :
 						?>
