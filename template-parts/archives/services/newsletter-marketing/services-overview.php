@@ -7,7 +7,7 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-12 col-lg-6 left-col">
+			<div class="col-12 col-lg-6 left-col order-2 order-lg-1">
 			<p class="services__overview-title"><?php the_field( 'service_overview_title' ); ?></p>
 			<?php if ( have_rows( 'service_overview_service_descriptions' ) ) : ?>
 				<?php $count = 0; ?>
@@ -17,7 +17,7 @@
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</div>
-		<div class="col-12 col-lg-6 right-col">
+		<div class="col-12 col-lg-6 right-col order-1 order-lg-2 mb-5 mb-lg-0">
 			<?php if ( have_rows( 'service_overview_service_list' ) ) : ?>
 				<?php $count = 0; ?>
 				<?php while ( have_rows( 'service_overview_service_list' ) ) : the_row(); ?>

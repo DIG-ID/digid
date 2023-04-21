@@ -47,7 +47,7 @@
         font-size: 20px
         font-weight: 400
         line-height: 24px
-        margin-bottom: 50px
+        margin-bottom: 30px
         color: $main-color
       &-description
         font-size: 14px
@@ -62,8 +62,14 @@
         color: $dark-color
         margin-bottom: 0
         padding-bottom: 6px
+        cursor: pointer
+        transition: all 0.2s ease-in
         &:not(:first-child)
           padding-top: 6px
+        &.active
+          color: $main-color
+        &:hover
+          color: $main-color
   .section-services
     padding-bottom: 0px
 
