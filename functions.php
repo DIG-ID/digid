@@ -49,6 +49,9 @@ function digid_theme_setup() {
 
 add_action( 'after_setup_theme', 'digid_theme_setup' );
 
+//Maintain JPEG compression when cutting images
+add_filter('jpeg_quality', function($arg){return 100;});
+
 /**
  * Register our sidebars and widgetized areas.
  */
