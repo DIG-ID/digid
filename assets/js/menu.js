@@ -5,9 +5,11 @@ document.querySelector('.hamburguer-button').addEventListener('click', function 
 });
 
 $(function() {
-    $('.clickable').click(function() {
+    $('.clickable').on('click', function() {
         var index = $(this).data('index');
-        $('.services__overview-description').hide();
-        $('.services__overview-description:eq(' + (index - 1) + ')').show();
+        $('.services__overview-description').removeClass('active').hide();
+        $('.services__overview-description:eq(' + (index - 0) + ')').addClass('active').show();
+        $('.clickable').removeClass('active');
+        $(this).addClass('active');
     });
     });
