@@ -16,9 +16,11 @@
 					<h2 class="section__title"><?php echo esc_html_e( 'Team', 'digid' ); ?></h2>
 				</div>
 			</div>
+			<?php if( get_field( 'title_team' ) ) : ?>
 			<div class="row py-3">
 				<h2 class="section__subtitle"><?php the_field( 'title_team' ); ?></h2>
 			</div>
+			<?php endif; ?>
 	</div>
 	<div class="container">
 		<div class="row">

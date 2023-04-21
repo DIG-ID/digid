@@ -56,3 +56,14 @@
           margin: 0
       &__image
         width: 100%
+
+
+@include media-breakpoint-down(sm)
+  .section-blocks
+    .block
+      &__subtitle
+        word-wrap: break-word
+        overflow-wrap: break-word
+        -webkit-hyphens: auto
+        -moz-hyphens: auto
+        hyphens: auto
