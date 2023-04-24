@@ -41,6 +41,11 @@
 					</div>
 				</div><!--  .footer-left -->
 				<div class="col-12 col-md-12 col-lg-5 footer-right d-flex flex-column">
+					<h4 class="footer-title"><?php echo esc_html_e( 'Kontaktieren Sie uns', 'digid' ); ?></h4>
+					<div class="contacts">
+						<a href="mailto:hello@dig.id">hello@dig.id</a>
+						<a href="tel:+41613732020">+41 61 373 20 20</a>
+					</div>
 					<h4 class="footer-title"><?php esc_html_e( 'Unser Newsletter', 'digid' ); ?></h4>
 					<p><?php esc_html_e( 'Abonnieren Sie unseren Newsletter, um über alle Neuigkeiten sowie Einblicke in die Branche informiert zu werden', 'digid' ); ?></p>
 					<?php
@@ -49,11 +54,7 @@
 						echo do_shortcode( $newsletter_sc );
 					endif;
 					?>
-					<h4 class="footer-title"><?php echo esc_html_e( 'Kontaktieren Sie uns', 'digid' ); ?></h4>
-					<div class="contacts">
-						<a href="mailto:hello@dig.id">hello@dig.id</a>
-						<a href="tel:+41613732020">+41 61 373 20 20</a>
-					</div>
+					
 
 				</div><!--  .footer-right -->
 			</div><!-- .row -->

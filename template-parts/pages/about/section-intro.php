@@ -1,12 +1,5 @@
 <section class="section section-intro section-about-intro position-relative">
-	<div class="container-fluid min-vh-100 px-0">
-		<div class="about__image-container d-flex position-absolute overflow-hidden justify-content-center">
-			<?php
-			$header_image = get_field( 'header_image' );
-			if ( $header_image ) {
-				echo wp_get_attachment_image( $header_image, 'full', '', ['class' => 'about__header-image', 'alt'=>'About Header Image'] );
-			} ?>
-		</div>
+	<div class="container-fluid px-0">
 		<div class="container about__container">
 			<div class="row align-items-center section__title--wrapper">
 				<div class="col-3 col-md-1">
