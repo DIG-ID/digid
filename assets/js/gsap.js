@@ -30,19 +30,25 @@ $(function() {
 
     let heroTl = gsap.timeline({
       delay: 0.15,
-      /*onComplete: () => {
-        gsap.set( ".section-hero__title .text:first-child", {
-          clearProps: 'x'
-        } );
-      }*/
+      /*scrollTrigger: {
+        trigger: ".section-hero",
+        endTrigger: ".section-hero__title",
+        start: "top top",
+        end: "bottom 40%",
+        //pin: true,
+        //scrub: 2,
+        markers: true,
+        //toggleActions: "restart pause reverse pause"
+      },*/
     });
     
-    heroTl
-      .from(".section-hero__title .text", { autoAlpha: 0, x:'-50px', opacity: 0, duration: 1, stagger: '0.25', duration: 1, ease: "back.inOut(2)" });
-      //.to(".section-hero__title .text:first-child", { x:'400px', skewX: "-10%", color: "#fff", duration: 0.8, ease: "back.inOut(2)"}, "<2.5")
-      //.to(".section-hero__title .text:first-child", {skewX: "0%", duration: .2, ease: "expo.inOut"}, "<0.6");
+    
+    /*heroTl
+      .from(".section-hero__title .text", { autoAlpha: 0, x:'-50px', opacity: 0, duration: 1, stagger: '0.25', duration: 1, ease: "back.inOut(2)" })
+      .to(".section-hero__title .text:first-child", { x:'400px', skewX: "-10%", color: "#fff", duration: 0.8, ease: "back.inOut(2)"}, "<1.5")
+      .to(".section-hero__title .text:first-child", {skewX: "0%", duration: .2, ease: "expo.inOut"}, "<0.6");*/
 
-    gsap.to(".section-hero__title .text:first-child", {
+    /*gsap.to(".section-hero__title .text:first-child", {
       scrollTrigger: {
         trigger: ".section-hero__title",
         endTrigger: ".section-hero__title",
@@ -55,7 +61,7 @@ $(function() {
       x: 400,
       color: "#fff",
       duration: 2,
-    });
+    });*/
 
     let servicesTl = gsap.timeline({
       scrollTrigger: {
@@ -68,7 +74,7 @@ $(function() {
       },
     });
     servicesTl
-      .from(".card-service", { autoAlpha: 0, x:'-50px', opacity: 0, duration: 1, stagger: '0.25', ease: "back.inOut(2)" });
+      .from(".card-service", { autoAlpha: 0, x:'-50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
 
 
     let projectsTl = gsap.timeline({
@@ -76,13 +82,13 @@ $(function() {
         trigger: ".section-projects",
         start: "top 40%",
         end: "bottom 50%",
-        scrub: 1,
-        markers: true,
+        //scrub: 1,
+        //markers: true,
         //toggleActions: "restart pause reverse pause"
       },
     });
     projectsTl
-      .from(".card-project", { autoAlpha: 0, y:'50px', opacity: 0, duration: 1, stagger: '0.25', ease: "back.inOut(2)" });
+      .from(".card-project", { autoAlpha: 0, y:'50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
 
   }
 });

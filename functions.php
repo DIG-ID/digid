@@ -25,7 +25,7 @@ function digid_theme_setup() {
 
 	add_image_size( 'single-case-studie-featured-image', 1320, 720, array( 'center', 'center' ) );
 
-	add_image_size( 'single-project-featured-image', 1320, 720, array( 'center', 'center' ) );
+	add_image_size( 'single-project-featured-image', 1320, 720 );
 
 	add_image_size( 'single-project-image', 760 );
 
@@ -33,11 +33,11 @@ function digid_theme_setup() {
 
 	add_image_size( 'card-post-thumbnail', 426, 314, array( 'center', 'center' ) );
 
-	add_image_size( 'card-related-post-thumbnail', 150, 150, array( 'center', 'center' ) );
+	add_image_size( 'card-related-post-thumbnail', 150, 150 );
 
-	add_image_size( 'card-project-thumbnail-portrait', 646, 733, array( 'center', 'center' ) );
+	add_image_size( 'card-project-thumbnail-portrait', 646, 733 );
 
-	add_image_size( 'card-project-thumbnail-landscape', 646, 422, array( 'center', 'center' ) );
+	add_image_size( 'card-project-thumbnail-landscape', 646, 422 );
 
 	add_image_size( 'team-photo-image', 340, 410, array( 'center', 'center' ) );
 
