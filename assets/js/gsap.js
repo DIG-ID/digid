@@ -43,10 +43,10 @@ $(function() {
     });
     
     
-    /*heroTl
+    heroTl
       .from(".section-hero__title .text", { autoAlpha: 0, x:'-50px', opacity: 0, duration: 1, stagger: '0.25', duration: 1, ease: "back.inOut(2)" })
-      .to(".section-hero__title .text:first-child", { x:'400px', skewX: "-10%", color: "#fff", duration: 0.8, ease: "back.inOut(2)"}, "<1.5")
-      .to(".section-hero__title .text:first-child", {skewX: "0%", duration: .2, ease: "expo.inOut"}, "<0.6");*/
+      .to(".section-hero__title .text:first-child", { x:'400px', skewX: "-10%", color: "#fff", duration: 0.8, ease: "back.inOut(2)"}, "<2.5")
+      .to(".section-hero__title .text:first-child", {skewX: "0%", duration: .2, ease: "expo.inOut"}, "<0.6");
 
     /*gsap.to(".section-hero__title .text:first-child", {
       scrollTrigger: {

@@ -28,17 +28,28 @@
 				</div>
 				<a class="section__btn" href="<?php echo esc_url( get_field( 'intro_section_button_url' ) ); ?>"><?php the_field( 'intro_section_button_text' ); ?> <svg xmlns="http://www.w3.org/2000/svg" width="32.439" height="11.914"><path d="M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z" transform="translate(-1 -16.293)"/></svg></a>
 			</div>
-			<div class="col-12 col-lg-5 text-end">
+			<div class="col-12 col-lg-5 text-end luxy-el" data-speed-y="5", data-offset="-50">
 				<?php
-				$image = get_field( 'intro_section_image' );
-				if ( $image ) :
+				//$image = get_field( 'intro_section_image' );
+				/*if ( $image ) :
 					echo wp_get_attachment_image( $image, 'home-intro-image', false, array( 'class' => 'luxy-el', 'data-speed-y' => '5', 'data-offset' => '-50' ) );
 				else :
 					echo '<img src="https://via.placeholder.com/405x500" alt="">';
-				endif;
+				endif;*/
 				?>
+				<?php $slider = get_field( 'intro_section_slider' ); ?>
+				<?php if ( $slider ) : ?>
+					<div class="swiper swiper-home-intro">
+						<div class="swiper-wrapper swiper-wrapper-home-intro">
+							<?php foreach ( $slider as $slider_id ) : ?>
+								<figure class="swiper-slide swiper-slide-home-intro mb-0">
+									<?php echo wp_get_attachment_image( $slider_id, 'home-intro-image' ); ?>
+								</figure>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
-		
 	</div>
 </section>
