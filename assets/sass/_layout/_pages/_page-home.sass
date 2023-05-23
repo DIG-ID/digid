@@ -12,6 +12,15 @@
   to
     border-bottom-color: transparent
 
+
+@keyframes t
+  from
+    background-size: 0 200%
+
+@keyframes b
+  50%
+    background-position: 0 -100%, 0 0
+
 .page-template-page-home
   .section-intro
     .section__subtitle
@@ -27,25 +36,41 @@
   background: $main-color
   //background: linear-gradient(180deg, $main-color 1%, $bg-color 90%)
   background: linear-gradient(180deg, rgba(18,35,43,1) 0%, rgba(0,204,204,1) 50%, rgba(248,248,248,1) 100%)
+  overflow: hidden
   &__row
-    padding: 150px 0 100px
+    padding: 150px 0 150px
   &__title
+    position: relative
     font-size: 72px
     font-weight: bold
-    line-height: 71px
+    line-height: 1
     color: $dark-color
+    max-width: 380px
+    min-height: 300px
+    //display: inline-block
+    //max-width: 365px
+    //background: linear-gradient( -90deg, #00DFFC 5px, #0000 0) 10px 0, linear-gradient( #00DFFC 0 0 ) 0 0
+    //background-size: calc( var(--n)*1ch ) 200%
+    //-webkit-background-clip: padding-box, text
+    //background-clip: padding-box, text
+    //background-repeat: no-repeat
+    //animation:  b 0.7s infinite steps(1), t calc(var(--n) * 0.3s) steps(var(--n)) forwards
     span
-      &:nth-child(1)
-        color: $bg-color
-        margin-left: 50%
-        transform: translateX(-60%)
-        display: inline-block
+      display: inline-block
+    .text
+      //opacity: 0
+      visibility: hidden
+    .cursor
+      font-weight: 400
+      display: inline-block
+      //font-size: 40px
+      //transform: translate(-70%, -10%)
   .section__title, .section__subtitle, .section__description, .section__description > p, .section__btn
     color: $dark-color
   .section__btn
     position: absolute
     bottom: 40px
-  
+
 .section-form
   padding-top: 100px
   padding-bottom: 140px

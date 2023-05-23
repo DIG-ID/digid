@@ -31,8 +31,9 @@
 							),
 						);
 						?>
-						<?php do_action('wpml_add_language_selector'); ?>
+						<?php do_action( 'wpml_add_language_selector' ); ?>
 					</div><!-- .navbar-collapse -->
 				</div>
 			</nav>
 		</header>
+		<div class="scroll-wrapper">

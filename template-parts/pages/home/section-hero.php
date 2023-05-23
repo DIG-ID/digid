@@ -3,10 +3,11 @@
 		<div class="row section-hero__row ">
 			<div class="col-12">
 				<h2 class="section-hero__title">
-					<span>forward</span> <br>
-					<span>thinking</span> <br>
-					<span>marketing</span> <br>
-					<span>solutions</span>
+					<span class="text">forward<br></span>
+					<span class="text">thinking<br></span>
+					<span class="text">marketing<br></span>
+					<span class="text">solutions</span>
+					<!-- <span class="cursor">|</span> -->
 				</h2>
 			</div>
 		</div>
@@ -31,7 +32,7 @@
 				<?php
 				$image = get_field( 'intro_section_image' );
 				if ( $image ) :
-					echo wp_get_attachment_image( $image, 'home-intro-image' );
+					echo wp_get_attachment_image( $image, 'home-intro-image', false, array( 'class' => 'luxy-el', 'data-speed-y' => '5', 'data-offset' => '-50' ) );
 				else :
 					echo '<img src="https://via.placeholder.com/405x500" alt="">';
 				endif;

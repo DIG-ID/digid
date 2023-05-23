@@ -27,7 +27,7 @@ function digid_theme_setup() {
 
 	add_image_size( 'single-project-featured-image', 1320, 720, array( 'center', 'center' ) );
 
-	add_image_size( 'single-project-image', 760, 9999, array( 'center', 'center' ) );
+	add_image_size( 'single-project-image', 760 );
 
 	add_image_size( 'single-featured-image', 770, 420, array( 'center', 'center' ) );
 
