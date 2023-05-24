@@ -10,9 +10,9 @@ $(function() {
     //let cursor = document.querySelector(".section-hero__title .cursor");
    // gsap.to(cursor, {opacity: 0, ease:"power2.inOut", repeat: -1});
 
-    let words = gsap.utils.toArray(".section-hero__title .text"),
-    tl = gsap.timeline({delay: 0.15}),
-    timePerCharacter = 0.06;
+    //let words = gsap.utils.toArray(".section-hero__title .text"),
+    //tl = gsap.timeline({delay: 0.15}),
+    //timePerCharacter = 0.06;
 
     /*words.forEach(el => {
       tl.from(el, {autoAlpha: 0, duration:.1})
@@ -31,11 +31,11 @@ $(function() {
 
     
     
-    gsap.from(".section-hero__title .text", { delay: 0.15, autoAlpha: 0, x:'-50px', opacity: 0, duration: 1, stagger: '0.25', duration: 1, ease: "back.inOut(2)", clearProps: 'x' })
+    //gsap.from(".section-hero__title .text", { delay: 0.15, autoAlpha: 0, x:'-50px', opacity: 0, duration: 1, stagger: '0.25', duration: 1, ease: "back.inOut(2)", clearProps: 'x' })
       //.to(".section-hero__title .text:first-child", { x:'400px', skewX: "-10%", color: "#fff", duration: 0.8, ease: "back.inOut(2)"}, "<2.5")
       //.to(".section-hero__title .text:first-child", {skewX: "0%", duration: .2, ease: "expo.inOut"}, "<0.6");
 
-    gsap.to(".section-hero__title .text:first-child", {
+    /*gsap.to(".section-hero__title .text:first-child", {
       scrollTrigger: {
         trigger: ".section-hero",
         endTrigger: ".section-hero__title",
@@ -48,7 +48,7 @@ $(function() {
       x: 400,
       color: "#fff",
       onReverseComplete: () => gsap.to(".section-hero__title .text:first-child", { x:' 0px' })
-    });
+    });*/
 
     let servicesTl = gsap.timeline({
       scrollTrigger: {
