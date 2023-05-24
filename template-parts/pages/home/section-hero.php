@@ -26,7 +26,7 @@
 				<div class="section__description">
 					<?php the_field( 'intro_section_description' ); ?>
 				</div>
-				<a class="section__btn" href="<?php echo esc_url( get_field( 'intro_section_button_url' ) ); ?>"><?php the_field( 'intro_section_button_text' ); ?> <svg xmlns="http://www.w3.org/2000/svg" width="32.439" height="11.914"><path d="M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z" transform="translate(-1 -16.293)"/></svg></a>
+				<a class="section__btn" href="<?php echo esc_url( get_field( 'intro_section_button_url' ) ); ?>"><span class="section__btn-text"><?php the_field( 'intro_section_button_text' ); ?></span> <svg xmlns="http://www.w3.org/2000/svg" width="32.439" height="11.914"><path d="M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z" transform="translate(-1 -16.293)"/></svg></a>
 			</div>
 			<div class="col-12 col-lg-5 text-end luxy-el" data-speed-y="5", data-offset="-50">
 				<?php

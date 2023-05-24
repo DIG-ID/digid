@@ -27,6 +27,30 @@ function digid_theme_socials() {
 
 add_action( 'socials', 'digid_theme_socials' );
 
+
+/**
+ * This function open the scroll wrapper.
+ */
+function theme_scroll_wrapper_open() {
+	?>
+	<div class="scroll-wrapper">
+	<?php
+}
+
+add_action( 'scroll_wrapper_open', 'theme_scroll_wrapper_open' );
+
+/**
+ * This function closes the scroll wrapper.
+ */
+function theme_scroll_wrapper_close() {
+	?>
+	</div><!-- .scroll-wrapper -->
+	<?php
+}
+
+add_action( 'scroll_wrapper_close', 'theme_scroll_wrapper_close' );
+
+
 /**
  * This function open the main content.
  */

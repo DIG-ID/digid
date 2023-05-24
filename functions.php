@@ -50,7 +50,7 @@ function digid_theme_setup() {
 add_action( 'after_setup_theme', 'digid_theme_setup' );
 
 //Maintain JPEG compression when cutting images
-add_filter('jpeg_quality', function($arg){return 100;});
+add_filter( 'jpeg_quality', function( $arg ) { return 100; } );
 
 /**
  * Register our sidebars and widgetized areas.
@@ -187,7 +187,7 @@ add_filter( 'body_class', 'custom_body_classes' );
 function digid_theme_enqueue_styles() {
 
 	//Get the theme data
-	$the_theme     = wp_get_theme(); 
+	$the_theme     = wp_get_theme();
 	$theme_version = $the_theme->get( 'Version' );
 
 	// Register Theme main style.
@@ -217,7 +217,7 @@ function digid_wrap_post_thumbnail_in_figure( $html, $post_id, $post_thumbnail_i
 	if ( ! in_array( $size, $allowed_sizes ) ) :
 		return $html;
 	endif;
-	return '<a href="' . get_the_permalink() . '"><figure>' . $html . '</figure></a>';
+	return '<figure>' . $html . '</figure>';
 }
 
 add_filter( 'post_thumbnail_html', 'digid_wrap_post_thumbnail_in_figure', 10, 5 );

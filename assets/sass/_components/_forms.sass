@@ -20,21 +20,28 @@
           border: none
       .wpcf7-submit
         float: right
-        font-family: $second-font
-        font-size: 23px
-        font-weight: 300
+        padding: 10px 40px
+        margin: 16px 0px 26px
+        font-family: $main-font
+        font-size: 14px
+        font-weight: 400
+        text-transform: uppercase
         letter-spacing: 0.46px
-        border: none
+        border: 1px solid $dark-color
+        border-radius: 20px
+        
         transition: all .3s ease-in
-        background-color: transparent
-        color: $dark-color
+        background-color: $dark-color
+        color: $main-color
         svg
           transition: all .3s ease-in
           fill: $dark-color
         &:hover
-          color: $accent-color
+          color: $dark-color
+          background-color: $accent-color
+          border: 1px solid $accent-color
           svg
-            fill: $accent-color
+            fill: $dark-color
 
       .wpcf7-not-valid-tip
         font-family: $main-font
@@ -50,8 +57,6 @@
       .wpcf7-form
         .wpcf7-submit
           float: right !important
-          &:hover
-            opacity: 0.8
 
 @include media-breakpoint-down(lg)
   .section-form

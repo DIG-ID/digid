@@ -1,5 +1,5 @@
 		<?php get_template_part( 'template-parts/main', 'footer' ); ?>
-		</div>
+		<?php do_action( 'scroll_wrapper_close' ); ?>
 		<?php wp_footer(); ?>
 	</body>
 

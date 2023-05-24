@@ -28,40 +28,27 @@ $(function() {
       .to(".section-hero__title .text:first-child", {skewX: "0%", duration: 1, ease: "power4.inOut"}, "<0.4");
       */
 
-    let heroTl = gsap.timeline({
-      delay: 0.15,
-      /*scrollTrigger: {
+
+    
+    
+    gsap.from(".section-hero__title .text", { delay: 0.15, autoAlpha: 0, x:'-50px', opacity: 0, duration: 1, stagger: '0.25', duration: 1, ease: "back.inOut(2)", clearProps: 'x' })
+      //.to(".section-hero__title .text:first-child", { x:'400px', skewX: "-10%", color: "#fff", duration: 0.8, ease: "back.inOut(2)"}, "<2.5")
+      //.to(".section-hero__title .text:first-child", {skewX: "0%", duration: .2, ease: "expo.inOut"}, "<0.6");
+
+    gsap.to(".section-hero__title .text:first-child", {
+      scrollTrigger: {
         trigger: ".section-hero",
         endTrigger: ".section-hero__title",
         start: "top top",
         end: "bottom 40%",
-        //pin: true,
-        //scrub: 2,
-        markers: true,
-        //toggleActions: "restart pause reverse pause"
-      },*/
-    });
-    
-    
-    heroTl
-      .from(".section-hero__title .text", { autoAlpha: 0, x:'-50px', opacity: 0, duration: 1, stagger: '0.25', duration: 1, ease: "back.inOut(2)" })
-      .to(".section-hero__title .text:first-child", { x:'400px', skewX: "-10%", color: "#fff", duration: 0.8, ease: "back.inOut(2)"}, "<2.5")
-      .to(".section-hero__title .text:first-child", {skewX: "0%", duration: .2, ease: "expo.inOut"}, "<0.6");
-
-    /*gsap.to(".section-hero__title .text:first-child", {
-      scrollTrigger: {
-        trigger: ".section-hero__title",
-        endTrigger: ".section-hero__title",
-        start: "top 250px",
-        end: "bottom 60%",
         scrub: 1,
         //markers: true,
-        toggleActions: "restart pause reverse pause"
+        toggleActions: "play none reverse none"
       },
       x: 400,
       color: "#fff",
-      duration: 2,
-    });*/
+      onReverseComplete: () => gsap.to(".section-hero__title .text:first-child", { x:' 0px' })
+    });
 
     let servicesTl = gsap.timeline({
       scrollTrigger: {

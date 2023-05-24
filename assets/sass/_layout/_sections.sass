@@ -42,6 +42,7 @@
       color: $text-color
       padding-right: 20%
   &__btn
+    position: relative
     font-family: $second-font
     font-weight: 300
     font-size: 23px
@@ -53,14 +54,16 @@
     &-blocks
       display: inline-block
       margin-top: 50px
+    &-text
+      transition: all .25s ease-in
+      border-bottom: 1px solid transparent
     svg
       margin-left: 5px
-      transition: all .3s ease-in
       fill: $main-color
     &:hover
-      color: $accent-color
-      svg
-        fill: $accent-color
+      color: $text-color
+      .section__btn-text
+        border-bottom: 1px solid $dark-color
 
 @include media-breakpoint-down(lg)
   .section
