@@ -11,7 +11,7 @@ if ( ! empty( $prev_post ) || ! empty( $next_post ) ) :
 					<?php
 					if ( is_a( $prev_post , 'WP_Post' ) ) :
 						?>
-						<a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32.4" height="11.9" style="enable-background:new 0 0 32.4 11.9"><path d="M32.4 5.3H2.6L6.9 1 6 0 0 6l6 6 1-1-4.4-4.4h29.8V5.3z" class="st0"/></svg> <?php echo esc_html( $prev_post->post_title ); ?></a>
+						<a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32.4" height="11.9" style="enable-background:new 0 0 32.4 11.9"><path d="M32.4 5.3H2.6L6.9 1 6 0 0 6l6 6 1-1-4.4-4.4h29.8V5.3z" class="st0"/></svg> <span><?php echo esc_html( $prev_post->post_title ); ?></span></a>
 						<?php
 					endif;
 					?>
@@ -20,7 +20,7 @@ if ( ! empty( $prev_post ) || ! empty( $next_post ) ) :
 					<?php
 					if ( is_a( $next_post , 'WP_Post' ) ) :
 						?>
-						<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo esc_html( $next_post->post_title ); ?> <svg xmlns="http://www.w3.org/2000/svg" width="32.439" height="11.914"><path d="M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z" transform="translate(-1 -16.293)"/></svg></a>
+						<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><span><?php echo esc_html( $next_post->post_title ); ?></span> <svg xmlns="http://www.w3.org/2000/svg" width="32.439" height="11.914"><path d="M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z" transform="translate(-1 -16.293)"/></svg></a>
 						<?php
 					endif;
 					?>

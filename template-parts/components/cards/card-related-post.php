@@ -19,6 +19,7 @@
                         <div class="col-8 py-3">
                             <h3 class="card-related-post__title"><?php echo mb_strimwidth( get_the_title( $rpod_id ), 0, 36, "..." ); ?></h3>
                             <?php 
+                            $output = '';
                             $categories = get_the_category( $rpod_id );
                             $category = $categories[0]->name;
                             $output .= $category .', '; 
