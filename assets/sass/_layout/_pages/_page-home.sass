@@ -179,8 +179,14 @@
     &__title
       font-size: 34px
       line-height: 40px
+      max-width: 230px
       span
         &:nth-child(1)
           margin-right: -10%
     .col-12.col-lg-5.text-end
       margin-bottom: 30px
+
+@include media-breakpoint-down(sm)
+  .section-hero
+    &__title
+      max-width: 150px
