@@ -118,17 +118,17 @@ $(function() {
     images.forEach(image => {
       gsap.from(image, { 
         autoAlpha: 0,
-        scale:0 ,
+        x: "-200px",
         opacity: 0,
         duration: 0.6,
-        stagger: '0.20',
+        //stagger: '0.20',
         ease: "power3.out",
         scrollTrigger: {
           trigger: image,
           //start: "top 40%",
           //end: "bottom 50%",
           scrub: true,
-          markers: true,
+          //markers: true,
         }
       })
     });
