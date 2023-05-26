@@ -22,4 +22,3 @@
 		</div>
 	</nav>
 </header>
-<?php do_action( 'scroll_wrapper_open' ); ?>

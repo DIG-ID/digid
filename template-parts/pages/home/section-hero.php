@@ -3,7 +3,7 @@
 		<div class="row section-hero__row ">
 			<div class="col-12">
 				<h2 class="section-hero__title">
-					<span class="text">forward<br></span>
+					<span class="text text-forward">forward<br></span>
 					<span class="text">thinking<br></span>
 					<span class="text">marketing<br></span>
 					<span class="text">solutions</span>

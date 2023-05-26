@@ -31,7 +31,7 @@ function digid_theme_setup() {
 
 	add_image_size( 'single-featured-image', 770, 420, array( 'center', 'center' ) );
 
-	add_image_size( 'card-post-thumbnail', 426, 314, array( 'center', 'center' ) );
+	add_image_size( 'card-post-thumbnail', 700, 520, array( 'center', 'center' ) );
 
 	add_image_size( 'card-related-post-thumbnail', 150, 150 );
 
