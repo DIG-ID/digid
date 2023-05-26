@@ -169,12 +169,22 @@
     background-color: $dark-color !important
     color: $main-color !important
     float: none !important
-
+    transition: all .3s ease-in !important
+    &:hover
+      opacity: 1 !important
+      border: 1px solid $accent-color !important
+      color: $dark-color !important
+      background-color: $accent-color !important
   fieldset[data-cf7mls-order="2"]
     text-align: center
     .cf7mls_back.action-button
       float: none
-
+      transition: all .3s ease-in
+      &:hover
+        opacity: 1
+        border: 1px solid $dark-color
+        color: $main-color
+        background-color: $dark-color
 .section-st-kontakt
   .section
     &__description
