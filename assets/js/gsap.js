@@ -78,6 +78,9 @@ $(function() {
       //onReverseComplete: () => gsap.to(".section-hero__title .text:first-child", { x:' 0px' })
     });
 
+  }
+
+  if ( $(".page-template-page-home") || $(".post-type-archive-services")) {
     let servicesTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-services",
@@ -90,8 +93,9 @@ $(function() {
     });
     servicesTl
       .from(".card-service", { autoAlpha: 0, x:'-50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
+  }
 
-
+  if ( $(".page-template-page-home") || $(".post-type-archive-projects") || $(".post-type-archive-services")) {
     let projectsTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-projects",
@@ -104,7 +108,6 @@ $(function() {
     });
     projectsTl
       .from(".card-project", { autoAlpha: 0, y:'50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
-
   }
 
 });
