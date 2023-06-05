@@ -73,7 +73,7 @@ $(function() {
         //markers: true,
         toggleActions: "play none reverse none"
       },
-      x: 400,
+      x: '140%',
       color: "#fff",
       //onReverseComplete: () => gsap.to(".section-hero__title .text:first-child", { x:' 0px' })
     });

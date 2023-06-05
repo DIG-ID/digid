@@ -13,7 +13,10 @@ mix
   .sass('assets/sass/admin-login.sass', 'css')
   .disableNotifications()
   .browserSync({
-    proxy: "digid.local",
+    proxy: {
+      target: "http://digid.digid",
+      ws: true
+    },
     files: ["./**/*.php", "./dist/*.js", "./dist/*.css"]
   });
 
