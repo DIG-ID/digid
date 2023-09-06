@@ -1,4 +1,4 @@
-<section class="section section-form">
+<section id="section-form" class="section section-form">
 	<div class="container">
 		<div div class="row align-items-center section__title--wrapper">
 			<div class="col-3 col-md-1">

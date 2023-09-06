@@ -96,7 +96,7 @@ $(function() {
       .from(".card-service", { autoAlpha: 0, x:'-50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
   }
 
-  if ( $(".page-template-page-home")[0] || $(".post-type-archive-projects")[0] || $(".post-type-archive-services")[0] || $(".single-services")[0] ) {
+  if ( $(".page-template-page-home")[0] || $(".post-type-archive-services")[0] || $(".single-services")[0] ) {
    // console.log( 'temos projects gsap' );
     let projectsTl = gsap.timeline({
       scrollTrigger: {
@@ -111,6 +111,22 @@ $(function() {
     projectsTl
       .from(".card-project", { autoAlpha: 0, y:'50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
   }
+
+  if ( $(".post-type-archive-projects")[0] ) {
+    // console.log( 'temos projects gsap' );
+     let archiveProjectsTl = gsap.timeline({
+       scrollTrigger: {
+         trigger: ".section-projects",
+         start: "top 75%",
+         end: "bottom 50%",
+         scrub: 1,
+         //markers: true,
+         toggleActions: "restart pause reverse pause"
+       },
+     });
+     archiveProjectsTl
+       .from(".card-project", { autoAlpha: 0, y:'50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
+   }
 
   /*if ( $(".single-services")[0] ) {
     console.log( 'temos single service gsap' );

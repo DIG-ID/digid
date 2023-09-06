@@ -15,17 +15,11 @@ if ( ! empty( $rpods ) ) :
 		global $post;
 		$post = $rpod;
 		setup_postdata( $post );
-		switch ( $count ) :
-			case 1:
-				get_template_part( 'template-parts/components/cards/card', 'project-portrait' );
-				break;
-			case 2:
-				get_template_part( 'template-parts/components/cards/card', 'project-portrait' );
-				break;
-			default:
-				get_template_part( 'template-parts/components/cards/card', 'project-landscape' );
-				break;
-		endswitch;
+		if ( $count % 2 == 0 ) :
+			get_template_part( 'template-parts/components/cards/card', 'project', array( 'image' => 'landscape' ) );
+		else :
+			get_template_part( 'template-parts/components/cards/card', 'project', array( 'image' => 'portrait' ) );
+		endif;
 	endforeach;
 	wp_reset_postdata();
 endif;

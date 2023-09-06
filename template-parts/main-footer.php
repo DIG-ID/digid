@@ -54,8 +54,6 @@
 						echo do_shortcode( $newsletter_sc );
 					endif;
 					?>
-					
-
 				</div><!--  .footer-right -->
 			</div><!-- .row -->
 		</div><!-- .container -->

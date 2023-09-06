@@ -17,19 +17,21 @@ function digid_theme_setup() {
 
 	add_theme_support( 'title-tag' );
 
-	add_theme_support( 'post-thumbnails' );
-
 	add_theme_support( 'yoast-seo-breadcrumbs' );
+
+	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
+
+	add_theme_support( 'post-thumbnails' );
 
 	add_image_size( 'home-intro-image', 405, 500, array( 'center', 'center' ) );
 
-	add_image_size( 'single-case-studie-featured-image', 1320, 720, array( 'center', 'center' ) );
+	add_image_size( 'single-case-studie-featured-image', 1320, 720 );
 
 	add_image_size( 'single-project-featured-image', 1320, 720 );
 
-	add_image_size( 'single-project-image', 760 );
+	add_image_size( 'single-project-image', 760, 9999 );
 
-	add_image_size( 'single-featured-image', 770, 420, array( 'center', 'center' ) );
+	add_image_size( 'single-featured-image', 770, 420 );
 
 	add_image_size( 'card-post-thumbnail', 700, 520, array( 'center', 'center' ) );
 
@@ -43,7 +45,6 @@ function digid_theme_setup() {
 
 	add_image_size( 'contact-image-thumbnail', 530, 340, array( 'center', 'center' ) );
 
-	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
 }
 
@@ -256,6 +257,18 @@ function digid_create_option_page_for_cpt() {
 
 add_action( 'acf/init', 'digid_create_option_page_for_cpt' );
 
+/**
+ * Lowers the metabox priority to 'core' for Yoast SEO's metabox.
+ *
+ * @param string $priority The current priority.
+ *
+ * @return string $priority The potentially altered priority.
+ */
+function parsber_theme_lower_yoast_metabox_priority( $priority ) {
+	return 'core';
+}
+
+add_filter( 'wpseo_metabox_prio', 'parsber_theme_lower_yoast_metabox_priority' );
 
 /**
  * Add custom html a tag to the yoast breadcrumbs single page link.
@@ -296,9 +309,6 @@ function digid_theme_custom_breadcrumb_output( $output ) {
 
 add_filter( 'wpseo_breadcrumb_output', 'digid_theme_custom_breadcrumb_output' );
 */
-
-
-
 
 
 // Theme custom Walker.
