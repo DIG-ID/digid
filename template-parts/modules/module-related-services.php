@@ -23,7 +23,7 @@
 						$rpod_id  = $rpod['ID'];
 						$rnames[] = get_the_title( $rpod_id );
 						?>
-						<article id="post-<?php echo $rpod_id ?>" <?php post_class( 'col-12 col-lg-4 card-service ' . digid_get_related_services() . ''  ); ?>>
+						<article id="post-<?php echo $rpod_id ?>" <?php post_class( 'col-12 col-lg-4 card-service' ); ?>>
 							<a href="<?php the_permalink( $rpod_id ); ?>" class="card-service__content-link">
 								<div class="card-service__content">
 									<div class="card-service__title"><h3><?php echo get_the_title( $rpod_id ); ?></h3></div>
