@@ -117,8 +117,8 @@ $(function() {
      let archiveProjectsTl = gsap.timeline({
        scrollTrigger: {
          trigger: ".section-projects",
-         start: "top 75%",
-         end: "bottom 50%",
+         start: "-100px 90%",
+         end: "bottom 90%",
          scrub: 1,
          //markers: true,
          toggleActions: "restart pause reverse pause"
