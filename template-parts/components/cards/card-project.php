@@ -18,7 +18,7 @@
 		?>
 		<div class="card-project__content">
 			<?php the_title( '<h3 class="card-project__title">', '</h3> ' );  ?>
-			<?php //echo $counter; ?><?php echo //$args['image']; ?>
+			<?php //echo $counter; ?><?php //echo $args['image']; ?>
 			<?php get_template_part( 'template-parts/loops/loop', 'related-services' ); ?>
 		</div>
 	</a>
