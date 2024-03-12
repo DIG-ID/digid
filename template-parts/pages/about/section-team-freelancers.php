@@ -20,7 +20,6 @@
 			$team_freelancer_posts = get_field( 'team_members_freelancers' );
 			if ( $team_freelancer_posts ) :
 				foreach ( $team_freelancer_posts as $team_freelancer_post ) :
-					//var_dump($team_full_post);
 					$member_id       = $team_freelancer_post->ID;
 					$member_name     = get_field( 'name', $member_id );
 					$member_position = get_field( 'position', $member_id );
