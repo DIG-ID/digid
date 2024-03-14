@@ -1,4 +1,5 @@
-.card-service
+.card-service,
+.card-job
   //visibility: hidden
   margin-bottom: 30px
   &__content
@@ -9,23 +10,26 @@
     &-link
       text-decoration: none
       &:hover
-        .card-service__content
+        .card-service__content,
+        .card-job__content
           background-color: $main-color
           p
             color: $dark-color
           hr
             border-top-color: $dark-color
             opacity: 0.8
-          .card-service__title
-            h3
+          .card-service__title,
+          .card-job__title
+            h3, h2
               color: $bg-color
-          .card-service__btn
+          .card-service__btn,
+          .card-job__btn
             color: $dark-color
             svg
               fill: $dark-color
   &__title
     text-decoration: none
-    h3
+    h3, h2
       font-family: $second-font
       font-size: 23.04px
       font-weight: 300
@@ -226,7 +230,6 @@
       &:hover
         .card-related-post__title
           color: $main-color
-
 
 
 .team-card

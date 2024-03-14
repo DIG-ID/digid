@@ -1,0 +1,55 @@
+.post-type-archive-job
+  .section-intro
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 300px
+    padding-bottom: 100px
+    .section__title
+      &--wrapper
+        margin-bottom: 40px
+    .section__subtitle
+      font-size: 47.78px
+      letter-spacing: 0.9556px
+      line-height: 54px !important
+      margin-bottom: 70px
+
+  .section-jobs
+    padding-top: 0
+    .job-filters-button-group
+      width: 100%
+      display: flex
+      flex-direction: column
+      padding-right: 100px
+      .button
+        font-family: $main-font
+        font-weight: 400
+        font-size: 12px
+        letter-spacing: 0.36px
+        text-transform: uppercase
+        white-space: nowrap
+        padding: 10px 20px
+        margin-bottom: 20px
+        margin-right: 10px
+        border: 1px solid $text-color
+        border-radius: 30px
+        background-color: transparent
+        transition: all .3s ease-in
+        color: $text-color
+        &:last-of-type
+          margin-right: 0
+        &:hover
+          border-color: $accent-color
+          color: $accent-color
+      .is-checked
+        border-color: $main-color
+        color: $main-color
+
+@include media-breakpoint-down(lg)
+  .post-type-archive-job
+    .section-intro
+      height: auto
+      padding-top: 120px
+      .section__subtitle
+        font-size: 28px
+        line-height: 32px !important

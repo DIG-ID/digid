@@ -45,7 +45,6 @@ function digid_theme_setup() {
 
 	add_image_size( 'contact-image-thumbnail', 530, 340, array( 'center', 'center' ) );
 
-
 }
 
 add_action( 'after_setup_theme', 'digid_theme_setup' );
@@ -249,6 +248,13 @@ function digid_create_option_page_for_cpt() {
 			array(
 				'page_title'  => 'Case Studies Archive',
 				'parent_slug' => 'edit.php?post_type=case_studies',
+				'capability'  => 'manage_options',
+			)
+		);
+		$jobs         = acf_add_options_page(
+			array(
+				'page_title'  => 'Jobs Archive',
+				'parent_slug' => 'edit.php?post_type=job',
 				'capability'  => 'manage_options',
 			)
 		);

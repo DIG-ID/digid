@@ -26,7 +26,19 @@
 					$date = get_field( 'project_scope_date' );
 					if ( $date ) :
 						echo '<h3>' . esc_html_e( 'Datum', 'digid' ) . '</h3>';
-						echo '<p>' . $date . '</p>';
+						$datetime = DateTime::createFromFormat( 'Ymd', $date );
+						if ( $datetime ) :
+							$formatted_date = '';
+							$site_lang = apply_filters( 'wpml_current_language', null );
+							if ( 'de' === $site_lang ) :
+								$formatted_date = $datetime->format( 'j. F Y' ); // Example format: "1. Oktober 2024".
+							else :
+								$formatted_date = $datetime->format( 'F j, Y' ); // Example format: "Oktober 1, 2024".
+							endif;
+							echo '<p>' . $formatted_date . '</p>';
+						else :
+							echo '<p>Error parsing date</p>';
+						endif;
 					endif;
 					?>
 					<h3><?php esc_html_e( 'Dienstleistungen', 'digid' ); ?></h3>

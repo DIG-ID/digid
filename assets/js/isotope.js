@@ -60,26 +60,50 @@ $(function() {
     });
   }
 
-    // Posts filter grid
-    if ($('body').is('.blog')) {
-      const pGrid = new isotope( '.blog-grid', {
-        // options
-        itemSelector: '.type-post',
-        percentPosition: true,
+  // Jobs page grid
+  if ($('body').is('.post-type-archive-job')) {
+    const jobGrid = new isotope( '.grid-jobs', {
+      // options
+      itemSelector: '.grid-item',
+      layoutMode: 'fitRows',
+    });
+    // filter items on button click
+    $('.job-filters-button-group').on( 'click', 'button', function() {
+      var filterValue = $(this).attr('data-filter');
+      jobGrid.arrange({filter: filterValue});
+    });
+    // change is-checked class on buttons
+    $('.job-filters-button-group').each( function( i, buttonGroup ) {
+      var $buttonGroup = $( buttonGroup );
+      $buttonGroup.on( 'click', 'button', function( event ) {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        var $button = $( event.currentTarget );
+        $button.addClass('is-checked');
       });
-      // filter items on button click
-      $('.filter-button-group').on( 'click', 'button', function() {
-        var filterValue = $(this).attr('data-filter');
-        pGrid.arrange({filter: filterValue});
+    });
+
+  }
+
+  // Posts filter grid
+  if ($('body').is('.blog')) {
+    const pGrid = new isotope( '.blog-grid', {
+      // options
+      itemSelector: '.type-post',
+      percentPosition: true,
+    });
+    // filter items on button click
+    $('.filter-button-group').on( 'click', 'button', function() {
+      var filterValue = $(this).attr('data-filter');
+      pGrid.arrange({filter: filterValue});
+    });
+    // change is-checked class on buttons
+    $('.filter-button-group').each( function( i, buttonGroup ) {
+      var $buttonGroup = $( buttonGroup );
+      $buttonGroup.on( 'click', 'button', function( event ) {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        var $button = $( event.currentTarget );
+        $button.addClass('is-checked');
       });
-      // change is-checked class on buttons
-      $('.filter-button-group').each( function( i, buttonGroup ) {
-        var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on( 'click', 'button', function( event ) {
-          $buttonGroup.find('.is-checked').removeClass('is-checked');
-          var $button = $( event.currentTarget );
-          $button.addClass('is-checked');
-        });
-      });
-    }
+    });
+  }
 });
