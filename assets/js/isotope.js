@@ -84,6 +84,30 @@ $(function() {
 
   }
 
+  // TEam portfolio page grid
+  if ($('body').is('.single-team')) {
+    const jobGrid = new isotope( '.grid-portfolio', {
+      // options
+      itemSelector: '.grid-item',
+      layoutMode: 'fitRows',
+    });
+    // filter items on button click
+    $('.portfolio-filter-button-group').on( 'click', 'button', function() {
+      var filterValue = $(this).attr('data-filter');
+      jobGrid.arrange({filter: filterValue});
+    });
+    // change is-checked class on buttons
+    $('.portfolio-filter-button-group').each( function( i, buttonGroup ) {
+      var $buttonGroup = $( buttonGroup );
+      $buttonGroup.on( 'click', 'button', function( event ) {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        var $button = $( event.currentTarget );
+        $button.addClass('is-checked');
+      });
+    });
+
+  }
+
   // Posts filter grid
   if ($('body').is('.blog')) {
     const pGrid = new isotope( '.blog-grid', {

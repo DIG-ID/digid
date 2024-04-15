@@ -6,3 +6,4 @@ import "./menu";
 import "./swiper";
 import "./navmenu-sticky";
 import "./gsap";
+import "./fancybox";

@@ -1,5 +1,6 @@
 .section-team-member
   padding-top: 220px
+  padding-bottom: 40px
   .team-card
     figure
         margin: 0
@@ -21,6 +22,7 @@
         font-weight: 400
         letter-spacing: 0.36px
         line-height: 25px
+        color: $main-color
   
   &--description
     p
@@ -52,3 +54,37 @@
       color: $accent-color
     svg
       margin-left: 10px
+
+.single-team
+  .section-team-title
+    padding-top: 0px
+    padding-bottom: 60px
+    h3
+      margin: 0
+  .section-filter--team-portfolio
+    padding-bottom: 48px
+  .section-team-portfolio
+    margin-bottom: 220px
+    .card-portfolio,
+    .grid-sizer
+      max-height: 250px
+    .card-portfolio
+      display: block
+      margin-bottom: 16px
+      &:hover
+        cursor: pointer
+
+@include media-breakpoint-down(lg)
+  .single-team
+    .section-filter--team-portfolio
+      padding-bottom: 48px
+    .section-team-portfolio
+      margin-bottom: 220px
+      .card-portfolio,
+      .grid-sizer
+        max-height: 400px
+      .card-portfolio
+        display: block
+        margin-bottom: 16px
+        &:hover
+          cursor: pointer

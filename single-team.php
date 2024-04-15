@@ -6,6 +6,7 @@ get_header( 'light' );
 		while ( have_posts() ) :
 			the_post();
 			get_template_part( 'template-parts/posts/team/content' );
+			get_template_part( 'template-parts/posts/team/portfolio' );
 		endwhile;
 		do_action( 'after_post_content' );
 	endif;

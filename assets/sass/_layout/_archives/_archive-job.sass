@@ -45,11 +45,23 @@
         border-color: $main-color
         color: $main-color
 
+@include media-breakpoint-down(xl)
+  .post-type-archive-job
+    .section-jobs
+      .job-filters-button-group
+        padding-right: 0
+        margin-bottom: 60px
+
 @include media-breakpoint-down(lg)
   .post-type-archive-job
     .section-intro
       height: auto
-      padding-top: 120px
+      padding-top: 180px
+      padding-bottom: 30px
       .section__subtitle
         font-size: 28px
         line-height: 32px !important
+        margin-bottom: 0
+    .section-jobs
+      .job-filters-button-group
+        padding-right: 0

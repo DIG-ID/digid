@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-xl-4">
-				<p><?php esc_html_e( 'Nach Position filtern:', 'digid' ); ?></p>
+				<p class="d-none d-lg-block"><?php esc_html_e( 'Nach Position filtern:', 'digid' ); ?></p>
 				<div class="job-button-group job-filters-button-group">
 					<button class="button is-checked" data-filter="*"><?php esc_html_e( 'Alle', 'digid' ); ?></button>
 					<?php
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div class="col-12 col-xl-8">
-				<div class="row grid-jobs">
+				<div class="row row-flex grid-jobs">
 					<?php get_template_part( 'template-parts/loops/loop', 'jobs' ); ?>
 				</div>
 			</div>

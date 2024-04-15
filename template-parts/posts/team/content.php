@@ -26,8 +26,8 @@
 				<?php the_content(); ?>
 			</div>
 			<div class="col-xl-3">
-				<h3 class="section-team-member--external-links-title"><?php esc_html_e( 'Portfolio', 'digid' ); ?></h3>
-				<?php
+				<!-- <h3 class="section-team-member--external-links-title"><?php esc_html_e( 'Portfolio', 'digid' ); ?></h3> -->
+				<?php /*
 				if ( have_rows( 'links' ) ) :
 					echo '<ul class="section-team-member--external-links">';
 					while ( have_rows( 'links' ) ) :
@@ -49,7 +49,7 @@
 					endwhile;
 					echo '</ul>';
 				endif;
-				?>
+				*/ ?>
 			</div>
 		</div>
 	</div>
