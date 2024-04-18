@@ -20,7 +20,7 @@ if ( have_rows( 'partners' ) ) :
 					?>
 					<div class="partner-item col-12">
 						<div class="row">
-							<div class="col-3 text-center">
+							<div class="col-4 col-md-3 text-center">
 								<a href="<?php echo esc_url( get_sub_field( 'link' ) ); ?>" target="_blank" rel="noopener noreferrer">
 									<?php
 									$partner_logo = get_sub_field( 'logo' );
@@ -31,7 +31,7 @@ if ( have_rows( 'partners' ) ) :
 								</a>
 							</div>
 							<div class="col-1"></div>
-							<div class="col-4">
+							<div class="col-6 col-md-4">
 								<p class="partner-description"><?php the_sub_field( 'description' ); ?></p>
 							</div>
 						</div>
