@@ -1,6 +1,6 @@
 <?php
 $args = array(
-	'post_type'   => 'job',
+	'post_type'   => 'jobs',
 	'post_status' => 'publish',
 	/*'tax_query'   => array(
 		array(
