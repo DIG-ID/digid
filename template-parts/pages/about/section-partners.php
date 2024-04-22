@@ -20,7 +20,7 @@ if ( have_rows( 'partners' ) ) :
 					?>
 					<div class="partner-item col-12">
 						<div class="row">
-							<div class="col-12 col-sm-4 col-md-3 text-center">
+							<div class="col-12 col-sm-4 col-md-3 text-center mb-5 mb-sm-0">
 								<a href="<?php echo esc_url( get_sub_field( 'link' ) ); ?>" target="_blank" rel="noopener noreferrer">
 									<?php
 									$partner_logo = get_sub_field( 'logo' );
