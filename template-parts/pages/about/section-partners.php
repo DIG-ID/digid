@@ -8,7 +8,7 @@ if ( have_rows( 'partners' ) ) :
 					<span class="section__title--line"></span>
 				</div>
 				<div class="col-9 col-md-11">
-					<h2 class="section__title"><?php echo esc_html_e( 'Partners', 'digid' ); ?></h2>
+					<h2 class="section__title"><?php echo esc_html_e( 'Zertifizierungen', 'digid' ); ?></h2>
 				</div>
 			</div>
 		</div>
@@ -20,7 +20,7 @@ if ( have_rows( 'partners' ) ) :
 					?>
 					<div class="partner-item col-12">
 						<div class="row">
-							<div class="col-4 col-md-3 text-center">
+							<div class="col-12 col-sm-4 col-md-3 text-center">
 								<a href="<?php echo esc_url( get_sub_field( 'link' ) ); ?>" target="_blank" rel="noopener noreferrer">
 									<?php
 									$partner_logo = get_sub_field( 'logo' );
@@ -30,8 +30,8 @@ if ( have_rows( 'partners' ) ) :
 									?>
 								</a>
 							</div>
-							<div class="col-1"></div>
-							<div class="col-6 col-md-4">
+							<div class="col-12 col-sm-1"></div>
+							<div class="col-12 col-sm-7 col-md-4">
 								<p class="partner-description"><?php the_sub_field( 'description' ); ?></p>
 							</div>
 						</div>
