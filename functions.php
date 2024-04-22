@@ -254,7 +254,7 @@ function digid_create_option_page_for_cpt() {
 		$jobs         = acf_add_options_page(
 			array(
 				'page_title'  => 'Jobs Archive',
-				'parent_slug' => 'edit.php?post_type=job',
+				'parent_slug' => 'edit.php?post_type=jobs',
 				'capability'  => 'manage_options',
 			)
 		);
