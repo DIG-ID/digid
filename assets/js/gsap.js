@@ -118,8 +118,8 @@ $(function() {
        scrollTrigger: {
          trigger: ".section-projects",
          //start: "-100px 90%",
-         start: "-100px 100%",
-         end: "bottom 90%",
+         start: "top 100%",
+         end: "bottom 100%",
          scrub: 1,
          //markers: true,
          toggleActions: "restart pause reverse pause"
