@@ -112,7 +112,7 @@ $(function() {
       .from(".card-project", { autoAlpha: 0, y:'50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
   }
 
-  /*if ( $(".post-type-archive-projects")[0] ) {
+  if ( $(".post-type-archive-projects")[0] ) {
     // console.log( 'temos projects gsap' );
      let archiveProjectsTl = gsap.timeline({
        scrollTrigger: {
@@ -127,7 +127,7 @@ $(function() {
      });
      archiveProjectsTl
        .from(".card-project", { autoAlpha: 0, y:'50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
-   }*/
+   }
 
   /*if ( $(".single-services")[0] ) {
     console.log( 'temos single service gsap' );
