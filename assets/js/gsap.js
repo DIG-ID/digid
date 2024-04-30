@@ -115,7 +115,7 @@ $(function() {
   if ( $(".post-type-archive-projects")[0] ) {
     // console.log( 'temos projects gsap' );
      let archiveProjectsTl = gsap.timeline({
-       scrollTrigger: {
+       /*scrollTrigger: {
          trigger: ".section-projects",
          //start: "-100px 90%",
          start: "top 90%",
@@ -123,7 +123,7 @@ $(function() {
          scrub: 1,
          //markers: true,
          toggleActions: "restart pause reverse pause"
-       },
+       },*/
      });
      archiveProjectsTl
        .from(".card-project", { autoAlpha: 0, y:'50px', opacity: 0, duration: 0.5, stagger: '0.20', ease: "power3.out" });
