@@ -8,8 +8,8 @@
 					<div class="address">
 						<div class="address__ch">
 							<p class="address__title">Switzerland</p>
-							<p>Grellingerstrasse 35,<br>
-							4052 Basel</p>
+							<p>Schneidergasse 27,<br>
+							4051 Basel</p>
 						</div>
 						<div class="addresss__pt">
 							<p class="address__title">Portugal</p>
