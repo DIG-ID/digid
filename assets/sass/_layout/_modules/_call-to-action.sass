@@ -26,7 +26,16 @@
     &:hover
       background-color: $dark-color
       box-shadow: 0 2px 2px rgb(0 0 0 / 18%) !important
-
+  &--jobs
+    background-color: #DEE3E4
+    a
+      color: $dark-color
+      background-color: transparent
+      border: 1px solid $dark-color
+      box-shadow: none
+      &:hover
+        color: white
+        background-color: $dark-color
 @include media-breakpoint-down(lg)
   .section-call-to-action
     .justify-content-between

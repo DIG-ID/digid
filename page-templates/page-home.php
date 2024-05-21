@@ -12,5 +12,6 @@ get_header('dark');
 	get_template_part( 'template-parts/modules/module', 'testimonials' );
 	get_template_part( 'template-parts/pages/home/section', 'form' );
 	get_template_part( 'template-parts/pages/home/section', 'blog' );
+	get_template_part( 'template-parts/modules/module', 'jobs' );
 	do_action( 'after_main_content' );
 get_footer();
