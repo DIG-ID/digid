@@ -24,7 +24,6 @@
 					endif;
 
 					$date = get_field( 'project_scope_date' );
-					var_dump($date);
 					if ( $date ) :
 						echo '<h3>' . esc_html_e( 'Datum', 'digid' ) . '</h3>';
 						$datetime = new DateTime($date);
