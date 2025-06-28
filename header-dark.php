@@ -17,6 +17,10 @@
 					),
 				);
 				?>
+				<button data-fancybox data-src="#dialog-content">Project Starten</button>
+				<div id="dialog-content" style="display:none;max-width:700px;">
+					<?php get_template_part( 'template-parts/pages/starting-project/section', 'form' ); ?>
+				</div>
 				<?php do_action( 'wpml_add_language_selector' ); ?>
 			</div><!-- .navbar-collapse -->
 		</div>
