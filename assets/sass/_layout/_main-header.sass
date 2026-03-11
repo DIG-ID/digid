@@ -119,18 +119,20 @@
           border-radius: 30px
           padding: 1.1rem 3rem 0.9rem !important
           margin-left: 3rem
+          margin-right: 1.6rem
           box-shadow: 0 5px 2rem rgb(0 0 0 / 18%) !important
           transition: all .3s ease-in
           &:hover
             background-color: $dark-color
             box-shadow: 0 2px 2px rgb(0 0 0 / 18%) !important
-  
-  .wpml-ls-legacy-list-horizontal
-    display: none
 
-  .navbar-nav
-    li
-      &:last-child
+    .navbar-nav
+      li.wpml-ls-item
+        a.nav-link
+          padding: 0px 0.8rem 0px 0.8rem
+
+
+      li.wpml-ls-last-item:not(.wpml-ls-first-item)
         position: relative
         &::before
           content: ""
@@ -140,12 +142,11 @@
           height: 14px
           bottom: 0
           left: 0
-        a
-          padding: 0 1.6rem 0 0.8rem !important
-      &:nth-last-child(2)
-        a
-          padding: 0 0.8rem 0 1.6rem !important
-        
+  
+  .wpml-ls-legacy-list-horizontal
+    display: none
+
+
 
   #main-header.sticky
     .dropdown-menu

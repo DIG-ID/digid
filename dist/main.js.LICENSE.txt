@@ -1,16 +1,15 @@
 /*!
-  * Bootstrap v5.3.1 (https://getbootstrap.com/)
-  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap v5.3.8 (https://getbootstrap.com/)
+  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 
 /*!
- * GSAP 3.12.2
- * https://greensock.com
+ * GSAP 3.14.2
+ * https://gsap.com
  *
- * @license Copyright 2008-2023, GreenSock. All rights reserved.
- * Subject to the terms at https://greensock.com/standard-license or for
- * Club GreenSock members, the agreement issued with that membership.
+ * @license Copyright 2008-2025, GreenSock. All rights reserved.
+ * Subject to the terms at https://gsap.com/standard-license
  * @author: Jack Doyle, jack@greensock.com
 */
 
@@ -39,12 +38,11 @@
  */
 
 /*!
- * Observer 3.12.2
- * https://greensock.com
+ * Observer 3.14.2
+ * https://gsap.com
  *
- * @license Copyright 2008-2023, GreenSock. All rights reserved.
- * Subject to the terms at https://greensock.com/standard-license or for
- * Club GreenSock members, the agreement issued with that membership.
+ * @license Copyright 2008-2025, GreenSock. All rights reserved.
+ * Subject to the terms at https://gsap.com/standard-license
  * @author: Jack Doyle, jack@greensock.com
 */
 
@@ -55,22 +53,20 @@
  */
 
 /*!
- * ScrollTrigger 3.12.2
- * https://greensock.com
+ * ScrollTrigger 3.14.2
+ * https://gsap.com
  *
- * @license Copyright 2008-2023, GreenSock. All rights reserved.
- * Subject to the terms at https://greensock.com/standard-license or for
- * Club GreenSock members, the agreement issued with that membership.
+ * @license Copyright 2008-2025, GreenSock. All rights reserved.
+ * Subject to the terms at https://gsap.com/standard-license
  * @author: Jack Doyle, jack@greensock.com
 */
 
 /*!
- * TextPlugin 3.12.2
- * https://greensock.com
+ * TextPlugin 3.14.2
+ * https://gsap.com
  *
- * @license Copyright 2008-2023, GreenSock. All rights reserved.
- * Subject to the terms at https://greensock.com/standard-license or for
- * Club GreenSock members, the agreement issued with that membership.
+ * @license Copyright 2008-2025, GreenSock. All rights reserved.
+ * Subject to the terms at https://gsap.com/standard-license
  * @author: Jack Doyle, jack@greensock.com
 */
 
@@ -98,11 +94,10 @@
  */
 
 /*!
- * strings: 3.12.2
- * https://greensock.com
+ * strings: 3.14.2
+ * https://gsap.com
  *
- * Copyright 2008-2023, GreenSock. All rights reserved.
- * Subject to the terms at https://greensock.com/standard-license or for
- * Club GreenSock members, the agreement issued with that membership.
+ * Copyright 2008-2025, GreenSock. All rights reserved.
+ * Subject to the terms at https://gsap.com/standard-license
  * @author: Jack Doyle, jack@greensock.com
 */
