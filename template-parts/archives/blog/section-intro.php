@@ -23,7 +23,7 @@
 				]);
 				if ( $page_blog )
 				{ ?>
-					<h1 class="section__subtitle"><?php echo $page_blog[0]->post_content; ?></h1>
+					<div class="section__subtitle"><h1><?php echo $page_blog[0]->post_content; ?></h1></div>
 				<?php } ?>
 			</div>
 		</div>
