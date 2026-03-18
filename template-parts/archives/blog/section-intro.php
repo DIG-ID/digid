@@ -5,13 +5,13 @@
 				<span class="section__title--line"></span>
 			</div>
 			<div class="col-9 col-md-11">
-				<h1 class="section__title">
+				<div class="section__title">
 					<?php
 					if ( function_exists( 'yoast_breadcrumb' ) ) :
 						yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
 					endif;
 					?>
-				</h1>
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -23,7 +23,7 @@
 				]);
 				if ( $page_blog )
 				{ ?>
-					<h2 class="section__subtitle"><?php echo $page_blog[0]->post_content; ?></h2>
+					<h1 class="section__subtitle"><?php echo $page_blog[0]->post_content; ?></h1>
 				<?php } ?>
 			</div>
 		</div>
