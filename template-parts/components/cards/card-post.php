@@ -6,7 +6,7 @@
 		echo '<a href="' . esc_url( get_the_permalink() ) . '"><figure><img src="https://via.placeholder.com/416x304" alt="placeholder image"></figure></a>';
 	endif;
 	?>
-	<a href="<?php the_permalink(); ?>" class="card-post__title"><?php the_title( '<h2>', '</h2> '); ?></a>
+	<a href="<?php the_permalink(); ?>" class="card-post__title"><?php the_title( '<h3>', '</h3> '); ?></a>
 	<?php get_template_part( 'template-parts/loops/loop', 'related-categories' ); ?>
 	<?php the_excerpt(); ?>
 	<a href="<?php the_permalink(); ?>" class="card-post__btn"><?php esc_html_e( 'Mehr erfahren', 'digid' ); ?></a>
