@@ -23,7 +23,7 @@
 				]);
 				if ( $page_blog )
 				{ ?>
-					<div class="section__subtitle"><h1><?php echo $page_blog[0]->post_content; ?></h1></div>
+					<div class="section__subtitle"><h1><?php echo wp_strip_all_tags($page_blog[0]->post_content); ?></h1></div>
 				<?php } ?>
 			</div>
 		</div>
