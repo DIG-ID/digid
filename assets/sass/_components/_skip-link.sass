@@ -1,0 +1,28 @@
+// Skip-to-main-content link
+// Hidden off-screen until focused via keyboard (TAB)
+.skip-link
+  @apply absolute overflow-hidden whitespace-nowrap uppercase no-underline font-normal rounded-full
+  left: -9999px
+  top: auto
+  width: 1px
+  height: 1px
+  font-family: $main-font
+  font-size: 12px
+  letter-spacing: 0.08em
+  color: #F7F7F7
+  background-color: $accent-color
+  box-shadow: 0 5px 2rem rgb(0 0 0 / 18%)
+  padding: 1.1rem 3rem 0.9rem
+  transition: all .3s ease-in
+  z-index: 9999
+
+  &:focus
+    @apply fixed overflow-visible
+    left: 50%
+    top: 1rem
+    width: auto
+    height: auto
+    transform: translateX(-50%)
+    outline: 3px solid $main-color
+    outline-offset: 3px
+    box-shadow: 0 5px 2rem rgb(0 0 0 / 18%), 0 0 0 5px $main-color

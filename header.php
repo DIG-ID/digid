@@ -1,3 +1,6 @@
+<a class="skip-link" href="#main-content">
+	<?php esc_html_e( 'Skip to main content', 'digid' ); ?>
+</a>
 <?php get_template_part( 'template-parts/master-header' ); ?>
 <header id="main-header" class="main-header" itemscope itemtype="http://schema.org/WebSite">
 	<nav class="navbar fixed-top navbar-expand-lg" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'digid' ); ?>">
