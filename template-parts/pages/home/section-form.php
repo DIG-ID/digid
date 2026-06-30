@@ -10,7 +10,7 @@
 		</div>
 		<div class="row">
 			<div class="col-12 col-lg-12">
-				<h2 class="section__subtitle"><?php the_field( 'form_section_title' ); ?></h2>
+				<p class="section__subtitle"><?php the_field( 'form_section_title' ); ?></p>
 			</div>
 		</div>
 		<div class="row justify-content-between align-items-center">
