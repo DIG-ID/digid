@@ -5,7 +5,7 @@
 				<span class="section__title--line"></span>
 			</div>
 			<div class="col-9 col-md-11">
-				<h2 class="section__title"><?php echo esc_html_e( 'Freelancers', 'digid' ); ?></h2>
+				<p class="section__title"><?php echo esc_html_e( 'Freelancers', 'digid' ); ?></p>
 			</div>
 		</div>
 		<div class="row justify-content-between">
