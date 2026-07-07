@@ -5,7 +5,7 @@
 					<span class="section__title--line"></span>
 				</div>
 				<div class="col-9 col-md-11">
-					<h2 class="section__title"><?php echo esc_html_e( 'Freelancers', 'digid' ); ?></h2>
+					<h2 class="section__title"><?php echo esc_html_e( 'Erweitertes Team', 'digid' ); ?></h2>
 				</div>
 			</div>
 			<?php if ( get_field( 'title_team' ) ) : ?>
