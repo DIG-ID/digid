@@ -17,10 +17,25 @@
 	<div class="container">
 		<div class="row">
 			<?php
-			$team_freelancer_posts = get_field( 'team_members_freelancers' );
-			if ( $team_freelancer_posts ) :
-				foreach ( $team_freelancer_posts as $team_freelancer_post ) :
-					$member_id       = $team_freelancer_post->ID;
+			$team_freelancer_query = new WP_Query(
+				array(
+					'post_type'      => 'team',
+					'posts_per_page' => -1,
+					'orderby'        => 'menu_order',
+					'order'          => 'ASC',
+					'meta_query'     => array(
+						array(
+							'key'     => 'is_freelancer',
+							'value'   => '1',
+							'compare' => '=',
+						),
+					),
+				)
+			);
+			if ( $team_freelancer_query->have_posts() ) :
+				while ( $team_freelancer_query->have_posts() ) :
+					$team_freelancer_query->the_post();
+					$member_id       = get_the_ID();
 					$member_name     = get_field( 'name', $member_id );
 					$member_position = get_field( 'position', $member_id );
 					$member_link     = get_the_permalink( $member_id );
@@ -38,7 +53,8 @@
 						<a class="card-post__btn" href="<?php echo esc_url( $member_link ); ?>"><?php esc_html_e( 'Mehr erfahren', 'digid' ); ?></a>
 					</div>
 					<?php
-				endforeach;
+				endwhile;
+				wp_reset_postdata();
 			endif;
 			?>
 		</div>

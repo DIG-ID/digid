@@ -25,11 +25,30 @@
 	<div class="container">
 		<div class="row">
 			<?php
-			$team_full_posts = get_field( 'team_members_full-time' );
-			if ( $team_full_posts ) :
-				foreach ( $team_full_posts as $team_full_post ) :
-					//var_dump($team_full_post);
-					$member_id       = $team_full_post->ID;
+			$team_full_query = new WP_Query(
+				array(
+					'post_type'      => 'team',
+					'posts_per_page' => -1,
+					'orderby'        => 'menu_order',
+					'order'          => 'ASC',
+					'meta_query'     => array(
+						'relation' => 'OR',
+						array(
+							'key'     => 'is_freelancer',
+							'value'   => '1',
+							'compare' => '!=',
+						),
+						array(
+							'key'     => 'is_freelancer',
+							'compare' => 'NOT EXISTS',
+						),
+					),
+				)
+			);
+			if ( $team_full_query->have_posts() ) :
+				while ( $team_full_query->have_posts() ) :
+					$team_full_query->the_post();
+					$member_id       = get_the_ID();
 					$member_name     = get_field( 'name', $member_id );
 					$member_position = get_field( 'position', $member_id );
 					?>
@@ -45,7 +64,8 @@
 						<p class="team__position"><?php echo esc_html( $member_position ); ?></p>
 					</div>
 					<?php
-				endforeach;
+				endwhile;
+				wp_reset_postdata();
 			endif;
 			?>
 		</div>
