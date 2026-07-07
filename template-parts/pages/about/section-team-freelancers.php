@@ -50,7 +50,6 @@
 						?>
 						<p class="team__name"><?php echo esc_html( $member_name ); ?></p>
 						<p class="team__position"><?php echo esc_html( $member_position ); ?></p>
-						<a class="card-post__btn" href="<?php echo esc_url( $member_link ); ?>"><?php esc_html_e( 'Mehr erfahren', 'digid' ); ?></a>
 					</div>
 					<?php
 				endwhile;
