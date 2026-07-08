@@ -18,12 +18,20 @@ $(function() {
       loop: true,
       loopAdditionalSlides: 10,
       allowTouchMove: false,
-      speed: 5000,
+      speed: 4000,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
       },
+    });
+
+    // Autoplay with delay:0 can stall when the tab is backgrounded and a
+    // transitionEnd event is dropped. Restart it whenever the tab is shown again.
+    document.addEventListener('visibilitychange', function () {
+      if ( ! document.hidden && clientsLogosSwiper.autoplay ) {
+        clientsLogosSwiper.autoplay.start();
+      }
     });
   }
 
