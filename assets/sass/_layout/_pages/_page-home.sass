@@ -118,9 +118,9 @@
     width: 100%
     padding-top: 50px
     overflow: hidden
-    // Pause the loop while hovering the strip
-    &:hover .clients-marquee__track
-      animation-play-state: paused
+    // Fade the logos out as they reach the left/right edges
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 10%, black 90%, transparent 100%)
+    mask-image: linear-gradient(to right, transparent 0, black 10%, black 90%, transparent 100%)
     &__track
       display: flex
       align-items: center
