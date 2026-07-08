@@ -5,7 +5,8 @@
 				<span class="section__title--line"></span>
 			</div>
 			<div class="col-9 col-md-11">
-				<h2 class="section__title"><?php esc_html_e( 'Clients', 'digid' ); ?></h2>
+				<h2 class="section__title"><?php esc_html_e( 'REFERENZEN', 'digid' ); ?></h2>
+                <p class="section__subtitle"><?php the_field( 'clients_title' ); ?></p>
 			</div>
 		</div>
 
@@ -13,7 +14,7 @@
 	$client_logos = get_field( 'clients_logos' );
 	if ( $client_logos ) :
 		?>
-		<div class="row">
+		<div class="row pt-10">
 			<div class="col-12">
 				<div class="swiper clients-logos-swiper">
 					<div class="swiper-wrapper">
