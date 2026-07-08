@@ -18,7 +18,7 @@ $(function() {
       loop: true,
       loopAdditionalSlides: 10,
       allowTouchMove: false,
-      speed: 1000,
+      speed: 6000,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
