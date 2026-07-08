@@ -112,6 +112,27 @@
     &--wrapper
       margin-bottom: 60px
 
+.section-clients
+  overflow: hidden
+  .clients-logos-swiper
+    width: 100%
+    // Linear timing turns the autoplay into a continuous marquee
+    .swiper-wrapper
+      transition-timing-function: linear !important
+      align-items: center
+    .clients-logos__slide
+      display: flex
+      align-items: center
+      justify-content: center
+      width: auto
+    .clients-logos__img
+      width: auto
+      height: 40px
+      max-width: none
+      object-fit: contain
+      @media (min-width: 768px)
+        height: 55px
+
 @include media-breakpoint-down(xl)
   .section-hero
     &__title

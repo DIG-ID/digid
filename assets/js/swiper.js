@@ -11,6 +11,20 @@ $(function() {
     },
   });
 
+  if ( $(".clients-logos-swiper")[0] ) {
+    const clientsLogosSwiper = new Swiper('.clients-logos-swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 60,
+      loop: true,
+      allowTouchMove: false,
+      speed: 4000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+    });
+  }
+
   if ( $(".section-hero")[0] ) {
     const homeIntroSwiper = new Swiper('.swiper-home-intro', {
       // Optional parameters
