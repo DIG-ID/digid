@@ -131,8 +131,12 @@
       height: 40px
       max-width: none
       object-fit: contain
+      filter: grayscale(100%)
+      transition: filter 0.3s ease
       @media (min-width: 768px)
         height: 55px
+      &:hover
+        filter: grayscale(0%)
 
 @include media-breakpoint-down(xl)
   .section-hero

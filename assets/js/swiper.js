@@ -14,13 +14,15 @@ $(function() {
   if ( $(".clients-logos-swiper")[0] ) {
     const clientsLogosSwiper = new Swiper('.clients-logos-swiper', {
       slidesPerView: 'auto',
-      spaceBetween: 60,
+      spaceBetween: 100,
       loop: true,
+      loopAdditionalSlides: 10,
       allowTouchMove: false,
       speed: 4000,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
+        pauseOnMouseEnter: false,
       },
     });
   }
