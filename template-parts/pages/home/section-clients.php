@@ -18,28 +18,28 @@
 		?>
 		<div class="row pt-10">
 			<div class="col-12">
-				<div class="swiper clients-logos-swiper">
-					<div class="swiper-wrapper">
-						<?php
-						foreach ( $client_logos as $logo ) :
-							$logo_id = is_array( $logo ) ? $logo['ID'] : $logo;
-							?>
-							<div class="swiper-slide clients-logos__slide">
-								<?php
-								echo wp_get_attachment_image(
-									$logo_id,
-									'full',
-									false,
-									array(
-										'class'   => 'clients-logos__img',
-										'loading' => 'lazy',
-									)
-								);
-								?>
-							</div>
-						<?php endforeach; ?>
+				<div class="clients-marquee">
+					<div class="clients-marquee__track">
+						<?php for ( $i = 0; $i < 2; $i++ ) : ?>
+							<?php foreach ( $client_logos as $logo ) : ?>
+								<?php $logo_id = is_array( $logo ) ? $logo['ID'] : $logo; ?>
+								<div class="clients-marquee__item" aria-hidden="<?php echo 0 === $i ? 'false' : 'true'; ?>">
+									<?php
+									echo wp_get_attachment_image(
+										$logo_id,
+										'full',
+										false,
+										array(
+											'class'   => 'clients-marquee__img',
+											'loading' => 'lazy',
+										)
+									);
+									?>
+								</div>
+							<?php endforeach; ?>
+						<?php endfor; ?>
 					</div>
-				</div><!-- .clients-logos-swiper -->
+				</div><!-- .clients-marquee -->
 			</div>
 		</div>
     </div>
