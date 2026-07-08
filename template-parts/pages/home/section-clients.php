@@ -8,7 +8,6 @@
 				<h2 class="section__title"><?php esc_html_e( 'Clients', 'digid' ); ?></h2>
 			</div>
 		</div>
-	</div>
 
 	<?php
 	$client_logos = get_field( 'clients_logos' );
@@ -40,5 +39,6 @@
 				</div><!-- .clients-logos-swiper -->
 			</div>
 		</div>
+    </div>
 	<?php endif; ?>
 </section>
