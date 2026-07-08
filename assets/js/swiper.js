@@ -14,7 +14,7 @@ $(function() {
   if ( $(".clients-logos-swiper")[0] ) {
     const clientsLogosSwiper = new Swiper('.clients-logos-swiper', {
       slidesPerView: 'auto',
-      spaceBetween: 100,
+      spaceBetween: 200,
       loop: true,
       loopAdditionalSlides: 10,
       allowTouchMove: false,
