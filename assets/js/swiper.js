@@ -14,11 +14,11 @@ $(function() {
   if ( $(".clients-logos-swiper")[0] ) {
     const clientsLogosSwiper = new Swiper('.clients-logos-swiper', {
       slidesPerView: 'auto',
-      spaceBetween: 100,
+      spaceBetween: 120,
       loop: true,
       loopAdditionalSlides: 10,
       allowTouchMove: false,
-      speed: 2000,
+      speed: 1000,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
