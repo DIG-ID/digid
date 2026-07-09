@@ -169,6 +169,9 @@
     .clients-marquee
       padding-top: 0
       padding-bottom: 40px
+    // A bit less space between logos on tablet
+    .clients-marquee__item
+      padding: 0 35px
 
 // Clients — mobile
 @include media-breakpoint-down(md)
@@ -182,9 +185,6 @@
     // A bit of breathing room under the REFERENZEN heading block
     .section__title--wrapper
       padding-bottom: 30px
-      // Nudge the 1px line up to the optical centre of the uppercase over-title
-      .section__title--line
-        transform: translateY(-3px)
     // Drop the title's bottom margin (the wrapper padding handles the gap)
     .section__subtitle
       margin-bottom: 0

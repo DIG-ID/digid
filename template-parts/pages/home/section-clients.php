@@ -7,7 +7,9 @@
 			<div class="col-9 col-md-11">
 				<h2 class="section__title"><?php esc_html_e( 'REFERENZEN', 'digid' ); ?></h2>
 			</div>
-            <div class="col-12 col-md-11">
+		</div>
+		<div class="row">
+			<div class="col-12 col-lg-12">
 				<p class="section__subtitle"><?php the_field( 'clients_title' ); ?></p>
 			</div>
 		</div>
