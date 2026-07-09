@@ -163,9 +163,12 @@
 // Clients — tablet & down
 @include media-breakpoint-down(lg)
   .section-clients
-    // Gap between the over-title (REFERENZEN) and the title
+    .section__title--wrapper
+      margin-bottom: 0
     .section__title
-      margin-bottom: 20px
+      margin-bottom: 0
+    .section__subtitle
+      margin-bottom: 60px
     .clients-marquee
       padding-top: 0
       padding-bottom: 40px
@@ -177,7 +180,7 @@
 @include media-breakpoint-down(md)
   .section-clients
     .clients-marquee
-      padding-top: 0
+      padding-top: 40px
       padding-bottom: 40px
     // Tighter spacing between logos on small screens
     .clients-marquee__item
@@ -185,6 +188,8 @@
     // A bit of breathing room under the REFERENZEN heading block
     .section__title--wrapper
       padding-bottom: 30px
+    .section__title
+      margin-bottom: 0
     // Drop the title's bottom margin (the wrapper padding handles the gap)
     .section__subtitle
       margin-bottom: 0
