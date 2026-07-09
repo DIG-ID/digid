@@ -141,7 +141,7 @@
       object-fit: contain
       // brightness(0) flattens every logo to a solid black silhouette,
       // invert() then lifts that black to one uniform grey (higher = lighter)
-      filter: brightness(0) invert(0.65)
+      filter: brightness(0) invert(0.4)
       transition: filter 0.3s ease
       @media (min-width: 768px)
         height: 55px
@@ -159,6 +159,26 @@
 @media (prefers-reduced-motion: reduce)
   .clients-marquee__track
     animation: none
+
+// Clients — tablet & down
+@include media-breakpoint-down(lg)
+  .section-clients
+    // Gap between the over-title (REFERENZEN) and the title
+    .section__title
+      margin-bottom: 20px
+    .clients-marquee
+      padding-top: 0
+      padding-bottom: 40px
+
+// Clients — mobile
+@include media-breakpoint-down(md)
+  .section-clients
+    .clients-marquee
+      padding-top: 0
+      padding-bottom: 0
+    // A bit of breathing room under the REFERENZEN heading block
+    .section__title--wrapper
+      padding-bottom: 30px
 
 @include media-breakpoint-down(xl)
   .section-hero
