@@ -139,12 +139,14 @@
       height: 40px
       max-width: none
       object-fit: contain
-      filter: grayscale(100%)
+      // brightness(0) flattens every logo to a solid black silhouette,
+      // invert() then lifts that black to one uniform grey (higher = lighter)
+      filter: brightness(0) invert(0.65)
       transition: filter 0.3s ease
       @media (min-width: 768px)
         height: 55px
       &:hover
-        filter: grayscale(0%)
+        filter: none
 
 // The track holds the logo set twice; shifting by -50% lands the second copy
 // exactly where the first began, so the loop is seamless and never resets.
