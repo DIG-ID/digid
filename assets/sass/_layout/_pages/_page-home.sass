@@ -175,10 +175,19 @@
   .section-clients
     .clients-marquee
       padding-top: 0
-      padding-bottom: 0
+      padding-bottom: 40px
+    // Tighter spacing between logos on small screens
+    .clients-marquee__item
+      padding: 0 20px
     // A bit of breathing room under the REFERENZEN heading block
     .section__title--wrapper
       padding-bottom: 30px
+      // Nudge the 1px line up to the optical centre of the uppercase over-title
+      .section__title--line
+        transform: translateY(-3px)
+    // Drop the title's bottom margin (the wrapper padding handles the gap)
+    .section__subtitle
+      margin-bottom: 0
 
 @include media-breakpoint-down(xl)
   .section-hero
