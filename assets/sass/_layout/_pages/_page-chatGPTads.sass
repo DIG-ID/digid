@@ -1,0 +1,219 @@
+.section-chatGPTads-intro
+  padding: 0
+  background-color: $dark-color
+  overflow: hidden
+  .chatGPTads__container
+    .section
+      &__btn
+        &-text
+          color: $main-color
+          font-weight: 100
+
+.chatGPTads
+  &__header
+    &-image
+        position: absolute
+        width: auto
+        max-width: 100%
+        object-fit: cover
+        height: 100%
+  &__image-container
+    position: relative
+    width: 100%
+    height: 100%
+    &::after
+      background-image: linear-gradient(0,rgba(18,35,43,.85),rgba(18,35,43,.85))
+      content: ""
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+  &__container
+    position: relative
+    padding-top: 200px
+    padding-bottom: 150px
+    .section
+      &__subtitle
+        font-size: 47.78px
+        letter-spacing: 0.9556px
+        line-height: 54px !important
+        margin-bottom: 30px
+        color: $bg-color
+      &__description
+        font-size: 16px
+        line-height: 30px
+        color: $bg-color
+
+
+@include media-breakpoint-down(lg)
+  .chatGPTads
+    &__container
+      padding-top: 120px
+      padding-right: calc(var(--bs-gutter-x) * 0.5)
+      padding-left: calc(var(--bs-gutter-x) * 0.5)
+      .section
+        &__subtitle
+          font-size: 28px
+          line-height: 32px !important
+          letter-spacing: 0.23px
+          margin-bottom: 40px
+          color: $main-color
+        &__description
+          font-size: 16px
+          line-height: 30px
+          font-weight: light
+
+.section-why-process
+  padding: 0
+  background: linear-gradient(to right, $bg-color 0%, $bg-color 50%, $dark-color 50%, $dark-color 100%)
+  .why-process__banner
+    background-color: $main-color
+    padding-top: 30px
+    padding-bottom: 30px
+    &-text
+      font-family: $second-font
+      font-size: 24px
+      font-weight: 400
+      line-height: 32px
+      letter-spacing: 0.24px
+      margin-bottom: 0
+      color: $dark-color
+    &-btn
+      display: inline-block
+      font-size: 12px
+      font-weight: 400
+      font-family: $main-font
+      line-height: 16px
+      text-transform: uppercase
+      text-decoration: none
+      white-space: nowrap
+      padding: 1.1rem 3rem 0.9rem
+      border-radius: 30px
+      color: #F7F7F7
+      background-color: $accent-color
+      box-shadow: 0 5px 2rem rgba(0, 0, 0, 0.18)
+      transition: all .3s ease-in
+      &:hover
+        color: #F7F7F7
+        background-color: darken($accent-color, 20%)
+  .why-process__col
+    padding-top: 100px
+    padding-bottom: 100px
+    &--light
+      .section__description
+        color: $text-color
+    &--dark
+      .section__subtitle
+        color: $bg-color
+      .why-process__steps
+        margin-top: 40px
+        hr
+          border-top-width: 1px
+          border-top-color: $bg-color
+          opacity: 0.25
+          margin-bottom: 25px
+        .why-process__step
+          margin-bottom: 25px
+          &-title
+            font-family: $second-font
+            font-weight: 500
+            font-size: 16px
+            letter-spacing: 0.4px
+            margin-bottom: 10px
+            color: $main-color
+          &-text
+            font-family: $main-font
+            font-weight: 300
+            font-size: 14px
+            line-height: 25px
+            margin-bottom: 0
+            color: $bg-color
+            opacity: 0.8
+
+@include media-breakpoint-down(lg)
+  .section-why-process
+    background: linear-gradient(to bottom, $bg-color 0%, $bg-color 50%, $dark-color 50%, $dark-color 100%)
+    .why-process__banner
+      &-text
+        font-size: 20px
+        line-height: 26px
+        margin-bottom: 20px
+      &-btn
+        font-size: 11px
+        padding: 1rem 2rem 0.8rem
+    .why-process__col
+      padding-top: 50px
+      padding-bottom: 50px
+
+.section-chatgptads-contact
+  background-color: $bg-color
+  .section__description
+    margin-bottom: 50px
+  .wpcf7
+    .wpcf7-form
+      label
+        display: block
+        font-size: 13.33px
+        font-weight: 400
+        letter-spacing: 0.7998px
+        line-height: 16px
+        text-transform: uppercase
+        margin-bottom: 10px
+        color: $dark-color
+      .wpcf7-form-control-wrap
+        display: block
+        margin-bottom: 30px
+        .wpcf7-form-control
+          padding: 10px 0
+          width: 100%
+          border: none
+          border-bottom: 1px solid rgba(18, 35, 43, 0.15)
+          border-radius: 0
+          background-color: transparent
+          font-family: $main-font
+          font-weight: 300
+          font-size: 14px
+          color: $text-color
+          transition: border-color .3s ease-in
+          &:focus
+            outline: none
+            border-bottom-color: $main-color
+        textarea.wpcf7-form-control
+          min-height: 80px
+          resize: vertical
+      .wpcf7-submit
+        appearance: none
+        -webkit-appearance: none
+        display: inline-block
+        background-color: transparent
+        border: none
+        border-bottom: 1px solid transparent
+        margin-top: 20px
+        padding: 0 42px 10px 0
+        font-family: $second-font
+        font-weight: 300
+        font-size: 23px
+        letter-spacing: 0.46px
+        line-height: 1
+        color: $text-color
+        cursor: pointer
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32.439' height='11.914' viewBox='0 0 32.439 11.914'%3E%3Cpath fill='%2300CCCC' d='M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z' transform='translate(-1 -16.293)'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-position: right 10px
+        transition: all .3s ease-in
+        &:hover
+          border-bottom-color: $dark-color
+      .wpcf7-not-valid-tip
+        font-family: $main-font
+        font-weight: 400
+        font-size: 12px
+        letter-spacing: 0.4px
+        line-height: 16px
+        padding-top: 5px
+
+@include media-breakpoint-down(lg)
+  .section-chatgptads-contact
+    .wpcf7
+      .wpcf7-submit
+        font-size: 18px
