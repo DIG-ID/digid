@@ -6,6 +6,7 @@
 
 .main-header--chatgptads
   background-color: $dark-color
+  overflow-x: hidden
   .navbar
     padding-top: 30px
     padding-bottom: 30px
@@ -41,6 +42,19 @@
     .main-header__cta
       font-size: 11px
       padding: 1rem 2rem 0.8rem
+
+@include media-breakpoint-down(sm)
+  .main-header--chatgptads
+    .navbar
+      padding-top: 16px
+      padding-bottom: 16px
+    .site-logo
+      svg
+        max-width: 34px
+    .main-header__cta
+      font-size: 9px
+      letter-spacing: 0.3px
+      padding: 0.7rem 1.1rem 0.55rem
 
 .section-chatGPTads-intro
   padding: 0
