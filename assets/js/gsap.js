@@ -32,6 +32,31 @@ gsap.ticker.add((time)=>{
   lenis.raf(time * 1000)
 })
 
+//Smooth scroll for anchor links (#id), using Lenis instead of the browser's instant jump
+document.addEventListener('click', function (e) {
+  const anchor = e.target.closest('a[href^="#"]');
+
+  if ( ! anchor ) {
+    return;
+  }
+
+  const hash = anchor.getAttribute('href');
+
+  if ( ! hash || hash === '#' ) {
+    return;
+  }
+
+  const target = document.querySelector(hash);
+
+  if ( ! target ) {
+    return;
+  }
+
+  e.preventDefault();
+
+  lenis.scrollTo(target, { offset: -100 });
+});
+
 $(function() {
   if ( $(".section-hero__title")[0] ) {
 
