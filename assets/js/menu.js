@@ -1,7 +1,10 @@
 $(function() {
-document.querySelector('.hamburguer-button').addEventListener('click', function () {
-    document.querySelector('.animated-icon2').classList.toggle('open');
-});
+var hamburguerButton = document.querySelector('.hamburguer-button');
+if ( hamburguerButton ) {
+    hamburguerButton.addEventListener('click', function () {
+        document.querySelector('.animated-icon2').classList.toggle('open');
+    });
+}
 });
 
 $(function() {

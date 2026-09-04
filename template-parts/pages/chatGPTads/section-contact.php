@@ -1,15 +1,13 @@
-<section class="section section-chatgptads-contact">
+<section id="sign-up" class="section section-chatgptads-contact">
 	<div class="container">
-		<div class="row">
-			<div class="col-12 col-lg-8 col-xl-6">
+		<div class="row justify-content-between">
+			<div class="col-12 col-lg-4">
 				<h2 class="section__subtitle"><?php the_field( 'contact_title' ); ?></h2>
 				<div class="section__description">
 					<?php the_field( 'contact_text' ); ?>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 col-lg-10 col-xl-8">
+			<div class="col-12 col-lg-7">
 				<?php $contact_form_shortcode = get_field( 'contact_form_shortcode' ); ?>
 				<?php if ( $contact_form_shortcode ) : ?>
 					<?php echo do_shortcode( $contact_form_shortcode ); ?>

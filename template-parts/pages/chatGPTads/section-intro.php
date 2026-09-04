@@ -19,9 +19,8 @@
 					<p class="section__description"><?php the_field( 'intro_text' ) ?></p>
 					<?php $intro_button = get_field( 'intro_button' ); ?>
 						<?php if ( $intro_button ) : ?>
-							<a class="section__btn" href="<?php echo esc_url( $intro_button['url'] ); ?>" target="<?php echo esc_attr( $intro_button['target'] ? $intro_button['target'] : '_self' ); ?>"><span class="section__btn-text"><?php echo esc_html( $intro_button['title'] ); ?></span> <svg xmlns="http://www.w3.org/2000/svg" width="32.439" height="11.914"><path d="M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z" transform="translate(-1 -16.293)"/></svg></a>
+							<a class="section__btn" href="<?php echo esc_url( $intro_button['url'] ); ?>" target="<?php echo esc_attr( $intro_button['target'] ? $intro_button['target'] : '_self' ); ?>"><span class="section__btn-text"><?php echo esc_html( $intro_button['title'] ); ?></span> <svg xmlns="http://www.w3.org/2000/svg" width="32.439" height="11.914"><path d="M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z" transform="translate(-1 -16.293)"></path></svg></a>
 						<?php endif; ?>
-					<?php get_template_part( 'template-parts/modules/module', 'start-project' ); ?>
 				</div>
 			</div>
 		</div>
