@@ -15,6 +15,39 @@
       max-width: 45px
       height: auto
       fill: $main-color
+  .main-header__lang-switcher
+    display: flex
+    align-items: center
+    list-style: none
+    margin: 0
+    margin-left: 1.6rem
+    padding: 0
+    .main-header__lang-item
+      position: relative
+      &:not(&--first)
+        margin-left: 12px
+        padding-left: 12px
+        &::before
+          content: ""
+          position: absolute
+          top: 50%
+          left: 0
+          transform: translateY(-50%)
+          width: 1px
+          height: 14px
+          background-color: $main-color
+      a
+        display: inline-block
+        font-family: $main-font
+        font-size: 12px
+        font-weight: 400
+        letter-spacing: 0.6px
+        text-decoration: none
+        text-transform: uppercase
+        color: $main-color
+        transition: color .3s ease-in
+        &:hover
+          color: $bg-color
   .main-header__cta
     display: inline-block
     font-size: 12px
