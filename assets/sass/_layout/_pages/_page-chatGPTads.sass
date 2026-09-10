@@ -325,7 +325,8 @@
         display: block
         margin-bottom: 24px
         input.wpcf7-form-control,
-        textarea.wpcf7-form-control
+        textarea.wpcf7-form-control,
+        select.wpcf7-form-control
           padding: 14px 16px
           width: 100%
           border: none
@@ -343,6 +344,46 @@
         textarea.wpcf7-form-control
           min-height: 50px
           resize: vertical
+        select.wpcf7-form-control
+          appearance: none
+          -webkit-appearance: none
+          cursor: pointer
+          padding-right: 40px
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23445659' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E")
+          background-repeat: no-repeat
+          background-position: right 16px center
+          &:invalid
+            color: $dark-accent
+        .wpcf7-radio
+          display: flex
+          gap: 10px
+          .wpcf7-list-item
+            margin: 0
+            flex: 1
+          label
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            padding: 14px 16px
+            background-color: #fff
+            border-radius: 4px
+            cursor: pointer
+            font-family: $main-font
+            font-weight: 400
+            font-size: 14px
+            color: $text-color
+            box-shadow: inset 0 0 0 1px transparent
+            transition: box-shadow .3s ease-in, font-weight .3s ease-in
+            &:has(input:checked)
+              box-shadow: inset 0 0 0 1px $main-color
+              font-weight: 700
+          input[type="radio"]
+            position: absolute
+            width: 1px
+            height: 1px
+            opacity: 0
         .wpcf7-acceptance
           display: block
           .wpcf7-list-item
@@ -367,23 +408,27 @@
         appearance: none
         -webkit-appearance: none
         display: inline-block
-        background-color: transparent
+        background-color: $main-color
         border: none
-        border-bottom: 1px solid transparent
-        padding: 0 42px 10px 0
-        font-family: $second-font
-        font-weight: 300
-        font-size: 23px
-        letter-spacing: 0.46px
+        border-radius: 4px
+        padding: 16px 32px
+        font-family: $main-font
+        font-weight: 700
+        font-size: 14px
+        letter-spacing: 0.3px
         line-height: 1
-        color: $text-color
+        color: $dark-color
         cursor: pointer
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32.439' height='11.914' viewBox='0 0 32.439 11.914'%3E%3Cpath fill='%23445659' d='M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z' transform='translate(-1 -16.293)'/%3E%3C/svg%3E")
-        background-repeat: no-repeat
-        background-position: right 8px
-        transition: all .3s ease-in
+        transition: background-color .3s ease-in
         &:hover
-          border-bottom-color: $dark-color
+          background-color: darken($main-color, 10%)
+      .wpcf7-submit-helper
+        display: inline-block
+        margin-left: 16px
+        font-family: $main-font
+        font-weight: 400
+        font-size: 13px
+        color: $dark-accent
       .wpcf7-spinner
         display: none
       .wpcf7-not-valid-tip
@@ -398,4 +443,11 @@
   .section-chatgptads-contact
     .wpcf7
       .wpcf7-submit
-        font-size: 18px
+        display: block
+        width: 100%
+        text-align: center
+      .wpcf7-submit-helper
+        display: block
+        margin-left: 0
+        margin-top: 12px
+        text-align: center
