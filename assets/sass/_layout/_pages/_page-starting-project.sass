@@ -190,7 +190,8 @@
     &__description
       margin-top: 20px
 
-.page-template-page-starting-project
+.page-template-page-starting-project,
+.modal-start-project
   .section-st-project
     &--option-link
       margin-top: 30px
@@ -201,6 +202,9 @@
       line-height: 20px
       color: $dark-color
       text-decoration: none
+      transition: color .3s ease
+      &:hover
+        color: $accent-color
 
 @include media-breakpoint-up(lg)
   .section-st-kontakt
@@ -278,9 +282,11 @@
         flex: 0 0 auto
       > .cf7mls-btns-last-step
         order: 1
+        min-height: 0
         margin: 16px 0 26px
         .cf7mls_back
           width: auto
+          margin: 0
       > .cf7submit-btn
         order: 2
         margin: 16px 0 26px !important
