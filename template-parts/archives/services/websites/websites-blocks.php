@@ -7,7 +7,7 @@
 				?>
 				<div class="row section-websites__row">
 					<div class="col-12 col-lg-6 order-2 order-lg-1">
-						<p class="section-websites__title"><?php the_sub_field( 'title' ); ?></p>
+						<h2 class="section-websites__title"><?php the_sub_field( 'title' ); ?></h2>
 							<?php
 							if ( have_rows( 'list' ) ) :
 								while( have_rows('list') ) :

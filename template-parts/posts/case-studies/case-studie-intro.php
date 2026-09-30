@@ -33,11 +33,11 @@
 						<?php
 						$sector = get_field( 'case_studie_scope_sector' );
 						if ( $sector ) :
-							echo '<h3>' . esc_html_e( 'Sector', 'digid' ) . '</h3>';
+							echo '<p class="case-studies-details__label">' . esc_html__( 'Sector', 'digid' ) . '</p>';
 							echo '<p>' . $sector . '</p>';
 						endif;
 						?>
-						<h3><?php esc_html_e( 'Services', 'digid' ); ?></h3>
+						<h2 class="case-studies-details__services-title"><?php esc_html_e( 'Services', 'digid' ); ?></h2>
 						<?php get_template_part( 'template-parts/loops/loop', 'related-services-link' ); ?>
 						<span class="line"></span>
 					</div>

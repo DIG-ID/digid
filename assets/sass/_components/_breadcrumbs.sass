@@ -1,33 +1,41 @@
+// Selectors don't rely on Yoast's outer <span> wrapper: hero breadcrumbs
+// use a <div> wrapper so the last crumb can be the page <h1>.
 .section-intro
   .section__title
     #breadcrumbs
       margin-bottom: 0px
+      font-family: $main-font
       color: $text-color
       font-weight: 400
-      span
-        span > a
-          text-decoration: none
-          border-bottom: 2px solid transparent
-          transition: all .4s ease-in
+      span > a
+        text-decoration: none
+        border-bottom: 2px solid transparent
+        transition: all .4s ease-in
+        color: $text-color
+        &:hover
           color: $text-color
-          &:hover
-            color: $text-color
-            border-bottom: 2px solid $text-color
-        .breadcrumb_last
-          color: $main-color
+          border-bottom: 2px solid $text-color
+      .breadcrumb_last
+        color: $main-color
+      // Last crumb as <h1>: look exactly like the inline <span> crumb
+      h1.breadcrumb_last
+        display: inline
+        font: inherit
+        letter-spacing: inherit
+        text-transform: inherit
+        margin: 0
   &--dark
     .section__title
       #breadcrumbs
         margin-bottom: 0px
         color: $bg-color
-        span
-          span > a
-            text-decoration: none
-            border-bottom: 2px solid transparent
-            transition: all .4s ease-in
+        span > a
+          text-decoration: none
+          border-bottom: 2px solid transparent
+          transition: all .4s ease-in
+          color: $bg-color
+          &:hover
             color: $bg-color
-            &:hover
-              color: $bg-color
-              border-bottom: 2px solid $bg-color
-          .breadcrumb_last
-            color: $main-color
+            border-bottom: 2px solid $bg-color
+        .breadcrumb_last
+          color: $main-color

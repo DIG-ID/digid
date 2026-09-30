@@ -11,6 +11,10 @@ $rpods = $pod->field(
 if ( ! empty( $rpods ) ) :
 	$count = 0;
 	foreach ( $rpods as $rpod ) :
+		// Unpublished projects would link to a 404.
+		if ( 'publish' !== get_post_status( $rpod ) ) :
+			continue;
+		endif;
 		$count++;
 		global $post;
 		$post = $rpod;

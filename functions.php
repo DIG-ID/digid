@@ -328,3 +328,6 @@ require get_template_directory() . '/inc/theme-template-tags.php';
 
 // The theme admin settings
 require get_template_directory() . '/inc/theme-admin-settings.php';
+
+// Local ACF field groups (SEO H1).
+require get_template_directory() . '/inc/acf-fields.php';

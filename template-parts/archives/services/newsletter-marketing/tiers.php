@@ -1,10 +1,13 @@
 <section class="section section-tiers">
 	<div class="container container-short">
+        <?php $tiers_title = get_field( 'section_tiers_title' ); ?>
+        <?php if ( $tiers_title ) : ?>
         <div class="row">
             <div class="col-12">
-                <p class="section__subtitle"><?php the_field('section_tiers_title'); ?></p>
+                <h2 class="section__subtitle"><?php echo wp_kses_post( $tiers_title ); ?></h2>
             </div>
         </div>
+        <?php endif; ?>
         <div class="row">
             <?php
             if( have_rows('section_tiers_tiers_repeater') ):

@@ -17,7 +17,10 @@
 		endif;
 		?>
 		<div class="card-project__content">
-			<?php the_title( '<h3 class="card-project__title">', '</h3> ' );  ?>
+			<?php
+			$heading_tag = ( isset( $args['heading'] ) && 'h2' === $args['heading'] ) ? 'h2' : 'h3';
+			the_title( '<' . $heading_tag . ' class="card-project__title">', '</' . $heading_tag . '> ' );
+			?>
 			<!--<p><?php //echo $counter; ?> - <?php //echo $args['image']; ?></p>-->
 			<?php get_template_part( 'template-parts/loops/loop', 'related-services' ); ?>
 		</div>

@@ -7,6 +7,7 @@ $args = array(
 );
 $recent_posts = get_posts( $args );
 foreach ( $recent_posts as $post ) :
-	get_template_part( 'template-parts/components/cards/card', 'post' );
+	// Teasers sit below the section's H2, so their titles are H3s.
+	get_template_part( 'template-parts/components/cards/card', 'post', array( 'heading' => 'h3' ) );
 endforeach;
 wp_reset_postdata();
