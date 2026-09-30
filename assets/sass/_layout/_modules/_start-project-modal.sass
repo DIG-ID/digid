@@ -1,0 +1,51 @@
+.modal-start-project
+  .modal-content
+    background-color: $main-color
+    border: 0
+    border-radius: 0
+  .modal-body
+    padding: 0
+  .section-st-project.section-form
+    min-height: 100%
+    padding: 120px 0 80px
+
+  &__close
+    position: fixed
+    top: 30px
+    right: 30px
+    z-index: 2
+    width: 44px
+    height: 44px
+    padding: 0
+    border: 0
+    background: transparent
+    cursor: pointer
+    span
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 30px
+      height: 2px
+      background-color: $dark-color
+      transition: background-color .3s ease
+      &:first-child
+        transform: translate(-50%, -50%) rotate(45deg)
+      &:last-child
+        transform: translate(-50%, -50%) rotate(-45deg)
+    &:hover span
+      background-color: $accent-color
+
+// Keep the modal below the WP admin bar
+.admin-bar .modal-start-project
+  top: 32px
+  height: calc(100% - 32px)
+  .modal-start-project__close
+    top: 62px
+
+@include media-breakpoint-down(md)
+  .modal-start-project
+    .section-st-project.section-form
+      padding: 90px 0 60px
+    &__close
+      top: 15px
+      right: 15px

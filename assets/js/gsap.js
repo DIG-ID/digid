@@ -177,3 +177,4 @@ $(function() {
   }*/
 
 });
+export { lenis };
