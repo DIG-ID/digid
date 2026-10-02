@@ -1,8 +1,10 @@
-// "Start a project" modal: centered box over a blurred page (tablet and up),
+// "Start a project" modal: centered rounded box over a blurred page (tablet and up),
 // fullscreen on mobile (.modal-fullscreen-md-down).
 // Teal title band on top, light body with the form.
 .modal-start-project
+  --bs-modal-margin: 60px
   .modal-content
+    overflow: hidden
     background-color: $bg-color
     border: 0
     border-radius: 0
@@ -12,27 +14,19 @@
   &__header
     position: relative
     flex-shrink: 0
-    padding: 40px 80px
+    padding: 32px 90px
     background-color: $main-color
     .section__subtitle
+      font-size: 32px
+      line-height: 40px !important
       text-align: center
       color: $dark-color
       margin-bottom: 0
 
-  .section-st-project.section-form
-    min-height: 100%
-    padding: 50px 40px 40px
-    border-bottom: 0
-    background: $bg-color
-    // Fields and "back" button are teal on the page; white on the light modal body
-    .st__control-wrap .wpcf7-form-control,
-    .cf7mls_back:not(:hover)
-      background-color: #fff
-
   &__close
     position: absolute
     top: 50%
-    right: 20px
+    right: 24px
     z-index: 2
     width: 44px
     height: 44px
@@ -45,7 +39,7 @@
       position: absolute
       top: 50%
       left: 50%
-      width: 30px
+      width: 26px
       height: 2px
       background-color: $dark-color
       transition: background-color .3s ease
@@ -55,6 +49,79 @@
         transform: translate(-50%, -50%) rotate(-45deg)
     &:hover span
       background-color: $accent-color
+
+  // Form inside the modal (overrides the full-page "Starting Project" layout)
+  .section-st-project.section-form
+    min-height: 100%
+    padding: 45px 60px 35px
+    border-bottom: 0
+    background: $bg-color
+    .container-starting-project
+      max-width: none
+      padding: 0
+    .st__title
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 30px
+    .st__control-wrap
+      width: 100%
+      .wpcf7-form-control
+        background-color: #fff
+      textarea.wpcf7-form-control
+        height: 120px
+        resize: vertical
+    .section-st-project--option-link
+      margin-top: 20px
+      font-size: 14px
+
+    // Options (services checkboxes / project radios) as a 2-column grid of pills
+    .wpcf7-form
+      .form__list-services,
+      .form__list-projects
+        display: grid
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+        gap: 12px
+        margin-bottom: 10px
+        .wpcf7-list-item
+          flex: none
+          width: auto
+          margin: 0
+          padding: 0
+          transform: none
+          label
+            margin: 0
+            cursor: pointer
+          .wpcf7-list-item-label
+            display: block
+            margin: 0
+            padding: 14px 20px 14px 52px
+            font-size: 15px
+            line-height: 20px
+            border: 1px solid rgba($dark-color, .2)
+            border-radius: 30px
+            background-color: #fff
+            transition: border-color .2s ease, background-color .2s ease
+            // Center the custom radio/checkbox dot inside the pill
+            &::before,
+            &::after
+              top: 50%
+              left: 20px
+              margin-top: -10px
+          label:hover .wpcf7-list-item-label
+            border-color: $dark-color
+          input:checked + .wpcf7-list-item-label
+            border-color: $dark-color
+            background-color: rgba($main-color, .15)
+          input:focus-visible + .wpcf7-list-item-label
+            outline: 2px solid $dark-color
+            outline-offset: 2px
+
+    // The multi-step plugin sets the "back" button colors inline
+    .cf7mls_back:not(:hover)
+      background-color: #fff !important
+    .cf7mls_back:hover
+      background-color: $dark-color !important
+      color: $main-color !important
 
 // Glass backdrop: the page behind the modal is blurred and slightly darkened
 .start-project-modal-open .modal-backdrop
@@ -66,26 +133,31 @@
 @include media-breakpoint-up(md)
   .modal-start-project
     .modal-dialog
-      max-width: 650px
+      max-width: min(900px, calc(100% - 60px))
     .modal-content
+      border-radius: 24px
       box-shadow: 0 20px 60px rgba($dark-color, .25)
 
-@include media-breakpoint-down(lg)
-  .modal-start-project__header
-    .section__subtitle
-      font-size: 23px
-      line-height: 28px !important
+  // Keep the box clear of the WP admin bar
+  .admin-bar .modal-start-project
+    --bs-modal-margin: 72px
 
 @include media-breakpoint-down(md)
   .modal-start-project
     &__header
-      padding: 30px 60px 30px 20px
+      padding: 24px 64px 24px 20px
       .section__subtitle
+        font-size: 23px
+        line-height: 28px !important
         text-align: left
-    .section-st-project.section-form
-      padding: 40px 0 60px
     &__close
       right: 10px
+    .section-st-project.section-form
+      padding: 30px 20px 50px
+      .wpcf7-form
+        .form__list-services,
+        .form__list-projects
+          grid-template-columns: 1fr
 
   // Keep the fullscreen modal below the WP admin bar
   .admin-bar .modal-start-project
