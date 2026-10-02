@@ -155,7 +155,7 @@
     &-btns
       display: flex
       justify-content: center
-      gap: 25px
+      column-gap: 25px
 
   .cf7submit-btn
     padding: 10px 40px !important
@@ -260,3 +260,34 @@
     .cf7mls_back.action-button
       float: right
       margin-right: 0px
+
+// Last form step: "Zurück" and "Absenden" side by side (tablet and up), stacked on mobile
+@include media-breakpoint-up(md)
+  .section-st-project.section-form
+    // No "position" here: the multi-step plugin hides inactive steps with position: absolute
+    .fieldset-cf7mls:has(.cf7mls-btns-last-step)
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      column-gap: 25px
+      > *
+        flex: 0 0 100%
+      > .cf7mls-btns-last-step,
+      > .cf7submit-btn
+        flex: 0 0 auto
+      > .cf7mls-btns-last-step
+        order: 1
+        min-height: 0
+        margin: 16px 0 26px
+        .cf7mls_back
+          width: auto
+          margin: 0
+      > .cf7submit-btn
+        order: 2
+        margin: 16px 0 26px !important
+      > .wpcf7-spinner
+        position: absolute
+        right: 0
+        bottom: 0
+        flex: 0 0 auto
