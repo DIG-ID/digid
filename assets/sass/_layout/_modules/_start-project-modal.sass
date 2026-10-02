@@ -149,13 +149,12 @@
 @include media-breakpoint-down(md)
   .modal-start-project
     &__header
-      padding: 24px 64px 24px 20px
+      padding: 22px 56px
       .section__subtitle
-        font-size: 23px
+        font-size: 22px
         line-height: 28px !important
-        text-align: left
     &__close
-      right: 10px
+      right: 8px
     .section-st-project.section-form
       padding: 30px 20px 50px
       .wpcf7-form
@@ -163,9 +162,23 @@
         .form__list-projects
           grid-template-columns: 1fr
           justify-content: start
-      // 16px avoids the iOS zoom-in when a field gets focus
+      .st__title
+        font-size: 13px
+        line-height: 20px
+        margin-bottom: 25px
+      // 16px avoids the iOS zoom-in when a field gets focus;
+      // the placeholders keep the smaller uppercase label size
       .st__control-wrap .wpcf7-form-control
         font-size: 16px
+        &::placeholder
+          font-size: 13px
+      // Last step: "Absenden" and "Zurück" stacked closer together
+      .cf7submit-btn
+        margin: 10px 0 12px !important
+      .cf7mls-btns-last-step
+        min-height: 0
+        .cf7mls_back
+          margin: 0 0 10px
 
   .modal-start-project .modal-content
     border-radius: 0
