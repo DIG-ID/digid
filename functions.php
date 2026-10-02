@@ -277,6 +277,37 @@ function parsber_theme_lower_yoast_metabox_priority( $priority ) {
 add_filter( 'wpseo_metabox_prio', 'parsber_theme_lower_yoast_metabox_priority' );
 
 /**
+ * 301 redirects for URLs whose slugs were renamed (SEO cleanup, October 2026).
+ *
+ * Only runs on 404s, so it never overrides a page that still exists.
+ */
+function digid_legacy_slug_redirects() {
+	if ( ! is_404() ) :
+		return;
+	endif;
+
+	$redirects = array(
+		'/en/services/analyse-beratung'                                    => '/en/services/analysis-consulting/',
+		'/en/services/web-development/webseiten'                           => '/en/services/web-development/websites/',
+		'/en/work/webseite-fuer-hotel-alex'                                => '/en/work/website-hotel-alex/',
+		'/en/kickstart-gemeinsam-neue-wege-gehen'                          => '/en/kickstart-breaking-new-ground-together/',
+		'/en/online-zum-erfolg-wie-weboptimierungen-den-umsatz-steigern'   => '/en/online-success-how-web-optimisation-increases-revenue/',
+		'/en/webseite-die-basis-von-allem'                                 => '/en/website-the-foundation-of-everything/',
+		'/en/allgemeinen-geschaeftsbedingungen-agb'                        => '/en/general-terms-and-conditions/',
+		'/projekte/webseite-auto-fisher'                                   => '/projekte/webseite-auto-fischer/',
+	);
+
+	$path = untrailingslashit( wp_parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+
+	if ( isset( $redirects[ $path ] ) ) :
+		// Raw home option: home_url() is filtered by WPML and could add a second language prefix.
+		wp_safe_redirect( untrailingslashit( get_option( 'home' ) ) . $redirects[ $path ], 301 );
+		exit;
+	endif;
+}
+add_action( 'template_redirect', 'digid_legacy_slug_redirects', 1 );
+
+/**
  * Add custom html a tag to the yoast breadcrumbs single page link.
  */
 /*function digid_theme_custom_breadcrumb_link( $links ) {
