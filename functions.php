@@ -279,13 +279,10 @@ add_filter( 'wpseo_metabox_prio', 'parsber_theme_lower_yoast_metabox_priority' )
 /**
  * 301 redirects for URLs whose slugs were renamed (SEO cleanup, October 2026).
  *
- * Only runs on 404s, so it never overrides a page that still exists.
+ * Runs on every request, not only on 404s: WPML can still resolve some old EN
+ * paths (e.g. analyse-beratung, which is also the DE slug) and serve them with a 200.
  */
 function digid_legacy_slug_redirects() {
-	if ( ! is_404() ) :
-		return;
-	endif;
-
 	$redirects = array(
 		'/en/services/analyse-beratung'                                    => '/en/services/analysis-consulting/',
 		'/en/services/web-development/webseiten'                           => '/en/services/web-development/websites/',
