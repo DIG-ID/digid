@@ -1,18 +1,38 @@
+// "Start a project" modal: centered box over a blurred page (tablet and up),
+// fullscreen on mobile (.modal-fullscreen-md-down).
+// Teal title band on top, light body with the form.
 .modal-start-project
   .modal-content
-    background-color: $main-color
+    background-color: $bg-color
     border: 0
     border-radius: 0
   .modal-body
     padding: 0
+
+  &__header
+    position: relative
+    flex-shrink: 0
+    padding: 40px 80px
+    background-color: $main-color
+    .section__subtitle
+      text-align: center
+      color: $dark-color
+      margin-bottom: 0
+
   .section-st-project.section-form
     min-height: 100%
-    padding: 120px 0 80px
+    padding: 50px 40px 40px
+    border-bottom: 0
+    background: $bg-color
+    // Fields and "back" button are teal on the page; white on the light modal body
+    .st__control-wrap .wpcf7-form-control,
+    .cf7mls_back:not(:hover)
+      background-color: #fff
 
   &__close
-    position: fixed
-    top: 30px
-    right: 30px
+    position: absolute
+    top: 50%
+    right: 20px
     z-index: 2
     width: 44px
     height: 44px
@@ -20,6 +40,7 @@
     border: 0
     background: transparent
     cursor: pointer
+    transform: translateY(-50%)
     span
       position: absolute
       top: 50%
@@ -35,17 +56,38 @@
     &:hover span
       background-color: $accent-color
 
-// Keep the modal below the WP admin bar
-.admin-bar .modal-start-project
-  top: 32px
-  height: calc(100% - 32px)
-  .modal-start-project__close
-    top: 62px
+// Glass backdrop: the page behind the modal is blurred and slightly darkened
+.start-project-modal-open .modal-backdrop
+  --bs-backdrop-opacity: 1
+  background-color: rgba($dark-color, .35)
+  -webkit-backdrop-filter: blur(12px)
+  backdrop-filter: blur(12px)
+
+@include media-breakpoint-up(md)
+  .modal-start-project
+    .modal-dialog
+      max-width: 650px
+    .modal-content
+      box-shadow: 0 20px 60px rgba($dark-color, .25)
+
+@include media-breakpoint-down(lg)
+  .modal-start-project__header
+    .section__subtitle
+      font-size: 23px
+      line-height: 28px !important
 
 @include media-breakpoint-down(md)
   .modal-start-project
+    &__header
+      padding: 30px 60px 30px 20px
+      .section__subtitle
+        text-align: left
     .section-st-project.section-form
-      padding: 90px 0 60px
+      padding: 40px 0 60px
     &__close
-      top: 15px
-      right: 15px
+      right: 10px
+
+  // Keep the fullscreen modal below the WP admin bar
+  .admin-bar .modal-start-project
+    top: 46px
+    height: calc(100% - 46px)
