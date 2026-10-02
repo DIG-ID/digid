@@ -68,6 +68,15 @@
       width: 100%
       .wpcf7-form-control
         background-color: #fff
+        // The homepage hides placeholders in every .section-form (page-home.sass);
+        // keep them visible in the modal, styled like the project request page
+        &::placeholder
+          visibility: visible
+          font-family: $main-font
+          font-size: inherit
+          text-transform: uppercase
+          color: $dark-color
+          opacity: 1
       textarea.wpcf7-form-control
         height: 120px
         resize: vertical
@@ -98,6 +107,11 @@
             cursor: pointer
           .wpcf7-list-item-label
             margin: 0
+
+    // The homepage contact form floats its submit button right (forms.sass);
+    // that breaks the stacked mobile buttons when the modal opens on the homepage
+    .wpcf7 .wpcf7-form .cf7submit-btn
+      float: none !important
 
     // The multi-step plugin sets the "back" button colors inline
     .cf7mls_back:not(:hover)
