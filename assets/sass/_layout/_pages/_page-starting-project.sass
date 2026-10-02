@@ -268,8 +268,8 @@
 // Last form step: "Zurück" and "Absenden" side by side (tablet and up), stacked on mobile
 @include media-breakpoint-up(md)
   .section-st-project.section-form
+    // No "position" here: the multi-step plugin hides inactive steps with position: absolute
     .fieldset-cf7mls:has(.cf7mls-btns-last-step)
-      position: relative
       display: flex
       flex-wrap: wrap
       justify-content: center
