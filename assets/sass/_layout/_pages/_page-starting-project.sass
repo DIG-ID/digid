@@ -261,6 +261,12 @@
       float: right
       margin-right: 0px
 
+// Last form step: "Zurück" gets the same padding as "Absenden" so both buttons
+// have the same height (the multi-step plugin sets padding: 13px 15px on it)
+.section-st-project.section-form
+  .cf7mls-btns-last-step .cf7mls_back.action-button
+    padding: 10px 40px
+
 // Last form step: "Zurück" and "Absenden" side by side (tablet and up), stacked on mobile
 @include media-breakpoint-up(md)
   .section-st-project.section-form
