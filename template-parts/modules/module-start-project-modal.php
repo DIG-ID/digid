@@ -3,7 +3,7 @@
  * "Start a project" modal.
  *
  * Renders the form of the "Starting Project" page inside a centered modal box
- * over a blurred page.
+ * over a blurred page (fullscreen on mobile).
  * Any link pointing to that page opens this modal instead of navigating
  * (see assets/js/start-project-modal.js). The page itself remains as a
  * fallback for no-JS users and search engines.
@@ -49,7 +49,7 @@ $digid_sp_urls = array_values(
 );
 ?>
 <div class="modal fade modal-start-project" id="modal-start-project" tabindex="-1" aria-labelledby="modal-start-project-title" aria-hidden="true" data-lenis-prevent data-trigger-urls="<?php echo esc_attr( wp_json_encode( $digid_sp_urls ) ); ?>">
-	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-md-down">
 		<div class="modal-content">
 			<div class="modal-start-project__header">
 				<h2 class="section__subtitle" id="modal-start-project-title"><?php echo esc_html( get_field( 'form_title', $digid_sp_page_id ) ); ?></h2>

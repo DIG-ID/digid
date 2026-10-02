@@ -1,4 +1,5 @@
-// "Start a project" modal: centered rounded box over a blurred page (all screen sizes).
+// "Start a project" modal: centered rounded box over a blurred page (tablet and up),
+// fullscreen on mobile (.modal-fullscreen-md-down).
 // Teal title band on top, light body with the form.
 .modal-start-project
   --bs-modal-margin: 60px
@@ -142,7 +143,7 @@
     &__close
       right: 10px
     .section-st-project.section-form
-      padding: 30px 20px 30px
+      padding: 30px 20px 50px
       .wpcf7-form
         .form__list-services,
         .form__list-projects
@@ -152,13 +153,11 @@
       .st__control-wrap .wpcf7-form-control
         font-size: 16px
 
-  .modal-start-project
-    --bs-modal-margin: 16px
-    .modal-dialog
-      max-width: none
-      margin-left: var(--bs-modal-margin)
-      margin-right: var(--bs-modal-margin)
+  .modal-start-project .modal-content
+    border-radius: 0
+    box-shadow: none
 
-  // Keep the box clear of the (taller) mobile WP admin bar
+  // Keep the fullscreen modal below the WP admin bar
   .admin-bar .modal-start-project
-    --bs-modal-margin: 58px
+    top: 46px
+    height: calc(100% - 46px)
