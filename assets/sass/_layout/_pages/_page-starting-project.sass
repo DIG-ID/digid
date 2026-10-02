@@ -193,9 +193,12 @@
 .page-template-page-starting-project,
 .modal-start-project
   .section-st-project
+    // Secondary action: underlined text + arrow, so it reads as a link
     &--option-link
       margin-top: 30px
-      display: inline-block
+      display: inline-flex
+      align-items: center
+      gap: 12px
       font-family: $main-font
       font-weight: 400
       font-size: 16px
@@ -203,8 +206,27 @@
       color: $dark-color
       text-decoration: none
       transition: color .3s ease
+      &-text
+        padding-bottom: 2px
+        border-bottom: 1px solid currentColor
+      svg
+        flex-shrink: 0
+        fill: currentColor
+        transition: transform .3s ease
       &:hover
         color: $accent-color
+        svg
+          transform: translateX(4px)
+
+// Mobile: let the link text wrap naturally with the arrow right after it
+@include media-breakpoint-down(md)
+  .page-template-page-starting-project,
+  .modal-start-project
+    .section-st-project--option-link
+      display: inline-block
+      svg
+        margin-left: 8px
+        vertical-align: middle
 
 @include media-breakpoint-up(lg)
   .section-st-kontakt

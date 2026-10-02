@@ -3,7 +3,7 @@
  * "Start a project" modal.
  *
  * Renders the form of the "Starting Project" page inside a centered modal box
- * over a blurred page (fullscreen on mobile).
+ * over a blurred page.
  * Any link pointing to that page opens this modal instead of navigating
  * (see assets/js/start-project-modal.js). The page itself remains as a
  * fallback for no-JS users and search engines.
@@ -49,7 +49,7 @@ $digid_sp_urls = array_values(
 );
 ?>
 <div class="modal fade modal-start-project" id="modal-start-project" tabindex="-1" aria-labelledby="modal-start-project-title" aria-hidden="true" data-lenis-prevent data-trigger-urls="<?php echo esc_attr( wp_json_encode( $digid_sp_urls ) ); ?>">
-	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-md-down">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 		<div class="modal-content">
 			<div class="modal-start-project__header">
 				<h2 class="section__subtitle" id="modal-start-project-title"><?php echo esc_html( get_field( 'form_title', $digid_sp_page_id ) ); ?></h2>
@@ -66,8 +66,8 @@ $digid_sp_urls = array_values(
 							</div>
 						</div>
 						<div class="row justify-content-center align-items-center">
-							<div class="col-12 col-md-6 text-center">
-								<a class="section-st-project--option-link js-start-project-message-link" href="<?php echo esc_url( get_home_url() ); ?>#section-form"><?php esc_html_e( 'Ich möchte nur eine Botschaft senden.', 'digid' ); ?></a>
+							<div class="col-12 text-center">
+								<a class="section-st-project--option-link js-start-project-message-link" href="<?php echo esc_url( get_home_url() ); ?>#section-form"><span class="section-st-project--option-link-text"><?php esc_html_e( 'Ich möchte nur eine Botschaft senden.', 'digid' ); ?></span> <svg xmlns="http://www.w3.org/2000/svg" width="32.439" height="11.914" aria-hidden="true"><path d="M1 22.934h29.82l-4.305 4.306.967.967 5.957-5.957-5.957-5.957-.967.967 4.305 4.305H1Z" transform="translate(-1 -16.293)"/></svg></a>
 							</div>
 						</div>
 					</div>

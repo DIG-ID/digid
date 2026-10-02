@@ -1,5 +1,4 @@
-// "Start a project" modal: centered rounded box over a blurred page (tablet and up),
-// fullscreen on mobile (.modal-fullscreen-md-down).
+// "Start a project" modal: centered rounded box over a blurred page (all screen sizes).
 // Teal title band on top, light body with the form.
 .modal-start-project
   --bs-modal-margin: 60px
@@ -7,7 +6,8 @@
     overflow: hidden
     background-color: $bg-color
     border: 0
-    border-radius: 0
+    border-radius: 12px
+    box-shadow: 0 20px 60px rgba($dark-color, .25)
   .modal-body
     padding: 0
 
@@ -80,10 +80,10 @@
       .form__list-services,
       .form__list-projects
         display: grid
-        grid-template-columns: repeat(2, max-content)
+        grid-template-columns: repeat(2, minmax(0, max-content))
         justify-content: center
         column-gap: 80px
-        row-gap: 22px
+        row-gap: 26px
         .wpcf7-list-item
           flex: none
           width: auto
@@ -92,6 +92,8 @@
           transform: none
           label
             margin: 0
+            // _forms.sass sets max-height: 0 on form labels below lg (meant for the home contact form)
+            max-height: none
             cursor: pointer
           .wpcf7-list-item-label
             margin: 0
@@ -114,13 +116,20 @@
   .modal-start-project
     .modal-dialog
       max-width: min(900px, calc(100% - 60px))
-    .modal-content
-      border-radius: 12px
-      box-shadow: 0 20px 60px rgba($dark-color, .25)
 
   // Keep the box clear of the WP admin bar
   .admin-bar .modal-start-project
     --bs-modal-margin: 72px
+
+// Tablet: tighter option columns so they fit the box
+@include media-breakpoint-down(lg)
+  .modal-start-project .section-st-project.section-form
+    padding-left: 40px
+    padding-right: 40px
+    .wpcf7-form
+      .form__list-services,
+      .form__list-projects
+        column-gap: 40px
 
 @include media-breakpoint-down(md)
   .modal-start-project
@@ -133,14 +142,23 @@
     &__close
       right: 10px
     .section-st-project.section-form
-      padding: 30px 20px 50px
+      padding: 30px 20px 30px
       .wpcf7-form
         .form__list-services,
         .form__list-projects
           grid-template-columns: 1fr
           justify-content: start
+      // 16px avoids the iOS zoom-in when a field gets focus
+      .st__control-wrap .wpcf7-form-control
+        font-size: 16px
 
-  // Keep the fullscreen modal below the WP admin bar
+  .modal-start-project
+    --bs-modal-margin: 16px
+    .modal-dialog
+      max-width: none
+      margin-left: var(--bs-modal-margin)
+      margin-right: var(--bs-modal-margin)
+
+  // Keep the box clear of the (taller) mobile WP admin bar
   .admin-bar .modal-start-project
-    top: 46px
-    height: calc(100% - 46px)
+    --bs-modal-margin: 58px
