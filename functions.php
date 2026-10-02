@@ -308,6 +308,48 @@ function digid_legacy_slug_redirects() {
 add_action( 'template_redirect', 'digid_legacy_slug_redirects', 1 );
 
 /**
+ * Team members are only shown inside queries (About page), never as their own pages.
+ *
+ * Not publicly queryable: no single URLs, no archive, out of search and the Yoast sitemap.
+ * WP_Query with 'post_type' => 'team' keeps working and the posts stay editable in the admin.
+ *
+ * @param array  $args      Post type arguments.
+ * @param string $post_type Post type key.
+ * @return array
+ */
+function digid_team_post_type_args( $args, $post_type ) {
+	if ( 'team' === $post_type ) :
+		$args['publicly_queryable']  = false;
+		$args['has_archive']         = false;
+		$args['rewrite']             = false;
+		$args['exclude_from_search'] = true;
+	endif;
+
+	return $args;
+}
+add_filter( 'register_post_type_args', 'digid_team_post_type_args', 10, 2 );
+
+/**
+ * 301 old team member URLs (e.g. /team/thierry-geissmann/) to the About page.
+ */
+function digid_team_redirects() {
+	if ( ! is_404() ) :
+		return;
+	endif;
+
+	$path = wp_parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+
+	if ( 0 === strpos( $path, '/en/team/' ) ) :
+		wp_safe_redirect( untrailingslashit( get_option( 'home' ) ) . '/en/about-us/', 301 );
+		exit;
+	elseif ( 0 === strpos( $path, '/team/' ) ) :
+		wp_safe_redirect( untrailingslashit( get_option( 'home' ) ) . '/ueber-uns/', 301 );
+		exit;
+	endif;
+}
+add_action( 'template_redirect', 'digid_team_redirects', 1 );
+
+/**
  * Add custom html a tag to the yoast breadcrumbs single page link.
  */
 /*function digid_theme_custom_breadcrumb_link( $links ) {
