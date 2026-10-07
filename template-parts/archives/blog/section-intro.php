@@ -33,7 +33,7 @@
 		if ( $blog_intro_text ) :
 			?>
 			<div class="row">
-				<div class="col-12 col-md-10 col-lg-6 col-xl-5 offset-lg-1">
+				<div class="col-12 col-md-10 col-lg-8 col-xl-7 offset-lg-1">
 					<p class="section__description"><?php echo wp_kses_post( $blog_intro_text ); ?></p>
 				</div>
 			</div>
