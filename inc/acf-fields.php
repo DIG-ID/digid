@@ -77,3 +77,41 @@ function digid_register_seo_h1_fields() {
 }
 
 add_action( 'acf/init', 'digid_register_seo_h1_fields' );
+
+/**
+ * Register the blog page "Intro text" field (shown below the H1 on /blog/).
+ */
+function digid_register_blog_intro_field() {
+	if ( ! function_exists( 'acf_add_local_field_group' ) ) :
+		return;
+	endif;
+
+	acf_add_local_field_group(
+		array(
+			'key'                    => 'group_digid_blog_intro',
+			'title'                  => 'Blog Intro',
+			'fields'                 => array(
+				array(
+					'key'                 => 'field_digid_blog_intro_text',
+					'label'               => 'Intro text',
+					'name'                => 'intro_text',
+					'type'                => 'textarea',
+					'instructions'        => __( 'Short text shown below the blog title. 1-3 sentences.', 'digid' ),
+					'rows'                => 4,
+					// Line breaks as <br>: the text is output inside a <p>.
+					'new_lines'           => 'br',
+					// ACFML: translate this field per language.
+					'wpml_cf_preferences' => 2,
+				),
+			),
+			'location'               => array(
+				array( array( 'param' => 'page_type', 'operator' => '==', 'value' => 'posts_page' ) ),
+			),
+			'menu_order'             => 1,
+			'position'               => 'acf_after_title',
+			'acfml_field_group_mode' => 'advanced',
+		)
+	);
+}
+
+add_action( 'acf/init', 'digid_register_blog_intro_field' );

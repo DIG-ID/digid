@@ -1,0 +1,15 @@
+// Blog page intro text (below the H1).
+// Note: _archive-blog.sass is not imported (replaced by archive-job in 2024), so these rules live here.
+.blog
+  .section-intro
+    .section__description
+      font-size: 16px
+      line-height: 30px
+      margin-bottom: 0
+
+@include media-breakpoint-down(lg)
+  .blog
+    .section-intro
+      .section__description
+        font-size: 15px
+        line-height: 26px

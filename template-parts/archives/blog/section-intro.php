@@ -27,5 +27,16 @@
 				<?php } ?>
 			</div>
 		</div>
+		<?php
+		$blog_page_id    = apply_filters( 'wpml_object_id', (int) get_option( 'page_for_posts' ), 'page', true );
+		$blog_intro_text = $blog_page_id ? get_field( 'intro_text', $blog_page_id ) : '';
+		if ( $blog_intro_text ) :
+			?>
+			<div class="row">
+				<div class="col-12 col-md-10 col-lg-6 col-xl-5 offset-lg-1">
+					<p class="section__description"><?php echo wp_kses_post( $blog_intro_text ); ?></p>
+				</div>
+			</div>
+		<?php endif; ?>
 	</div>
 </section>
