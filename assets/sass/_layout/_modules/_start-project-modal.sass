@@ -1,18 +1,33 @@
+// "Start a project" modal: centered rounded box over a blurred page (tablet and up),
+// fullscreen on mobile (.modal-fullscreen-md-down).
+// Teal title band on top, light body with the form.
 .modal-start-project
+  --bs-modal-margin: 60px
   .modal-content
-    background-color: $main-color
+    overflow: hidden
+    background-color: $bg-color
     border: 0
-    border-radius: 0
+    border-radius: 12px
+    box-shadow: 0 20px 60px rgba($dark-color, .25)
   .modal-body
     padding: 0
-  .section-st-project.section-form
-    min-height: 100%
-    padding: 120px 0 80px
+
+  &__header
+    position: relative
+    flex-shrink: 0
+    padding: 32px 90px
+    background-color: $main-color
+    .section__subtitle
+      font-size: 32px
+      line-height: 40px !important
+      text-align: center
+      color: $dark-color
+      margin-bottom: 0
 
   &__close
-    position: fixed
-    top: 30px
-    right: 30px
+    position: absolute
+    top: 50%
+    right: 24px
     z-index: 2
     width: 44px
     height: 44px
@@ -20,11 +35,12 @@
     border: 0
     background: transparent
     cursor: pointer
+    transform: translateY(-50%)
     span
       position: absolute
       top: 50%
       left: 50%
-      width: 30px
+      width: 26px
       height: 2px
       background-color: $dark-color
       transition: background-color .3s ease
@@ -35,17 +51,140 @@
     &:hover span
       background-color: $accent-color
 
-// Keep the modal below the WP admin bar
-.admin-bar .modal-start-project
-  top: 32px
-  height: calc(100% - 32px)
-  .modal-start-project__close
-    top: 62px
+  // Form inside the modal (overrides the full-page "Starting Project" layout)
+  .section-st-project.section-form
+    min-height: 100%
+    padding: 35px 60px 25px
+    border-bottom: 0
+    background: $bg-color
+    .container-starting-project
+      max-width: none
+      padding: 0
+    .st__title
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 30px
+    .st__control-wrap
+      width: 100%
+      .wpcf7-form-control
+        background-color: #fff
+        // The homepage hides placeholders in every .section-form (page-home.sass);
+        // keep them visible in the modal, styled like the project request page
+        &::placeholder
+          visibility: visible
+          font-family: $main-font
+          font-size: inherit
+          text-transform: uppercase
+          color: $dark-color
+          opacity: 1
+      textarea.wpcf7-form-control
+        height: 120px
+        resize: vertical
+    .section-st-project--option-link
+      margin-top: 10px
+      font-size: 14px
+
+    // Options (services checkboxes / project radios): same clean look as the page,
+    // laid out in 2 centered columns so labels don't wrap
+    .wpcf7-form
+      .form__list-services,
+      .form__list-projects
+        display: grid
+        grid-template-columns: repeat(2, minmax(0, max-content))
+        justify-content: center
+        column-gap: 80px
+        row-gap: 26px
+        .wpcf7-list-item
+          flex: none
+          width: auto
+          margin: 0
+          padding: 0
+          transform: none
+          label
+            margin: 0
+            // _forms.sass sets max-height: 0 on form labels below lg (meant for the home contact form)
+            max-height: none
+            cursor: pointer
+          .wpcf7-list-item-label
+            margin: 0
+
+    // The homepage contact form floats its submit button right (forms.sass);
+    // that breaks the stacked mobile buttons when the modal opens on the homepage
+    .wpcf7 .wpcf7-form .cf7submit-btn
+      float: none !important
+
+    // The multi-step plugin sets the "back" button colors inline
+    .cf7mls_back:not(:hover)
+      background-color: #fff !important
+    .cf7mls_back:hover
+      background-color: $dark-color !important
+      color: $main-color !important
+
+// Glass backdrop: the page behind the modal is blurred and slightly darkened
+.start-project-modal-open .modal-backdrop
+  --bs-backdrop-opacity: 1
+  background-color: rgba($dark-color, .35)
+  -webkit-backdrop-filter: blur(12px)
+  backdrop-filter: blur(12px)
+
+@include media-breakpoint-up(md)
+  .modal-start-project
+    .modal-dialog
+      max-width: min(900px, calc(100% - 60px))
+
+  // Keep the box clear of the WP admin bar
+  .admin-bar .modal-start-project
+    --bs-modal-margin: 72px
+
+// Tablet: tighter option columns so they fit the box
+@include media-breakpoint-down(lg)
+  .modal-start-project .section-st-project.section-form
+    padding-left: 40px
+    padding-right: 40px
+    .wpcf7-form
+      .form__list-services,
+      .form__list-projects
+        column-gap: 40px
 
 @include media-breakpoint-down(md)
   .modal-start-project
-    .section-st-project.section-form
-      padding: 90px 0 60px
+    &__header
+      padding: 22px 56px
+      .section__subtitle
+        font-size: 22px
+        line-height: 28px !important
     &__close
-      top: 15px
-      right: 15px
+      right: 8px
+    .section-st-project.section-form
+      padding: 30px 20px 50px
+      .wpcf7-form
+        .form__list-services,
+        .form__list-projects
+          grid-template-columns: 1fr
+          justify-content: start
+      .st__title
+        font-size: 13px
+        line-height: 20px
+        margin-bottom: 25px
+      // 16px avoids the iOS zoom-in when a field gets focus;
+      // the placeholders keep the smaller uppercase label size
+      .st__control-wrap .wpcf7-form-control
+        font-size: 16px
+        &::placeholder
+          font-size: 13px
+      // Last step: "Absenden" and "Zurück" stacked closer together
+      .cf7submit-btn
+        margin: 10px 0 12px !important
+      .cf7mls-btns-last-step
+        min-height: 0
+        .cf7mls_back
+          margin: 0 0 10px
+
+  .modal-start-project .modal-content
+    border-radius: 0
+    box-shadow: none
+
+  // Keep the fullscreen modal below the WP admin bar
+  .admin-bar .modal-start-project
+    top: 46px
+    height: calc(100% - 46px)

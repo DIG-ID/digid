@@ -45,9 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.show();
   });
 
-  // Pause the page smooth scroll while the modal is open.
-  modalEl.addEventListener('show.bs.modal', () => lenis.stop());
-  modalEl.addEventListener('hidden.bs.modal', () => lenis.start());
+  // Pause the page smooth scroll while the modal is open, and flag the body
+  // so the (shared) Bootstrap backdrop gets the blurred glass style.
+  modalEl.addEventListener('show.bs.modal', () => {
+    lenis.stop();
+    document.body.classList.add('start-project-modal-open');
+  });
+  modalEl.addEventListener('hidden.bs.modal', () => {
+    lenis.start();
+    document.body.classList.remove('start-project-modal-open');
+  });
 
   // "Only send a message" link: close the modal and scroll to the contact form if it is on this page.
   const messageLink = modalEl.querySelector('.js-start-project-message-link');
