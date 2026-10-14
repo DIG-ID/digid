@@ -3,7 +3,12 @@
 		<div class="row">
 			<div class="col-12 col-lg-6 project-description">
 				<p class="project-description__label"><?php esc_html_e( 'Beschreibung', 'digid' ); ?></p>
-				<?php the_content(); ?>
+				<?php
+				$description = get_field( 'project_description' );
+				if ( $description ) :
+					?>
+					<div class="project-description__text"><?php echo wp_kses_post( $description ); ?></div>
+				<?php endif; ?>
 			</div>
 			<div class="col-12 col-lg-5 offset-lg-1">
 				<div class="project-details">

@@ -104,42 +104,36 @@
           li
             display: inline
 
-  // Gallery: halves (square) and a full-width last image when the count is odd
-  .section-project-gallery
-    padding-bottom: 60px
-    .project-gallery__item
-      margin-bottom: 1.5rem
-      img
-        display: block
-        width: 100%
-        height: auto
-        object-fit: cover
-      &--half img
-        aspect-ratio: 1 / 1
-      &--full img
-        aspect-ratio: 2.1 / 1
-
-  // Alternating text + image rows
-  .section-project-text-image
+  // Modular content from the block editor (columns, images, text)
+  .section-project-blocks
     padding-bottom: 200px
-    .project-text-image
-      margin-bottom: 1.5rem
-      &__text
-        padding: 0 16.666%
-        p
-          font-size: 14px
-          font-weight: 300
-          line-height: 30px
-          color: $text-color
-          margin-bottom: 20px
-          &:last-child
-            margin-bottom: 0
-      &__img
-        display: block
-        width: 100%
-        height: auto
-        aspect-ratio: 1.12 / 1
-        object-fit: cover
+    .project-blocks
+      > *:last-child
+        margin-bottom: 0
+      .wp-block-columns
+        gap: 1.5rem
+        margin-bottom: 1.5rem
+      .wp-block-column
+        // Text-only columns get the inner indent from the design
+        &:not(:has(.wp-block-image))
+          padding: 0 8.333%
+      .wp-block-image
+        margin: 0 0 1.5rem
+        &:last-child
+          margin-bottom: 0
+        img
+          display: block
+          width: 100%
+          height: auto
+          object-fit: cover
+      p
+        font-size: 14px
+        font-weight: 300
+        line-height: 30px
+        color: $text-color
+        margin-bottom: 20px
+        &:last-child
+          margin-bottom: 0
 
 @include media-breakpoint-down(lg)
   .projects-template-default
@@ -155,7 +149,7 @@
         margin-bottom: 40px
       .project-details
         padding: 30px
-    .section-project-text-image
+    .section-project-blocks
       padding-bottom: 80px
-      .project-text-image__text
+      .project-blocks .wp-block-column:not(:has(.wp-block-image))
         padding: 30px 0
