@@ -9,3 +9,4 @@ import "./gsap";
 import "./fancybox";
 import "./section-how-equal-height";
 import "./start-project-modal";
+import "./consent-embeds";

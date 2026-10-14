@@ -401,3 +401,6 @@ require get_template_directory() . '/inc/theme-admin-settings.php';
 
 // Local ACF field groups (SEO H1).
 require get_template_directory() . '/inc/acf-fields.php';
+
+// Hold back YouTube embeds until marketing consent.
+require get_template_directory() . '/inc/consent-embeds.php';
