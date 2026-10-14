@@ -1,142 +1,161 @@
+// Single project (redesign, October 2026). Desktop first; tablet/mobile refined later.
 .projects-template-default
   .section-intro
     padding-top: 200px
-    padding-bottom: 80px
-    .section__title
-      font-family: $main-font
-      text-decoration: none
-      transition: all .3s ease-in
-      &:hover
-        color: $accent-color
-      &--wrapper
-        margin-bottom: 20px
+    padding-bottom: 40px
     .section__subtitle
       margin-bottom: 0
-    .section__btn--back
-      line-height: 1
-      &:hover
-        svg
-          fill: $accent-color
-      svg
-        fill: $main-color
-        margin-left: 0px
-        transition: all .3s ease-in
 
+  // "← Projekte" back link
+  .project-back-link
+    display: inline-flex
+    align-items: center
+    gap: 10px
+    margin-bottom: 20px
+    font-family: $main-font
+    font-size: 12px
+    font-weight: 400
+    letter-spacing: 0.8px
+    line-height: 16px
+    text-transform: uppercase
+    text-decoration: none
+    color: $main-color
+    transition: color .3s ease-in
+    svg
+      fill: $main-color
+      transition: fill .3s ease-in, transform .3s ease-in
+    &:hover
+      color: $accent-color
+      svg
+        fill: $accent-color
+        transform: translateX(-4px)
+
+  // Hero (featured image)
   .section-featured-image
-    padding-top: 0px
-    padding-bottom: 0px
-    max-height: 720px
+    padding: 0
     img
+      display: block
       width: 100%
-      max-width: 100%
+      height: auto
+      aspect-ratio: 2 / 1
       object-fit: cover
+
+  // Description + details box
   .section-content
     padding-top: 60px
-    padding-bottom: 100px
-    .project-details
-      h2
-        font-family: $second-font
-        font-size: 23.04px
+    padding-bottom: 60px
+    .project-description
+      &__label
+        position: relative
+        margin-bottom: 30px
+        padding-bottom: 10px
+        font-size: 12px
+        line-height: 16px
+        color: $main-color
+        &::after
+          content: ""
+          position: absolute
+          left: 0
+          bottom: 0
+          width: 30px
+          height: 1px
+          background-color: $main-color
+      p
+        font-size: 14px
         font-weight: 300
-        line-height: 64px
-        letter-spacing: 0.23039999999999997px
+        line-height: 30px
         color: $text-color
         margin-bottom: 30px
-      h3,
-      .project-details__label
-        font-size: 14px
+        &:last-child
+          margin-bottom: 0
+    .project-details
+      padding: 50px
+      background-color: $dark-color
+      &__grid
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 40px
+        margin: 0
+      &__item
+        padding-bottom: 15px
+        border-bottom: 1px solid rgba(248, 248, 248, .2)
+      &__label
+        margin-bottom: 4px
+        font-size: 12px
         font-weight: 400
-        line-height: 25px
-        letter-spacing: 0.14px
-        margin-bottom: 0
-        color: $text-color
-      p
-        font-size: 14px
+        line-height: 20px
+        color: $bg-color
+      &__value
+        margin: 0
+        font-size: 12px
         font-weight: 300
-        line-height: 25px
-        letter-spacing: 0.42px
-        margin-bottom: 20px
-        color: $text-color
+        line-height: 20px
+        color: #DEE3E4
         a
           text-decoration: none
-          transition: all .3s ease-in
-          color: $text-color
+          color: inherit
+          transition: color .3s ease-in
           &:hover
-            color: $accent-color
-      ul
-        list-style-type: none
-        margin: 0
-        padding: 0
-        li
-          display: inline-block
-          margin-right: 5px
-          &:last-of-type
-            margin-right: 0
-          a
-            font-family: $main-font
-            font-weight: 300
-            font-size: 14px
-            font-weight: 300
-            line-height: 25px
-            letter-spacing: 0.42px
-            text-decoration: none
-            margin-bottom: 20px
-            border-bottom: 2px solid transparent
-            transition: all .3s ease-in
-            color: $text-color
-            &:hover
-              border-bottom: 2px solid $text-color
-              color: $text-color
+            color: $main-color
+        ul
+          list-style: none
+          margin: 0
+          padding: 0
+          li
+            display: inline
 
-    .line
-      display: inline-block
-      width: 30px
-      height: 2px
-      margin-top: 40px
-      margin-bottom: 60px
-      background-color: $main-color
+  // Gallery: halves (square) and a full-width last image when the count is odd
+  .section-project-gallery
+    padding-bottom: 60px
+    .project-gallery__item
+      margin-bottom: 1.5rem
+      img
+        display: block
+        width: 100%
+        height: auto
+        object-fit: cover
+      &--half img
+        aspect-ratio: 1 / 1
+      &--full img
+        aspect-ratio: 2.1 / 1
 
-    .project-description
-      p
-        font-size: 14px
-        line-height: 30px
-        margin-bottom: 40px
-    img
-      width: 100%
-      max-width: 100%
-      height: auto
-      object-fit: cover
-      margin-bottom: 40px
-      &:last-of-type
-        margin-bottom: 0
-        
-@include media-breakpoint-up(lg)
-  .projects-template-default
-    .section-content
-      .sticky-content
-        position: -webkit-sticky
-        position: -moz-sticky
-        position: -ms-sticky
-        position: -o-sticky
-        position: sticky
-        height: 1000px
-        background: transparent
-        top: 100px
-        bottom: auto
-        z-index: 8
+  // Alternating text + image rows
+  .section-project-text-image
+    padding-bottom: 200px
+    .project-text-image
+      margin-bottom: 1.5rem
+      &__text
+        padding: 0 16.666%
+        p
+          font-size: 14px
+          font-weight: 300
+          line-height: 30px
+          color: $text-color
+          margin-bottom: 20px
+          &:last-child
+            margin-bottom: 0
+      &__img
+        display: block
+        width: 100%
+        height: auto
+        aspect-ratio: 1.12 / 1
+        object-fit: cover
 
 @include media-breakpoint-down(lg)
   .projects-template-default
     .section-intro
       padding-top: 120px
-      padding-bottom: 60px
+      padding-bottom: 30px
     .section__subtitle
       font-size: 28px
       line-height: 32px !important
     .section-content
       padding-top: 30px
       .project-description
-        p
-          font-size: 14px
-      .line
         margin-bottom: 40px
+      .project-details
+        padding: 30px
+    .section-project-text-image
+      padding-bottom: 80px
+      .project-text-image__text
+        padding: 30px 0

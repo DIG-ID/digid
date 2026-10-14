@@ -115,3 +115,59 @@ function digid_register_blog_intro_field() {
 }
 
 add_action( 'acf/init', 'digid_register_blog_intro_field' );
+
+/**
+ * Register the project "Text & Image" repeater (alternating rows below the gallery).
+ */
+function digid_register_project_text_image_field() {
+	if ( ! function_exists( 'acf_add_local_field_group' ) ) :
+		return;
+	endif;
+
+	acf_add_local_field_group(
+		array(
+			'key'                    => 'group_digid_project_text_image',
+			'title'                  => 'Text & Image',
+			'fields'                 => array(
+				array(
+					'key'                 => 'field_digid_project_text_image',
+					'label'               => 'Text & Image rows',
+					'name'                => 'project_text_image',
+					'type'                => 'repeater',
+					'instructions'        => __( 'Rows alternate automatically: 1st text left / image right, 2nd image left / text right, and so on.', 'digid' ),
+					'layout'              => 'block',
+					'button_label'        => __( 'Add row', 'digid' ),
+					'wpml_cf_preferences' => 2,
+					'sub_fields'          => array(
+						array(
+							'key'                 => 'field_digid_project_text_image_image',
+							'label'               => 'Image',
+							'name'                => 'image',
+							'type'                => 'image',
+							'required'            => 1,
+							'return_format'       => 'id',
+							'preview_size'        => 'medium',
+							'wpml_cf_preferences' => 1,
+						),
+						array(
+							'key'                 => 'field_digid_project_text_image_text',
+							'label'               => 'Text (optional)',
+							'name'                => 'text',
+							'type'                => 'textarea',
+							'rows'                => 5,
+							'new_lines'           => 'wpautop',
+							'wpml_cf_preferences' => 2,
+						),
+					),
+				),
+			),
+			'location'               => array(
+				array( array( 'param' => 'post_type', 'operator' => '==', 'value' => 'projects' ) ),
+			),
+			'menu_order'             => 20,
+			'acfml_field_group_mode' => 'advanced',
+		)
+	);
+}
+
+add_action( 'acf/init', 'digid_register_project_text_image_field' );

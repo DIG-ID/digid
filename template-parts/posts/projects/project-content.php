@@ -1,68 +1,74 @@
 <section class="section-content">
 	<div class="container">
-		<div class="row justify-content-between">
-			<div class="col-12 col-lg-4 sticky-content">
+		<div class="row">
+			<div class="col-12 col-lg-6 project-description">
+				<p class="project-description__label"><?php esc_html_e( 'Beschreibung', 'digid' ); ?></p>
+				<?php the_content(); ?>
+			</div>
+			<div class="col-12 col-lg-5 offset-lg-1">
 				<div class="project-details">
-					<h2>
+					<?php // Visually hidden: keeps the H2 in the heading outline (SEO) without showing it. ?>
+					<h2 class="visually-hidden">
 						<?php
 						/* translators: %s: project title */
 						printf( esc_html__( 'Projektumfang: %s', 'digid' ), esc_html( get_the_title() ) );
 						?>
 					</h2>
-					<?php
-					$client = get_field( 'project_scope_client' );
-					if ( $client ) :
-						echo '<p class="project-details__label">' . esc_html__( 'Kunde', 'digid' ) . '</p>';
-						echo '<p>' . $client . '</p>';
-					endif;
+					<dl class="project-details__grid">
+						<?php
+						$client = get_field( 'project_scope_client' );
+						if ( $client ) :
+							?>
+							<div class="project-details__item">
+								<dt class="project-details__label"><?php esc_html_e( 'Kunde', 'digid' ); ?></dt>
+								<dd class="project-details__value"><?php echo esc_html( $client ); ?></dd>
+							</div>
+						<?php endif; ?>
 
-					$website = get_field( 'project_scope_website' );
-					if ( $website ) :
-						echo '<p class="project-details__label">' . esc_html__( 'Webseite', 'digid' ) . '</p>';
-						echo '<p><a href="' . esc_url( $website ) . '" target="_blank">' . $website . '</a></p>';
-					endif;
+						<?php
+						$website = get_field( 'project_scope_website' );
+						if ( $website ) :
+							?>
+							<div class="project-details__item">
+								<dt class="project-details__label"><?php esc_html_e( 'Webseite', 'digid' ); ?></dt>
+								<dd class="project-details__value"><a href="<?php echo esc_url( $website ); ?>" target="_blank" rel="noopener"><?php echo esc_html( preg_replace( '#^https?://#', '', untrailingslashit( $website ) ) ); ?></a></dd>
+							</div>
+						<?php endif; ?>
 
-					$sector = get_field( 'project_scope_sector' );
-					if ( $sector ) :
-						echo '<p class="project-details__label">' . esc_html__( 'Branche', 'digid' ) . '</p>';
-						echo '<p>' . $sector . '</p>';
-					endif;
+						<div class="project-details__item">
+							<dt class="project-details__label"><?php esc_html_e( 'Erbrachte Leistungen', 'digid' ); ?></dt>
+							<dd class="project-details__value"><?php get_template_part( 'template-parts/loops/loop', 'related-services-link' ); ?></dd>
+						</div>
 
-					$date = get_field( 'project_scope_date' );
-					if ( $date ) :
-						echo '<p class="project-details__label">' . esc_html__( 'Datum', 'digid' ) . '</p>';
-						$datetime = new DateTime($date);
-						if ( $datetime ) :
-							$formatted_date = '';
-							$site_lang = apply_filters( 'wpml_current_language', null );
-							if ( 'de' === $site_lang ) :
-								$formatted_date = $datetime->format( 'j. F Y' ); // Example format: "1. Oktober 2024".
-							else :
-								$formatted_date = $datetime->format( 'F j, Y' ); // Example format: "Oktober 1, 2024".
-							endif;
-							echo '<p>' . $formatted_date . '</p>';
-						else :
-							echo '<p>Error parsing date</p>';
+						<?php
+						$sector = get_field( 'project_scope_sector' );
+						if ( $sector ) :
+							?>
+							<div class="project-details__item">
+								<dt class="project-details__label"><?php esc_html_e( 'Branche', 'digid' ); ?></dt>
+								<dd class="project-details__value"><?php echo esc_html( $sector ); ?></dd>
+							</div>
+						<?php endif; ?>
+
+						<?php
+						/*
+						 * Date: hidden in the new design, kept here in case it comes back.
+						 *
+						$date = get_field( 'project_scope_date' );
+						if ( $date ) :
+							$datetime = new DateTime( $date );
+							$format   = 'de' === apply_filters( 'wpml_current_language', null ) ? 'j. F Y' : 'F j, Y';
+							?>
+							<div class="project-details__item">
+								<dt class="project-details__label"><?php esc_html_e( 'Datum', 'digid' ); ?></dt>
+								<dd class="project-details__value"><?php echo esc_html( date_i18n( $format, $datetime->getTimestamp() ) ); ?></dd>
+							</div>
+							<?php
 						endif;
-					endif;
-					?>
-					<h3><?php esc_html_e( 'Erbrachte Leistungen', 'digid' ); ?></h3>
-					<?php get_template_part( 'template-parts/loops/loop', 'related-services-link' ); ?>
-					<span class="line"></span>
+						*/
+						?>
+					</dl>
 				</div>
-				<div class="project-description">
-					<?php the_content(); ?>
-				</div>
-			</div>
-			<div class="col-12 col-lg-7">
-				<?php
-				$images = get_field( 'project_gallery' );
-				if ( $images ) :
-					foreach ( $images as $image_id ) :
-						echo wp_get_attachment_image( $image_id, 'single-project-image' );
-					endforeach;
-				endif;
-				?>
 			</div>
 		</div>
 	</div>
