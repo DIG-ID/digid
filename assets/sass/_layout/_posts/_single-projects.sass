@@ -60,11 +60,15 @@
           width: 30px
           height: 1px
           background-color: $main-color
+      // Styled on the wrapper too: the ACF field may return text without <p> tags
+      &__text,
       p
+        font-family: $main-font
         font-size: 14px
         font-weight: 300
         line-height: 30px
         color: $text-color
+      p
         margin-bottom: 30px
         &:last-child
           margin-bottom: 0
