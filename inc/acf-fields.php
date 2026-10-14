@@ -127,11 +127,11 @@ function digid_register_project_text_image_field() {
 	acf_add_local_field_group(
 		array(
 			'key'                    => 'group_digid_project_text_image',
-			'title'                  => 'Text & Image',
+			'title'                  => 'Project Image & Text',
 			'fields'                 => array(
 				array(
 					'key'                 => 'field_digid_project_text_image',
-					'label'               => 'Text & Image rows',
+					'label'               => 'Project Image & Text Repeater',
 					'name'                => 'project_text_image',
 					'type'                => 'repeater',
 					'instructions'        => __( 'Rows alternate automatically: 1st text left / image right, 2nd image left / text right, and so on.', 'digid' ),
